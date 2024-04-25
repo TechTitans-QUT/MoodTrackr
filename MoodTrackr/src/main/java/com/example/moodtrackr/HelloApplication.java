@@ -1,4 +1,4 @@
-package com.example.addressbook.moodtrackr;
+package com.example.moodtrackr;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

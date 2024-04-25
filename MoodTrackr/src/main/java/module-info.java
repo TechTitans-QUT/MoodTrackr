@@ -5,6 +5,6 @@ module com.example.addressbook.moodtrackr {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
 
-    opens com.example.addressbook.moodtrackr to javafx.fxml;
-    exports com.example.addressbook.moodtrackr;
+    opens com.example.moodtrackr to javafx.fxml;
+    exports com.example.moodtrackr;
 }

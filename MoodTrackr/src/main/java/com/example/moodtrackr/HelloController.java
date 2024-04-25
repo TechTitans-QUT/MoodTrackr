@@ -1,4 +1,4 @@
-package com.example.addressbook.moodtrackr;
+package com.example.moodtrackr;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -76,7 +76,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.addressbook.moodtrackr/com.example.addressbook.moodtrackr.HelloApplication
+                                com.example.addressbook.moodtrackr/com.example.moodtrackr.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
