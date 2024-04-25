@@ -7,6 +7,6 @@ module com.example.addressbook.moodtrackr {
 
     opens com.example.moodtrackr to javafx.fxml;
     exports com.example.moodtrackr;
-    exports com.example.moodtrackr.controllers;
-    opens com.example.moodtrackr.controllers to javafx.fxml;
+    exports com.example.moodtrackr.controller;
+    opens com.example.moodtrackr.controller to javafx.fxml;
 }
