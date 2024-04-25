@@ -9,6 +9,6 @@ public class MoodInput {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("MoodInput!");
+        welcomeText.setText("MoodInpu!");
     }
 }
