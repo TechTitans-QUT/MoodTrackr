@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
-    public static final String TITLE = "MoodTrackr";
-    public static final int WIDTH = 1200;
-    public static final int HEIGHT = 1200;
+public class MoodInputApplication extends Application {
+    public static final String TITLE = "MoodInput";
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 100;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MoodInputApplication.class.getResource("mood-input-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
         stage.setTitle(TITLE);
         stage.setScene(scene);

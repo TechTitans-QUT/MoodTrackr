@@ -6,12 +6,11 @@
 
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.moodtrackr.controller.MoodInputController">
+      fx:controller="com.example.moodtrackr.controller.MoodInputPageController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="New Session" onAction="#onAddSessionButtonClick"/>
-    <Button text="End Session" onAction="#onEndSession"/>
+    <Label text=" INSERT INTUITIVE INPUT "/>
+
 </VBox>

@@ -12,10 +12,12 @@ import java.io.IOException;
 public class HelloController {
     @FXML
     private Button MoodInputButton;
+
+    // add other buttons for nav to other pages
     @FXML
     protected void onMoodInputButtonClick() throws IOException {
         Stage stage = (Stage) MoodInputButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mood-input.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mood-input-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
