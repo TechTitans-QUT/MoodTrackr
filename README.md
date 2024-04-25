@@ -1,6 +1,7 @@
 19/04/2024 Note;
 
 As a note Ibuki, Sean and Joeshenraj have all created or majorly contributed to the mockups and user stories for week 7, but had important commitments on submission when these things were uploaded to git repo for the log
+
 Contributors: n11282011 - Joshua Kyle-Little
 
 n10694218 - Ibuki Suzuki
