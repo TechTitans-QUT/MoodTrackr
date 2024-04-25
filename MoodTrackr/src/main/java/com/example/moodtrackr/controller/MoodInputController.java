@@ -19,6 +19,6 @@ public class MoodInputController {
     }
     @FXML
     protected void onEndSession() {
-        welcomeText.setText("End Session!");
+        welcomeText.setText("End Session");
     }
 }
