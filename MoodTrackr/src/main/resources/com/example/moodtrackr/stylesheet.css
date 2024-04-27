@@ -13,7 +13,10 @@ and the text color to white */
 }
 
 /* Set color of node with fx:id="confirmBtn" */
-#confirmBtn {
+#registerButton {
+    -fx-background-color: #23ad56;
+}
+#loginButton {
     -fx-background-color: #23ad56;
 }
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox spacing="50.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.MoodInputPageController">
+
+    <padding>
+        <Insets bottom="100.0" left="20" right="100.0" top="20.0" />
+    </padding>
+
+
+    <VBox>
+        <Label text="Moodtrackr">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="100.0" />
+         </padding></Label>
+        <Button fx:id="DashboardButton" onAction="#onDashboardButtonClick" text="Dashboard" />
+        <Button text="Mood" />
+        <Button text="Data" />
+        <Button text="Calendar" />
+        <Button text="Settings">
+         <VBox.margin>
+            <Insets bottom="250.0" />
+         </VBox.margin></Button>
+      <Button mnemonicParsing="false" text="Logout" />
+      <HBox.margin>
+         <Insets left="20.0" />
+      </HBox.margin>
+    </VBox>
+
+
+    <VBox alignment="TOP_CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+        <HBox>
+            <Label alignment="TOP_LEFT" text="MOOD INPUT">
+            <font>
+               <Font size="24.0" />
+            </font></Label>
+        </HBox>
+
+        <HBox>
+            <Button alignment="BOTTOM_LEFT" onAction="#onAddSessionButtonClick" text="Add Session" />
+            <Label fx:id="welcomeText" />
+        </HBox>
+
+        <ListView maxHeight="400.0" maxWidth="800.0" minHeight="400.0" minWidth="800.0" HBox.hgrow="ALWAYS" />
+
+        <HBox>
+            <Button alignment="BOTTOM_LEFT" onAction="#onEndSessionButtonClick" text="End Session" />
+        </HBox>
+    </VBox>
+
+
+
+
+</HBox>
