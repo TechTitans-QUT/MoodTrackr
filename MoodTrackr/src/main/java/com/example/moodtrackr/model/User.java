@@ -46,12 +46,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPhone() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPhone(String phone) {
-        this.password = phone;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getFullName() {

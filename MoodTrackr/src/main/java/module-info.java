@@ -4,6 +4,7 @@ module com.example.addressbook.moodtrackr {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires java.sql;
 
     opens com.example.moodtrackr to javafx.fxml;
     exports com.example.moodtrackr;
