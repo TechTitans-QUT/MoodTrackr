@@ -12,9 +12,9 @@ public class MockUserDAO implements IUserDAO {
 
     public MockUserDAO() {
         // Add some initial contacts to the mock database
-        addUser(new User("John", "Doe", "johndoe@example.com", "password1"));
-        addUser(new User("Jane", "Doe", "janedoe@example.com", "password2"));
-        addUser(new User("Jay", "Doe", "jaydoe@example.com", "password3"));
+//        addUser(new User("John", "Doe", "johndoe@example.com", "password1"));
+//        addUser(new User("Jane", "Doe", "janedoe@example.com", "password2"));
+//        addUser(new User("Jay", "Doe", "jaydoe@example.com", "password3"));
     }
 
     @Override
@@ -52,5 +52,10 @@ public class MockUserDAO implements IUserDAO {
     @Override
     public List<User> getAllUsers() {
         return new ArrayList<>(users);
+    }
+
+    @Override
+    public Boolean verifyUser(String firstName, String lastName, String password) {
+        return null;
     }
 }

@@ -1,34 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.moodtrackr.controllers.LoginController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.text.Font?>
+<?import com.sun.javafx.charts.Legend?>
+<VBox alignment="TOP_LEFT" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.moodtrackr.controllers.LoginController"
+>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <VBox spacing="10.0" prefWidth="400" >
-        <Label text="Register your account!" />
-        <GridPane hgap="5.0" vgap="5.0" >
-            <columnConstraints>
-                <ColumnConstraints minWidth="70" />
-                <ColumnConstraints hgrow="ALWAYS"/>
-            </columnConstraints>
-            <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity"/>
-            <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        </GridPane>
-    </VBox>
-    <Label fx:id="welcomeText"/>
-    <HBox spacing="15.0" alignment="CENTER">
-        <Button text="Cancel" onAction="#onCancelButtonClick"/>
-        <Button fx:id="loginButton" text="Login"/>
+    <HBox VBox.vgrow="ALWAYS" spacing="20.0">
+        <VBox spacing="10.0" prefWidth="400" >
+            <Label text="Enter the contact's details below." />
+            <GridPane hgap="5.0" vgap="5.0" >
+                <columnConstraints>
+                    <ColumnConstraints minWidth="70" />
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+                <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity"/>
+                <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </GridPane>
+            <Label fx:id="loginMessage" />
+            <HBox spacing="10.0" alignment="CENTER">
+                <Button fx:id="loginButton" text="Login" onAction="#onLoginButtonClick"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+                <Label text="Need an account?" />
+                <Button onAction="#onRegisterButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#0f07fc" underline="true">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="13.0" />
+                    </font></Button>
+            </HBox>
+        </VBox>
     </HBox>
 </VBox>

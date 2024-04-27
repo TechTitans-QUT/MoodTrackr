@@ -33,4 +33,6 @@ public interface IUserDAO {
      * @return A list of all users in the database.
      */
     public List<User> getAllUsers();
+
+    public Boolean verifyUser(String firstName, String lastName, String password);
 }
