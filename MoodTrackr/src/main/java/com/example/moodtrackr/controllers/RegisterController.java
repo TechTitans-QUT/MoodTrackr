@@ -6,24 +6,18 @@ import javafx.scene.control.Label;
 public class RegisterController {
     @FXML
     private Label welcomeText;
+    @FXML
+    protected void onCancel() {
+        welcomeText.setText("Cancel Button clicked!");
+    }
 
     @FXML
     protected void onRegisterButtonClick() {
-        welcomeText.setText("Welcome to Moodtracker Register!");
+        welcomeText.setText("Register Button clicked!");
     }
 
     @FXML
-    protected void onButton1Click() {
-        welcomeText.setText("Button 1 was clicked!");
-    }
-
-    @FXML
-    protected void onButton2Click() {
-        welcomeText.setText("Button 2 was clicked!");
-    }
-
-    @FXML
-    protected void onButton3Click() {
-        welcomeText.setText("Button 3 was clicked!");
+    protected void onLoginButtonClick() {
+        welcomeText.setText("Login Button clicked!");
     }
 }

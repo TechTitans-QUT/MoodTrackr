@@ -9,14 +9,30 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-
+    <VBox spacing="10.0" prefWidth="400" >
+        <Label text="Register your account!" />
+        <GridPane hgap="5.0" vgap="5.0" >
+            <columnConstraints>
+                <ColumnConstraints minWidth="70" />
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" maxWidth="Infinity"/>
+            <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        </GridPane>
+    </VBox>
     <Label fx:id="welcomeText"/>
-    <Button text="Register!" onAction="#onRegisterButtonClick"/>
-    <TextField text="TextField"/>
-    <Label text="Label"/>
     <HBox spacing="15.0" alignment="CENTER">
-        <Button text="Button 1" onAction="#onButton1Click"/>
-        <Button text="Button 2" onAction="#onButton2Click"/>
-        <Button fx:id="confirmBtn" text="Button 3" onAction="#onButton3Click"/>
+        <Button text="Cancel" onAction="#onCancel"/>
+        <Button fx:id="confirmBtn" text="Register" onAction="#onRegisterButtonClick" disable="true"/>
+    </HBox>
+    <HBox spacing="15.0" alignment="CENTER">
+        <Label text="Already has an account?"/>
+        <Button text="Login" onAction="#onLoginButtonClick"/>
     </HBox>
 </VBox>
