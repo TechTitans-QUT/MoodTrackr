@@ -2,18 +2,23 @@ package com.example.moodtrackr.controllers;
 
 import com.example.moodtrackr.HelloApplication;
 import com.example.moodtrackr.MoodInputApplication;
+
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.Popup;
+
 import java.io.IOException;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
+import javafx.scene.layout.StackPane;
+
 
 public class MoodInputPageController {
 
@@ -40,10 +45,9 @@ public class MoodInputPageController {
     private Timeline timeline;
 
 
-
-
     @FXML
     protected void onEndSessionButtonClick() throws IOException {
+
         startSessionButton.setDisable(false); // disable start session
         endSessionButton.setDisable(true); // enable end session
 
@@ -51,10 +55,12 @@ public class MoodInputPageController {
         timeline.stop();
         tracker.stopTracking(); // stop tracking time
 
-        Label label = new Label("This is a Popup");
-        Popup popup = new Popup();
 
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(MoodInputApplication.class.getResource("mood-input.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), MoodInputApplication.WIDTH, MoodInputApplication.HEIGHT);
+        stage.setScene(scene);
+        stage.showAndWait();
 
 
     }
@@ -78,12 +84,9 @@ public class MoodInputPageController {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
-
     }
 
     public void initialize() {
-        endSessionButton.setDisable(true);
-
         tracker = new TimeTracker();
 
         timeline = new Timeline(
