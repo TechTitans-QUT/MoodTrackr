@@ -1,41 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox spacing="50.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
-    <padding>
-        <Insets bottom="100.0" left="20.0" right="100.0" top="40.0"/>
-    </padding>
+<HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
 
-    <VBox>
-        <Label text="Moodtrackr">
+    <VBox prefHeight="666.0" prefWidth="156.0" style="-fx-background-color: #252321;">
+        <Label alignment="CENTER" prefHeight="152.0" prefWidth="170.0" text="\@Moodtrackr" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
             <VBox.margin>
                 <Insets />
             </VBox.margin>
             <padding>
-                <Insets bottom="100.0" />
-            </padding></Label>
-        <Button text="DashboardButton"/>
-        <Button text="Mood" />
-        <Button text="Data" />
-        <Button text="Calendar" />
-        <Button text="Settings">
+                <Insets bottom="100.0" top="20.0" />
+            </padding>
+         <font>
+            <Font name="Wingdings" size="25.0" />
+         </font></Label>
+        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="DashboardButton" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE">
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
-        <Button mnemonicParsing="false" text="Logout" />
+        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
         <HBox.margin>
-            <Insets left="20.0" />
+            <Insets />
         </HBox.margin>
     </VBox>
 
-    <VBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
-        <HBox>
-            <Label fx:id="welcomeText"/>
-            <Button text="Visualise Data"/>
+    <VBox alignment="TOP_CENTER" style="-fx-background-color: lightgrey;" VBox.vgrow="ALWAYS">
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="904.0" style="-fx-background-color: white;">
+            <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="Mood Insights" textAlignment="CENTER">
+                <font>
+                    <Font name="Wingdings" size="24.0" />
+                </font>
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin>
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+            </Label>
+            <TextField prefHeight="20.0" prefWidth="300.0" promptText="Search...">
+                <HBox.margin>
+                    <Insets left="50.0" top="5.0" />
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
         </HBox>
+      <VBox prefHeight="591.0" prefWidth="901.0" style="-fx-background-color: #F6F6F6;">
+         <children>
+            <HBox prefHeight="314.0" prefWidth="762.0">
+               <children>
+                  <VBox prefHeight="298.0" prefWidth="708.0">
+                     <children>
+                        <LineChart title="Mood Tracking">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets right="30.0" />
+                           </VBox.margin>
+                        </LineChart>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="296.0" prefWidth="282.0">
+                     <children>
+                        <PieChart prefHeight="278.0" prefWidth="251.0" title="Mood Chart" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="289.0" prefWidth="776.0">
+               <children>
+                  <VBox prefHeight="294.0" prefWidth="699.0">
+                     <children>
+                        <AreaChart prefHeight="254.0" prefWidth="576.0" title="Mood - Time">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets right="30.0" />
+                           </VBox.margin>
+                        </AreaChart>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="294.0" prefWidth="372.0">
+                     <children>
+                        <StackedBarChart prefHeight="258.0" prefWidth="289.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis prefHeight="254.0" prefWidth="22.0" side="LEFT" />
+                          </yAxis>
+                        </StackedBarChart>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children></VBox>
     </VBox>
 </HBox>

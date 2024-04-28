@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MoodTrackr.iml" filepath="$PROJECT_DIR$/.idea/MoodTrackr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MoodTrackr/MoodTrackr.iml" filepath="$PROJECT_DIR$/MoodTrackr/MoodTrackr.iml" />
     </modules>
   </component>
 </project>
