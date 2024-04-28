@@ -64,8 +64,8 @@
         <HBox>
          <ToolBar prefHeight="20.0" prefWidth="800.0">
            <items>
-                  <Button alignment="BOTTOM_LEFT" onAction="#onAddSessionButtonClick" text="Add Session" />
-                  <Label fx:id="welcomeText" />
+                  <Button fx:id="startSessionButton" alignment="BOTTOM_LEFT" onAction="#onStartSession" text="Start Session" />
+                  <Label fx:id="currentTime" />
            </items>
             <HBox.margin>
                <Insets top="40.0" />
@@ -74,7 +74,7 @@
         </HBox>
 
         <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" HBox.hgrow="ALWAYS" />
-         <Button alignment="BOTTOM_LEFT" onAction="#onEndSessionButtonClick" text="End Session">
+         <Button fx:id="endSessionButton" alignment="BOTTOM_LEFT" onAction="#onEndSessionButtonClick" text="End Session">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin>
