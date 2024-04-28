@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
+<HBox spacing="50.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="100.0" left="20.0" right="100.0" top="40.0"/>
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Visualise Data" onAction="#onHelloButtonClick"/>
-</VBox>
+    <VBox>
+        <Label text="Moodtrackr">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="100.0" />
+            </padding></Label>
+        <Button text="DashboardButton"/>
+        <Button text="Mood" />
+        <Button text="Data" />
+        <Button text="Calendar" />
+        <Button text="Settings">
+            <VBox.margin>
+                <Insets bottom="250.0" />
+            </VBox.margin></Button>
+        <Button mnemonicParsing="false" text="Logout" />
+        <HBox.margin>
+            <Insets left="20.0" />
+        </HBox.margin>
+    </VBox>
+
+    <VBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+        <HBox>
+            <Label fx:id="welcomeText"/>
+            <Button text="Visualise Data"/>
+        </HBox>
+    </VBox>
+</HBox>
