@@ -18,7 +18,7 @@
             <font>
                 <Font name="Wingdings" size="25.0" />
             </font></Label>
-        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="DashboardButton" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Dashboard" textFill="WHITE" />
         <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
         <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
         <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
@@ -50,6 +50,16 @@
                     <Insets left="50.0" top="5.0" />
                 </HBox.margin>
             </TextField>
+            <MenuButton mnemonicParsing="false" text="MenuButton">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Account" />
+                    <MenuItem mnemonicParsing="false" text="Notifications" />
+                    <MenuItem mnemonicParsing="false" text="Logoff" />
+                </items>
+                <HBox.margin>
+                    <Insets left="100.0" top="5.0" />
+                </HBox.margin>
+            </MenuButton>
             <VBox.margin>
                 <Insets />
             </VBox.margin>
