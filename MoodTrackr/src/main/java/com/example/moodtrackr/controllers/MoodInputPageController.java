@@ -11,6 +11,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -18,6 +20,7 @@ import java.io.IOException;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 import javafx.scene.layout.StackPane;
+
 
 
 public class MoodInputPageController {
@@ -32,15 +35,14 @@ public class MoodInputPageController {
     private Button SettingsButton;
     @FXML
     private Button LogOffButton;
-
     @FXML
     private Button startSessionButton;
     @FXML
     private Button endSessionButton;
-
     @FXML
     private Label currentTime;
-
+    @FXML
+    private ImageView cryingFace;
     private TimeTracker tracker;
     private Timeline timeline;
 
@@ -55,6 +57,8 @@ public class MoodInputPageController {
         timeline.stop();
         tracker.stopTracking(); // stop tracking time
 
+//        Image cryFace = new Image(HelloApplication.getResourceAsStream("@/images/icons8-loudly-crying-face-48.png"));
+//        cryingFace.setImage(cryFace);
 
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(MoodInputApplication.class.getResource("mood-input.fxml"));
@@ -91,9 +95,6 @@ public class MoodInputPageController {
 
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> onStartSession()));
-
-        // Create a timeline to update the time label every second
-
     }
 
 }
