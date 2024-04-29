@@ -22,7 +22,7 @@ public class LoginController {
     @FXML
     private TextField lastNameTextField;
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordPasswordField;
     @FXML
     private IUserDAO userDAO;
 
@@ -32,8 +32,8 @@ public class LoginController {
 
     @FXML
     public void onLoginButtonClick(ActionEvent e) {
-        if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordTextField.getText().isBlank()) {
-            if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordTextField.getText())) {
+        if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
+            if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText())) {
                 loginMessage.setText("Welcome!");
             } else {
                 loginMessage.setText("Invalid");

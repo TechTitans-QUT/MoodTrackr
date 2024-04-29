@@ -57,7 +57,7 @@
                      <Label alignment="CENTER" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                      <TextField fx:id="firstNameTextField" maxWidth="Infinity" promptText="Fisrst Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                      <TextField fx:id="lastNameTextField" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                     <TextField fx:id="passwordTextField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     <PasswordField fx:id="passwordPasswordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      <rowConstraints>
                          <RowConstraints />
                          <RowConstraints />

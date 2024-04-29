@@ -17,9 +17,9 @@ public class RegisterController {
     @FXML
     private ListView<User> usersListView;
     @FXML
-    private IUserDAO userDAO;
+    private final IUserDAO userDAO;
     @FXML
-    private Button registerButton;
+    private Button loginButton;
     @FXML
     private Label errorLabel;
     @FXML
@@ -29,7 +29,13 @@ public class RegisterController {
     @FXML
     private TextField emailTextField;
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordPasswordField;
+    @FXML
+    private CheckBox debugCheckBox;
+    @FXML
+    private Button deleteButton;
+    @FXML
+    private Button editConfirmButton;
 
     public RegisterController() {
         userDAO = new SqliteUserDAO();
@@ -45,7 +51,7 @@ public class RegisterController {
         firstNameTextField.setText(user.getFirstName());
         lastNameTextField.setText(user.getLastName());
         emailTextField.setText(user.getEmail());
-        passwordTextField.setText(user.getPassword());
+        passwordPasswordField.setText(user.getPassword());
     }
 
     /**
@@ -88,46 +94,26 @@ public class RegisterController {
     public void initialize() {
         usersListView.setCellFactory(this::renderCell);
         usersListView.getItems().addAll(userDAO.getAllUsers());
-
-        // Start Register
-        // Default values for a new contact
-        final String DEFAULT_FIRST_NAME = "";
-        final String DEFAULT_LAST_NAME = "";
-        final String DEFAULT_EMAIL = "";
-        final String DEFAULT_PASSWORD = "";
-        User newUser = new User(DEFAULT_FIRST_NAME, DEFAULT_LAST_NAME, DEFAULT_EMAIL, DEFAULT_PASSWORD);
-        // Add the new contact to the database
-        userDAO.addUser(newUser);
-        syncUsers();
-        // Select the new contact in the list view
-        // and focus the first name text field
-        selectUser(newUser);
-        firstNameTextField.requestFocus();
     }
 
     @FXML
     private void onRegisterButtonClick() {
         // Check for mandatory inputs
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() &&
-                !passwordTextField.getText().isBlank() && !emailTextField.getText().isBlank()) {
-            // Get the selected contact from the list view
-            User selectedUser = usersListView.getSelectionModel().getSelectedItem();
-            if (selectedUser != null) {
-                selectedUser.setFirstName(firstNameTextField.getText());
-                selectedUser.setLastName(lastNameTextField.getText());
-                selectedUser.setEmail(emailTextField.getText());
-                selectedUser.setPassword(passwordTextField.getText());
-                userDAO.updateUser(selectedUser);
-                syncUsers();
-            } else {
-                errorLabel.setText("Missing Mandatory field");
-            }
+                !passwordPasswordField.getText().isBlank() && !emailTextField.getText().isBlank()) {
+            User newUser = new User(firstNameTextField.getText(), lastNameTextField.getText(),
+                    emailTextField.getText(), passwordPasswordField.getText());
+            userDAO.addUser(newUser);
+            errorLabel.setText("User Registered Successfully!");
+            syncUsers();
+        } else {
+            errorLabel.setText("Missing Mandatory field");
         }
     }
 
     @FXML
     protected void onLoginButtonClick() throws IOException {
-        Stage stage = (Stage) registerButton.getScene().getWindow();
+        Stage stage = (Stage) loginButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), RegisterApplication.WIDTH, RegisterApplication.HEIGHT);
         stage.setTitle("Login Page");
@@ -146,5 +132,37 @@ public class RegisterController {
     protected void onCancelButtonClick() {
         Stage stage = (Stage) usersListView.getScene().getWindow();
         stage.close();
+    }
+
+    @FXML
+    protected void onDebug() {
+        boolean accepted = debugCheckBox.isSelected();
+        usersListView.setVisible(accepted);
+        deleteButton.setVisible(accepted);
+        editConfirmButton.setVisible(accepted);
+    }
+
+    @FXML
+    private void onDelete() {
+        // Get the selected contact from the list view
+        User selectedContact = usersListView.getSelectionModel().getSelectedItem();
+        if (selectedContact != null) {
+            userDAO.deleteUser(selectedContact);
+            syncUsers();
+        }
+    }
+
+    @FXML
+    private void onEditConfirm() {
+        // Get the selected contact from the list view
+        User selectedUser = usersListView.getSelectionModel().getSelectedItem();
+        if (selectedUser != null) {
+            selectedUser.setFirstName(firstNameTextField.getText());
+            selectedUser.setLastName(lastNameTextField.getText());
+            selectedUser.setEmail(emailTextField.getText());
+            selectedUser.setPassword(passwordPasswordField.getText());
+            userDAO.updateUser(selectedUser);
+            syncUsers();
+        }
     }
 }
