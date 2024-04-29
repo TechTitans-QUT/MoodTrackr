@@ -25,7 +25,11 @@
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
+<<<<<<< HEAD
         <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
+=======
+        <Button fx:id="logOutButton" mnemonicParsing="false" text="Logout" onAction="#onLogOutButton" />
+>>>>>>> Ibukis-branch
         <HBox.margin>
             <Insets />
         </HBox.margin>

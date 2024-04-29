@@ -25,7 +25,7 @@
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
-        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
+        <Button fx:id="logout" onAction="#onLogoutButtonClick" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
         <HBox.margin>
             <Insets />
         </HBox.margin>

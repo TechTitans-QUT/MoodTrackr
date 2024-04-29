@@ -1,6 +1,7 @@
 package com.example.moodtrackr.controllers;
 
 import com.example.moodtrackr.HelloApplication;
+import com.example.moodtrackr.RegisterApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +13,8 @@ import java.io.IOException;
 public class HelloController {
     @FXML
     private Button MoodInputButton;
+    @FXML
+    private Button logOutButton;
 
     // add other buttons for nav to other pages
     @FXML

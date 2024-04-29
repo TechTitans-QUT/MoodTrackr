@@ -31,10 +31,16 @@ public class LoginController {
     }
 
     @FXML
-    public void onLoginButtonClick(ActionEvent e) {
+    public void onLoginButtonClick(ActionEvent e) throws IOException {
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
             if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText())) {
                 loginMessage.setText("Welcome!");
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("hello-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 1075, 680);
+                stage.setTitle("Dashboard");
+                stage.setScene(scene);
+                stage.show();
             } else {
                 loginMessage.setText("Invalid");
             }
