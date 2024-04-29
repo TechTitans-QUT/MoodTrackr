@@ -17,11 +17,11 @@
             <font>
                 <Font name="Wingdings" size="25.0" />
             </font></Label>
-        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Dashboard" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE">
+        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" fx:id="Dashboard" onAction="#onDashboardButtonClick" text="Dashboard" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" fx:id="Mood" onAction="#onMoodButtonClick" text="Mood" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" text="Data" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" fx:id="Calendar" onAction="#onDataVisualisationButtonClick" text="Calendar" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" fx:id="Settings" onAction="#onSettingsButtonClick" text="Settings" textFill="WHITE">
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
