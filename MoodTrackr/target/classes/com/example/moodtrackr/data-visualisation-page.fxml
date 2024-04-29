@@ -8,7 +8,7 @@
 
 <HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
 
-    <VBox prefHeight="666.0" prefWidth="156.0" style="-fx-background-color: #252321;">
+    <VBox prefHeight="666.0" prefWidth="156.0" style="-fx-background-color: #252322;">
         <Label alignment="CENTER" prefHeight="152.0" prefWidth="170.0" text="\@Moodtrackr" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
             <VBox.margin>
                 <Insets />
