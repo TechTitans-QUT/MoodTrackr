@@ -12,8 +12,8 @@
             <VBox>
                 <ListView fx:id="usersListView" visible="false" />
             </VBox>
-            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="230.0">
-                <Label alignment="CENTER" prefHeight="38.0" prefWidth="227.0" text="MoodTracker" textFill="WHITE">
+            <VBox fx:id="logoContainer" alignment="CENTER" prefHeight="300.0" prefWidth="245.0" visible="true">
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="230.0" text="MoodTracker" textFill="WHITE">
                     <font>
                         <Font name="Verdana Bold" size="24.0" />
                     </font>
@@ -41,13 +41,13 @@
                     <Font name="Apple Braille" size="24.0" />
                 </font>
             </Label>
-            <VBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" spacing="20.0">
+            <VBox alignment="CENTER" layoutY="280.0" prefHeight="83.0" spacing="10.0">
                 <Label fx:id="errorLabel" textFill="RED" />
                 <HBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" prefWidth="332.0" spacing="10.0">
                     <Button layoutX="116.0" layoutY="267.0" onAction="#onRegisterButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: Black;" text="Register" textFill="WHITE" />
                     <Button onAction="#onCancelButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: Black;" text="Cancel" textFill="WHITE" />
                 </HBox>
-                <HBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" prefWidth="332.0" spacing="10.0">
+                <HBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" prefWidth="332.0">
                     <Label layoutX="63.0" layoutY="324.0" text="Already has an account?" />
                     <Button fx:id="loginButton" layoutX="197.0" layoutY="320.0" onAction="#onLoginButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="#0f07fc" underline="true">
                         <font>
@@ -66,15 +66,18 @@
                     <Label alignment="CENTER" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                     <Label alignment="CENTER" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                     <Label alignment="CENTER" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <Label alignment="CENTER" text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
                     <TextField fx:id="firstNameTextField" maxWidth="Infinity" promptText="Fisrst Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                     <TextField fx:id="lastNameTextField" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     <TextField fx:id="emailTextField" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     <PasswordField fx:id="passwordPasswordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     <rowConstraints>
                         <RowConstraints />
                         <RowConstraints />
                         <RowConstraints />
                         <RowConstraints />
+                  <RowConstraints />
                     </rowConstraints>
                 </GridPane>
             </HBox>
