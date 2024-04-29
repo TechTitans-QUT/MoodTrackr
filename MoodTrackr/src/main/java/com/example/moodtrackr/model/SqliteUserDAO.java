@@ -9,6 +9,7 @@ public class SqliteUserDAO implements IUserDAO {
     public SqliteUserDAO() {
         connection = SqliteConnection.getInstance();
         createTable();
+//        insertSampleData();
     }
 
     private void createTable() {
@@ -27,6 +28,23 @@ public class SqliteUserDAO implements IUserDAO {
             e.printStackTrace();
         }
     }
+
+//    private void insertSampleData() {
+//        try {
+//            // Clear before inserting
+//            Statement clearStatement = connection.createStatement();
+//            String clearQuery = "DELETE FROM users";
+//            clearStatement.execute(clearQuery);
+//            Statement insertStatement = connection.createStatement();
+//            String insertQuery = "INSERT INTO users (firstName, lastName, password, email) VALUES "
+//                    + "('John', 'Doe', 'pass1', 'johndoe@example.com'),"
+//                    + "('Jane', 'Doe', 'pass2', 'janedoe@example.com'),"
+//                    + "('Jay', 'Doe', 'pass3', 'jaydoe@example.com')";
+//            insertStatement.execute(insertQuery);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     @Override
     public void addUser(User user) {
