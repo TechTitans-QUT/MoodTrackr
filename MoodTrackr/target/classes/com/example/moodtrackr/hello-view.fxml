@@ -28,7 +28,7 @@
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
-        <Button mnemonicParsing="false" text="Logout" />
+        <Button fx:id="logOutButton" mnemonicParsing="false" text="Logout" onAction="#onLogOutButton" />
         <HBox.margin>
             <Insets left="20.0" />
         </HBox.margin>
