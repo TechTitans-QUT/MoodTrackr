@@ -9,10 +9,10 @@ import java.io.IOException;
 public class DataVisualisationApplication extends Application {
     public static final String Title = "Data Visualisation";
     public static final int height = 600;
-    public static final int width = 1000;
+    public static final int width = 1075;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("data-visualisation.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("data-visualisation-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), width, height);
         stage.setTitle(Title);
         stage.setScene(scene);
