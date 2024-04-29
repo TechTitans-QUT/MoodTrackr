@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.MoodInputPageController">
@@ -12,7 +13,8 @@
     <Label text="Please select the face that describes your mood the best!" />
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
       <children>
-         <Button mnemonicParsing="false" text="Button" />
+         <ImageView fx:id="cryingFace" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+
          <Button mnemonicParsing="false" text="Button" />
          <Button mnemonicParsing="false" text="Button" />
          <Button mnemonicParsing="false" text="Button" />
