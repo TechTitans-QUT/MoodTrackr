@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
-
+<HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <VBox prefHeight="666.0" prefWidth="156.0" style="-fx-background-color: #252322;">
         <Label alignment="CENTER" prefHeight="152.0" prefWidth="170.0" text="\@Moodtrackr" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
             <VBox.margin>
@@ -19,11 +18,11 @@
             <font>
                 <Font name="Wingdings" size="25.0" />
             </font></Label>
-        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="DashboardButton" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
-        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE">
+        <Button prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Dashboard" onAction="#onDashboardButtonClick" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" onAction="#onMoodButtonClick" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data Visualisation" onAction="#onDataVisualisationButtonClick" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" onAction="#onCalendarButtonClick" textFill="WHITE" />
+        <Button prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Settings" onAction="#onSettingsButtonClick" textFill="WHITE">
             <VBox.margin>
                 <Insets bottom="250.0" />
             </VBox.margin></Button>
