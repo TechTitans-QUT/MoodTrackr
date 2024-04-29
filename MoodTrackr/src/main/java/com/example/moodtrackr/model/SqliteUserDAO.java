@@ -1,19 +1,14 @@
 package com.example.moodtrackr.model;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SqliteUserDAO implements IUserDAO {
-    private Connection connection;
+    private final Connection connection;
     public SqliteUserDAO() {
         connection = SqliteConnection.getInstance();
         createTable();
-        // Used for testing, to be removed later
-        insertSampleData();
     }
 
     private void createTable() {
@@ -28,23 +23,6 @@ public class SqliteUserDAO implements IUserDAO {
                     + "email VARCHAR NOT NULL"
                     + ")";
             statement.execute(query);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void insertSampleData() {
-        try {
-            // Clear before inserting
-            Statement clearStatement = connection.createStatement();
-            String clearQuery = "DELETE FROM users";
-            clearStatement.execute(clearQuery);
-            Statement insertStatement = connection.createStatement();
-            String insertQuery = "INSERT INTO users (firstName, lastName, password, email) VALUES "
-                    + "('John', 'Doe', 'pass1', 'johndoe@example.com'),"
-                    + "('Jane', 'Doe', 'pass2', 'janedoe@example.com'),"
-                    + "('Jay', 'Doe', 'pass3', 'jaydoe@example.com')";
-            insertStatement.execute(insertQuery);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -142,11 +120,6 @@ public class SqliteUserDAO implements IUserDAO {
     @Override
     public Boolean verifyUser(String firstName, String lastName, String password) {
         try {
-//            PreparedStatement statement = connection.prepareStatement("SELECT count(1) FROM users WHERE " +
-//                    "firstName = ? AND lastName = ? AND password = ?");
-//            statement.setString(1, firstName);
-//            statement.setString(2, lastName);
-//            statement.setString(3, password);
             Statement statement = connection.createStatement();
             String query = "SELECT count(1) FROM users WHERE firstName = '" + firstName +
                     "' AND lastName = '" + lastName + "' AND password = '" + password + "'";
