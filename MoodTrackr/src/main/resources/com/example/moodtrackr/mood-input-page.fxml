@@ -2,71 +2,74 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox spacing="50.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.MoodInputPageController">
-
-    <padding>
-        <Insets bottom="100.0" left="20.0" right="100.0" top="40.0" />
-    </padding>
-
-
-    <VBox>
-        <Label text="Moodtrackr">
-         <VBox.margin>
+<HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.MoodInputPageController">
+    <VBox prefHeight="666.0" prefWidth="156.0" style="-fx-background-color: #252322;">
+        <Label alignment="CENTER" prefHeight="152.0" prefWidth="170.0" text="\@Moodtrackr" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="100.0" top="20.0" />
+            </padding>
+            <font>
+                <Font name="Wingdings" size="25.0" />
+            </font></Label>
+        <Button fx:id="Dashboard" onAction="#onDashboardButtonClick" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Dashboard" textFill="WHITE" />
+        <Button fx:id="Mood" onAction="#onMoodButtonClick" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
+        <Button fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
+        <Button fx:id="Calendar" onAction="#onCalendarButtonClick" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
+        <Button fx:id="Settings" onAction="#onSettingsButtonClick" prefHeight="26.0" prefWidth="151.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE">
+            <VBox.margin>
+                <Insets bottom="250.0" />
+            </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
+        <HBox.margin>
             <Insets />
-         </VBox.margin>
-         <padding>
-            <Insets bottom="100.0" />
-         </padding></Label>
-        <Button fx:id="DashboardButton" onAction="#onDashboardButtonClick" text="Dashboard" />
-        <Button text="Mood" />
-        <Button text="Data" />
-        <Button text="Calendar" />
-        <Button text="Settings">
-         <VBox.margin>
-            <Insets bottom="250.0" />
-         </VBox.margin></Button>
-      <Button mnemonicParsing="false" text="Logout" />
-      <HBox.margin>
-         <Insets left="20.0" />
-      </HBox.margin>
+        </HBox.margin>
     </VBox>
 
 
-    <VBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
-        <HBox>
-            <Label alignment="TOP_LEFT" text="MOOD INPUT">
-            <font>
-               <Font size="24.0" />
-            </font></Label>
-         <TextField prefHeight="5.0" prefWidth="400.0">
-            <HBox.margin>
-               <Insets left="50.0" top="5.0" />
-            </HBox.margin>
-         </TextField>
-         <MenuButton mnemonicParsing="false" text="MenuButton">
-           <items>
-             <MenuItem mnemonicParsing="false" text="Account" />
-             <MenuItem mnemonicParsing="false" text="Notifications" />
-               <MenuItem mnemonicParsing="false" text="Logoff" />
-           </items>
-            <HBox.margin>
-               <Insets left="100.0" top="5.0" />
-            </HBox.margin>
-         </MenuButton>
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
+    <VBox alignment="TOP_CENTER" style="-fx-background-color: lightgrey;" VBox.vgrow="ALWAYS">
+        <HBox alignment="CENTER" prefHeight="74.0" prefWidth="904.0" style="-fx-background-color: white;">
+            <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="Your Mood" textAlignment="CENTER">
+                <font>
+                    <Font name="Wingdings" size="24.0" />
+                </font>
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+                <padding>
+                    <Insets left="10.0" />
+                </padding>
+            </Label>
+            <TextField prefHeight="20.0" prefWidth="300.0" promptText="Search...">
+                <HBox.margin>
+                    <Insets left="50.0" top="5.0" />
+                </HBox.margin>
+            </TextField>
+            <MenuButton mnemonicParsing="false" text="MenuButton">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Account" />
+                    <MenuItem mnemonicParsing="false" text="Notifications" />
+                    <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logoff" />
+                </items>
+                <HBox.margin>
+                    <Insets left="100.0" top="5.0" />
+                </HBox.margin>
+            </MenuButton>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
         </HBox>
 
-        <HBox>
+        <HBox alignment="TOP_CENTER">
          <ToolBar prefHeight="20.0" prefWidth="800.0">
-           <items>
                   <Button fx:id="startSessionButton" alignment="BOTTOM_LEFT" onAction="#onStartSession" text="Start Session" />
                   <Label fx:id="currentTime" />
-           </items>
             <HBox.margin>
                <Insets top="40.0" />
             </HBox.margin>
@@ -74,11 +77,86 @@
         </HBox>
 
         <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" HBox.hgrow="ALWAYS" />
-         <Button fx:id="endSessionButton" alignment="BOTTOM_LEFT" onAction="#onEndSessionButtonClick" text="End Session" disable="true">
-         <VBox.margin>
-            <Insets top="5.0" />
-         </VBox.margin>
-      </Button>
+        <HBox alignment="TOP_CENTER">
+              <Button fx:id="endSessionButton" alignment="CENTER" disable="true" onAction="#onEndSessionButtonClick" prefHeight="64.0" prefWidth="108.0" text="End Session" textAlignment="CENTER">
+            <font>
+               <Font size="16.0" />
+            </font>
+              </Button>
+            <ToolBar fx:id="moodToolBar" disable="true" prefHeight="63.0" prefWidth="692.0">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            <VBox alignment="TOP_CENTER" prefHeight="53.0" prefWidth="675.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Choose the face that best describes your mood!" />
+                     </children>
+                  </HBox>
+      
+                      <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="557.0" spacing="35.0">
+                          <CheckBox fx:id="mood1" mnemonicParsing="false" onAction="#onMood1Check">
+                              <graphic>
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood2" mnemonicParsing="false" onAction="#onMood2Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood3" mnemonicParsing="false" onAction="#onMood3Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood4" mnemonicParsing="false" onAction="#onMood4Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood5" mnemonicParsing="false" onAction="#onMood5Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood6" mnemonicParsing="false" onAction="#onMood6Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                          <CheckBox fx:id="mood7" mnemonicParsing="false" onAction="#onMood7Check">
+                              <graphic>
+      
+                                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                  </ImageView>
+                              </graphic>
+                     </CheckBox>
+                      </HBox>
+               </children>
+            </VBox>
+            </ToolBar>
+        </HBox>
+        
       <HBox.margin>
          <Insets />
       </HBox.margin>

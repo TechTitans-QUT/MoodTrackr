@@ -6,6 +6,7 @@ import com.example.moodtrackr.MoodInputApplication;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,76 +22,239 @@ import javafx.scene.control.Label;
 import javafx.util.Duration;
 import javafx.scene.layout.StackPane;
 
+import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 
 public class MoodInputPageController {
 
     @FXML
-    private Button DashboardButton;
+    private Button Dashboard;
     @FXML
-    private Button DataButton;
+    private Button Mood;
     @FXML
-    private Button CalendarButton;
+    private Button DataVisualisation;
     @FXML
-    private Button SettingsButton;
+    private Button Calendar;
     @FXML
-    private Button LogOffButton;
+    private Button Settings;
+    @FXML
+    private Button logout;
     @FXML
     private Button startSessionButton;
     @FXML
     private Button endSessionButton;
     @FXML
-    private Label currentTime;
+    private ToolBar moodToolBar;
     @FXML
-    private ImageView cryingFace;
+    public Label currentTime;
+    @FXML
+    private CheckBox mood1;
+    @FXML
+    private CheckBox mood2;
+    @FXML
+    private CheckBox mood3;
+    @FXML
+    private CheckBox mood4;
+    @FXML
+    private CheckBox mood5;
+    @FXML
+    private CheckBox mood6;
+    @FXML
+    private CheckBox mood7;
+
     private TimeTracker tracker;
     private Timeline timeline;
 
+    private boolean checked;
 
     @FXML
-    protected void onEndSessionButtonClick() throws IOException {
+    protected void onDashboardButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "hello-view.fxml");
+    }
+    @FXML
+    protected void onMoodButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml");
+    }
+    @FXML
+    protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "data-visualisation-page.fxml");
+    }
+    @FXML
+    protected void onCalendarButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml");
+    }
+    @FXML
+    protected void onSettingsButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml");
+    }
+    @FXML
+    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "login-view.fxml");
+    }
 
+
+    @FXML
+    private void onEndSessionButtonClick() {
         startSessionButton.setDisable(false); // disable start session
         endSessionButton.setDisable(true); // enable end session
+        moodToolBar.setDisable(true); // enable mood select
+
+        // uncheck boxes
+        mood1.setSelected(false);
+        mood2.setSelected(false);
+        mood3.setSelected(false);
+        mood4.setSelected(false);
+        mood5.setSelected(false);
+        mood6.setSelected(false);
+        mood7.setSelected(false);
+
+        // disable all check boxes
+        mood1.setDisable(true);
+        mood2.setDisable(true);
+        mood3.setDisable(true);
+        mood4.setDisable(true);
+        mood5.setDisable(true);
+        mood6.setDisable(true);
+        mood7.setDisable(true);
 
         currentTime.setText("Current Time: " + tracker.getCurrentTime());
         timeline.stop();
         tracker.stopTracking(); // stop tracking time
-
-//        Image cryFace = new Image(HelloApplication.getResourceAsStream("@/images/icons8-loudly-crying-face-48.png"));
-//        cryingFace.setImage(cryFace);
-
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(MoodInputApplication.class.getResource("mood-input.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), MoodInputApplication.WIDTH, MoodInputApplication.HEIGHT);
-        stage.setScene(scene);
-        stage.showAndWait();
-
-
-    }
-    @FXML
-    protected void onDashboardButtonClick() throws IOException {
-        Stage stage = (Stage) DashboardButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-        stage.setScene(scene);
-
     }
     @FXML
     private void onStartSession() {
         if (tracker.isTracking){
             currentTime.setText("Current Time: " + tracker.getCurrentTime());
             startSessionButton.setDisable(true); // disable start session
-            endSessionButton.setDisable(false); // enable end session
+            //endSessionButton.setDisable(false); // enable end session
+            moodToolBar.setDisable(false); // enable mood select
+
         }
+        else{
+            mood1.setDisable(false);
+            mood2.setDisable(false);
+            mood3.setDisable(false);
+            mood4.setDisable(false);
+            mood5.setDisable(false);
+            mood6.setDisable(false);
+            mood7.setDisable(false);
+        }
+
+
         tracker.startTracking();
 
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
     }
+    @FXML
+    private void onMood1Check() {
+        checked = mood1.isSelected();
+
+        endSessionButton.setDisable(!checked);
+
+        // disable other check boxes
+        //mood1.setDisable(checked);
+        mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        mood7.setDisable(checked);
+
+    }
+    @FXML
+    private void onMood2Check() {
+        checked = mood2.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        //mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        mood7.setDisable(checked);
+
+    }
+    @FXML
+    private void onMood3Check() {
+        checked = mood3.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        mood2.setDisable(checked);
+       //mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        mood7.setDisable(checked);
+
+    }
+    @FXML
+    private void onMood4Check() {
+        checked = mood4.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        //mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        mood7.setDisable(checked);
+    }
+    @FXML
+    private void onMood5Check() {
+        checked = mood5.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        //mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        mood7.setDisable(checked);
+
+    }
+    @FXML
+    private void onMood6Check() {
+        checked = mood6.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        //mood6.setDisable(checked);
+        mood7.setDisable(checked);
+
+    }
+    @FXML
+    private void onMood7Check() {
+        checked = mood7.isSelected();
+
+        endSessionButton.setDisable(!checked);
+        mood1.setDisable(checked);
+        mood2.setDisable(checked);
+        mood3.setDisable(checked);
+        mood4.setDisable(checked);
+        mood5.setDisable(checked);
+        mood6.setDisable(checked);
+        //mood7.setDisable(checked);
+
+    }
 
     public void initialize() {
+
         tracker = new TimeTracker();
 
         timeline = new Timeline(

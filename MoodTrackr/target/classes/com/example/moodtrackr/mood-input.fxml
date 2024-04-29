@@ -12,16 +12,13 @@
 
     <Label text="Please select the face that describes your mood the best!" />
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-      <children>
-         <ImageView fx:id="cryingFace" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
-
-         <Button mnemonicParsing="false" text="Button" />
-         <Button mnemonicParsing="false" text="Button" />
-         <Button mnemonicParsing="false" text="Button" />
-         <Button mnemonicParsing="false" text="Button" />
-         <Button mnemonicParsing="false" text="Button" />
-         <Button mnemonicParsing="false" text="Button" />
-      </children>
+       <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true"/>
+       <Button mnemonicParsing="false" text="Button" />
+       <Button mnemonicParsing="false" text="Button" />
+       <Button mnemonicParsing="false" text="Button" />
+       <Button mnemonicParsing="false" text="Button" />
+       <Button mnemonicParsing="false" text="Button" />
+       <Button mnemonicParsing="false" text="Button" />
    </HBox>
 
 </VBox>
