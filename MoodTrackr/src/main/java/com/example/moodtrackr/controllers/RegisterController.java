@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,11 +32,15 @@ public class RegisterController {
     @FXML
     private PasswordField passwordPasswordField;
     @FXML
+    private PasswordField confirmPasswordField;
+    @FXML
     private CheckBox debugCheckBox;
     @FXML
     private Button deleteButton;
     @FXML
     private Button editConfirmButton;
+    @FXML
+    private VBox logoContainer;
 
     public RegisterController() {
         userDAO = new SqliteUserDAO();
@@ -101,11 +106,17 @@ public class RegisterController {
         // Check for mandatory inputs
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() &&
                 !passwordPasswordField.getText().isBlank() && !emailTextField.getText().isBlank()) {
-            User newUser = new User(firstNameTextField.getText(), lastNameTextField.getText(),
-                    emailTextField.getText(), passwordPasswordField.getText());
-            userDAO.addUser(newUser);
-            errorLabel.setText("User Registered Successfully!");
-            syncUsers();
+
+            if (passwordPasswordField.getText().equals(confirmPasswordField.getText())) {
+                errorLabel.setText("You are set");
+                User newUser = new User(firstNameTextField.getText(), lastNameTextField.getText(),
+                        emailTextField.getText(), passwordPasswordField.getText());
+                userDAO.addUser(newUser);
+                errorLabel.setText("User Registered Successfully!");
+                syncUsers();
+            } else {
+                errorLabel.setText("Password does not match");
+            }
         } else {
             errorLabel.setText("Missing Mandatory field");
         }
@@ -140,6 +151,7 @@ public class RegisterController {
         usersListView.setVisible(accepted);
         deleteButton.setVisible(accepted);
         editConfirmButton.setVisible(accepted);
+        logoContainer.setVisible(!accepted);
     }
 
     @FXML
