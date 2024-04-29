@@ -10,19 +10,19 @@ import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 public class BaseUITemplate {
     @FXML
-    private Button DashboardButton;
+    private Button Dashboard;
     @FXML
-    private Button MoodButton;
+    private Button Mood;
     @FXML
-    private Button DataVisualisationButton;
+    private Button DataVisualisation;
     @FXML
-    private Button CalendarButton;
+    private Button Calendar;
     @FXML
-    private Button SettingsButton;
+    private Button Settings;
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        ButtonNav(button, "hello-view.fxml");
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
@@ -32,7 +32,7 @@ public class BaseUITemplate {
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        ButtonNav(button, "data-visualisation-page.fxml");
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
