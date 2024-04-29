@@ -12,7 +12,7 @@ public class DataVisualisationApplication extends Application {
     public static final int width = 1075;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("data-visualisation.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("data-visualisation-page.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), width, height);
         stage.setTitle(Title);
         stage.setScene(scene);

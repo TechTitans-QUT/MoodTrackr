@@ -1,4 +1,4 @@
-module com.example.addressbook.moodtrackr {
+module com.example.moodtrackr.moodtrackr {
     requires javafx.controls;
     requires javafx.fxml;
 
