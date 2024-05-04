@@ -15,7 +15,7 @@ public class RegisterApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
 //        String stylesheet = Objects.requireNonNull(RegisterApplication.class.getResource("stylesheet.css")).toExternalForm();
 //        scene.getStylesheets().add(stylesheet);
         stage.setTitle(TITLE);
