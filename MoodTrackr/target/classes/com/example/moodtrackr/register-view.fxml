@@ -6,72 +6,114 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.RegisterController">
+<BorderPane prefHeight="680.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.RegisterController">
     <left>
-        <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
-            <VBox>
+        <AnchorPane prefHeight="680.0" prefWidth="485.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="680.0" prefWidth="485.0">
                 <ListView fx:id="usersListView" visible="false" />
             </VBox>
-            <VBox fx:id="logoContainer" alignment="CENTER" prefHeight="300.0" prefWidth="245.0" visible="true">
-                <Label alignment="CENTER" prefHeight="40.0" prefWidth="230.0" text="MoodTrackr" textFill="WHITE">
+            <VBox fx:id="logoContainer" alignment="CENTER" prefHeight="680.0" prefWidth="485.0" visible="true">
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="485.0" text="MoodTrackr" textFill="WHITE">
                     <font>
-                        <Font name="Verdana Bold" size="24.0" />
+                        <Font name="Verdana Bold" size="36.0" />
                     </font>
                 </Label>
-                <Line endX="100.0" startX="-100.0" stroke="WHITE" strokeWidth="2.0">
+                <Line endX="150.0" startX="-150.0" stroke="WHITE" strokeWidth="2.0">
                     <effect>
                         <DropShadow />
                     </effect>
                 </Line>
-                <Label alignment="CENTER" prefHeight="38.0" prefWidth="227.0" text="Web Application" textFill="WHITE">
+                <Label alignment="CENTER" prefHeight="40.0" prefWidth="485.0" text="Web Application" textFill="WHITE">
                     <font>
-                        <Font name="Apple Braille Outline 6 Dot" size="18.0" />
+                        <Font name="Apple Braille Outline 6 Dot" size="24.0" />
                     </font>
                 </Label>
             </VBox>
         </AnchorPane>
     </left>
     <right>
-        <AnchorPane prefHeight="400.0" prefWidth="290.0">
-            <Label alignment="CENTER" layoutY="58.0" prefHeight="17.0" prefWidth="332.0" text="User Registration">
+        <AnchorPane prefHeight="680.0" prefWidth="590.0">
+            <Label alignment="CENTER" layoutX="4.0" layoutY="69.0" prefHeight="30.0" prefWidth="590.0" text="User Registration">
                 <effect>
                     <InnerShadow />
                 </effect>
                 <font>
-                    <Font name="Apple Braille" size="24.0" />
+                    <Font name="Apple Braille" size="36.0" />
                 </font>
             </Label>
-            <VBox alignment="CENTER" layoutY="280.0" prefHeight="83.0" spacing="10.0">
-                <Label fx:id="errorLabel" textFill="RED" />
-                <HBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" prefWidth="332.0" spacing="10.0">
-                    <Button layoutX="116.0" layoutY="267.0" onAction="#onRegisterButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: Black;" text="Register" textFill="WHITE" />
-                    <Button onAction="#onCancelButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: Black;" text="Cancel" textFill="WHITE" />
+            <VBox alignment="CENTER" layoutX="5.0" layoutY="422.0" prefHeight="150.0" spacing="10.0">
+                <Label fx:id="errorLabel" text="test" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+                <HBox alignment="CENTER" layoutY="250.0" prefHeight="100.0" prefWidth="590.0" spacing="20.0">
+                    <Button onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Register" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Button>
+                    <Button onAction="#onCancelButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Cancel" textFill="WHITE">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Button>
                 </HBox>
-                <HBox alignment="CENTER" layoutY="250.0" prefHeight="83.0" prefWidth="332.0">
-                    <Label layoutX="63.0" layoutY="324.0" text="Already has an account?" />
+                <HBox alignment="CENTER" layoutY="250.0" prefWidth="590.0">
+                    <Label layoutX="63.0" layoutY="324.0" text="Already has an account?">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
                     <Button fx:id="loginButton" layoutX="197.0" layoutY="320.0" onAction="#onLoginButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="#0f07fc" underline="true">
                         <font>
-                            <Font name="Arial Rounded MT Bold" size="13.0" />
+                            <Font name="Arial Rounded MT Bold" size="14.0" />
                         </font>
                     </Button>
                 </HBox>
             </VBox>
-            <HBox alignment="CENTER" layoutY="120.0" prefHeight="83.0" prefWidth="332.0" spacing="10.0">
-                <GridPane hgap="5.0" vgap="5.0">
+            <HBox alignment="CENTER" layoutX="7.0" layoutY="158.0" prefWidth="590.0" spacing="10.0">
+                <GridPane hgap="10.0" prefHeight="243.0" prefWidth="400.0" vgap="10.0">
                     <columnConstraints>
                         <ColumnConstraints minWidth="70" />
                         <ColumnConstraints hgrow="ALWAYS" />
                     </columnConstraints>
-                    <Label alignment="CENTER" text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                    <Label alignment="CENTER" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                    <Label alignment="CENTER" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                    <Label alignment="CENTER" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                    <Label alignment="CENTER" text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                    <TextField fx:id="firstNameTextField" maxWidth="Infinity" promptText="Fisrst Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                    <TextField fx:id="lastNameTextField" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <TextField fx:id="emailTextField" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <PasswordField fx:id="passwordPasswordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                    <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <Label alignment="CENTER" prefWidth="200.0" text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                    <Label alignment="CENTER" prefWidth="200.0" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                    <Label alignment="CENTER" prefWidth="200.0" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                    <Label alignment="CENTER" prefWidth="200.0" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                    <Label alignment="CENTER" prefWidth="200.0" text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="18.0" />
+                  </font></Label>
+                    <TextField fx:id="firstNameTextField" maxWidth="Infinity" promptText="Fisrst Name" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <font>
+                     <Font size="18.0" />
+                  </font></TextField>
+                    <TextField fx:id="lastNameTextField" promptText="Last Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="18.0" />
+                  </font></TextField>
+                    <TextField fx:id="emailTextField" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="18.0" />
+                  </font></TextField>
+                    <PasswordField fx:id="passwordPasswordField" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="18.0" />
+                  </font></PasswordField>
+                    <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <font>
+                     <Font size="18.0" />
+                  </font></PasswordField>
                     <rowConstraints>
                         <RowConstraints />
                         <RowConstraints />
