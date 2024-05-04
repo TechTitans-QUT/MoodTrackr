@@ -107,7 +107,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-tear-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
@@ -115,7 +115,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-sad-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
@@ -123,7 +123,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-neutral-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
@@ -131,7 +131,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-slightlyhappy-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
@@ -139,7 +139,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-happy-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
@@ -147,7 +147,7 @@
                               <graphic>
       
                                   <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                          <Image url="@../../../images/icons8-loudly-crying-face-48.png" />
+                                          <Image url="@../../../images/icons8-veryhappy-face-48.png" />
                                   </ImageView>
                               </graphic>
                      </CheckBox>
