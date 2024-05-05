@@ -65,7 +65,9 @@ public class MoodInputPageController {
     private TimeTracker tracker;
     private Timeline timeline;
 
+    private int mood;
     private boolean checked;
+
 
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
@@ -156,7 +158,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood1Check() {
         checked = mood1.isSelected();
-
+        mood = 1;
         endSessionButton.setDisable(!checked);
 
         // disable other check boxes
@@ -172,6 +174,8 @@ public class MoodInputPageController {
     @FXML
     private void onMood2Check() {
         checked = mood2.isSelected();
+        mood = 2;
+
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
@@ -186,6 +190,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood3Check() {
         checked = mood3.isSelected();
+        mood = 3;
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
@@ -200,6 +205,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood4Check() {
         checked = mood4.isSelected();
+        mood = 4;
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
@@ -213,6 +219,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood5Check() {
         checked = mood5.isSelected();
+        mood = 5;
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
@@ -227,6 +234,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood6Check() {
         checked = mood6.isSelected();
+        mood = 6;
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
@@ -241,6 +249,7 @@ public class MoodInputPageController {
     @FXML
     private void onMood7Check() {
         checked = mood7.isSelected();
+        mood = 7;
 
         endSessionButton.setDisable(!checked);
         mood1.setDisable(checked);
