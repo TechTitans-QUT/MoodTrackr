@@ -33,7 +33,7 @@
     </left>
     <right>
         <AnchorPane prefHeight="680.0" prefWidth="590.0">
-            <Label alignment="CENTER" layoutX="4.0" layoutY="69.0" prefHeight="30.0" prefWidth="590.0" text="User Registration">
+            <Label alignment="CENTER" layoutX="4.0" layoutY="70.0" prefHeight="30.0" prefWidth="590.0" text="User Registration">
                 <effect>
                     <InnerShadow />
                 </effect>
@@ -41,10 +41,10 @@
                     <Font name="Apple Braille" size="36.0" />
                 </font>
             </Label>
-            <VBox alignment="CENTER" layoutX="5.0" layoutY="422.0" prefHeight="150.0" spacing="10.0">
-                <Label fx:id="errorLabel" text="test" textFill="RED">
+            <VBox alignment="CENTER" layoutX="5.0" layoutY="425.0" prefHeight="150.0" spacing="10.0">
+                <Label fx:id="errorLabel" textFill="RED">
                <font>
-                  <Font size="18.0" />
+                  <Font size="20.0" />
                </font></Label>
                 <HBox alignment="CENTER" layoutY="250.0" prefHeight="100.0" prefWidth="590.0" spacing="20.0">
                     <Button onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Register" textFill="WHITE">
@@ -69,28 +69,28 @@
                 </HBox>
             </VBox>
             <HBox alignment="CENTER" layoutX="7.0" layoutY="158.0" prefWidth="590.0" spacing="10.0">
-                <GridPane hgap="10.0" prefHeight="243.0" prefWidth="400.0" vgap="10.0">
+                <GridPane hgap="10.0" prefHeight="243.0" prefWidth="350.0" vgap="20.0">
                     <columnConstraints>
                         <ColumnConstraints minWidth="70" />
                         <ColumnConstraints hgrow="ALWAYS" />
                     </columnConstraints>
-                    <Label alignment="CENTER" prefWidth="200.0" text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Label alignment="CENTER" prefWidth="100.0" text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
                   <font>
                      <Font size="18.0" />
                   </font></Label>
-                    <Label alignment="CENTER" prefWidth="200.0" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Label alignment="CENTER" prefWidth="100.0" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1">
                   <font>
                      <Font size="18.0" />
                   </font></Label>
-                    <Label alignment="CENTER" prefWidth="200.0" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <Label alignment="CENTER" prefWidth="100.0" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="2">
                   <font>
                      <Font size="18.0" />
                   </font></Label>
-                    <Label alignment="CENTER" prefWidth="200.0" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                    <Label alignment="CENTER" prefWidth="100.0" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="3">
                   <font>
                      <Font size="18.0" />
                   </font></Label>
-                    <Label alignment="CENTER" prefWidth="200.0" text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                    <Label alignment="CENTER" prefWidth="100.0" text="Confirm:" GridPane.columnIndex="0" GridPane.rowIndex="4">
                   <font>
                      <Font size="18.0" />
                   </font></Label>
@@ -124,7 +124,7 @@
                 </GridPane>
             </HBox>
             <HBox>
-                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" />
+                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" visible="false" />
                 <Button fx:id="deleteButton" maxWidth="Infinity" onAction="#onDelete" text="Delete" visible="false" />
                 <Button fx:id="editConfirmButton" onAction="#onEditConfirm" text="Confirm" visible="false" />
             </HBox>
