@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<HBox style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+
+    <fx:include fx:id="sidebarTemplate" source="sidebar.fxml" />
+    <fx:include fx:id="bodyTemplate" source="bodytemplate.fxml" />
+
+</HBox>
