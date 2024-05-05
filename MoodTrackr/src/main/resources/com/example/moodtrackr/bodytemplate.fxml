@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox fx:id="bodyTemplate" alignment="CENTER" prefHeight="600" prefWidth="1000" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.DataVisualisationController">
+    <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="Dashboard" textAlignment="CENTER">
+        <font>
+            <Font name="Wingdings" size="24.0" />
+        </font>
+        <HBox.margin>
+            <Insets left="20.0" />
+        </HBox.margin>
+        <padding>
+            <Insets left="10.0" />
+        </padding>
+    </Label>
+    <TextField prefHeight="20.0" prefWidth="300.0" promptText="Search...">
+        <HBox.margin>
+            <Insets left="50.0" top="5.0" />
+        </HBox.margin>
+    </TextField>
+    <MenuButton mnemonicParsing="false" text="MenuButton">
+        <items>
+            <MenuItem mnemonicParsing="false" text="Account" />
+            <MenuItem mnemonicParsing="false" text="Notifications" />
+            <MenuItem mnemonicParsing="false" text="Logoff" />
+        </items>
+        <HBox.margin>
+            <Insets left="100.0" top="5.0" />
+        </HBox.margin>
+    </MenuButton>
+    <VBox.margin>
+        <Insets />
+    </VBox.margin>
