@@ -76,7 +76,7 @@
          </ToolBar>
         </HBox>
 
-        <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" HBox.hgrow="ALWAYS" />
+        <ListView fx:id="sessionsListView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" HBox.hgrow="ALWAYS" />
         <HBox alignment="TOP_CENTER">
               <Button fx:id="endSessionButton" alignment="CENTER" disable="true" onAction="#onEndSessionButtonClick" prefHeight="64.0" prefWidth="108.0" text="End Session" textAlignment="CENTER">
             <font>

@@ -1,6 +1,5 @@
 package com.example.moodtrackr.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SessionManager {
@@ -18,7 +17,7 @@ public class SessionManager {
         if (query == null || query.isEmpty()) return true;
         query = query.toLowerCase();
         String searchString = session.getMood()
-                + " " + session.getTime()
+                + " " + session.getSessionTime()
                 + " " + session.getLocalTime();
         return searchString.toLowerCase().contains(query);
     }
