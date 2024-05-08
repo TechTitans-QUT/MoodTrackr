@@ -7,7 +7,7 @@ import java.util.List;
 public class SqliteSessionDAO implements ISessionDAO {
     private final Connection connection;
     public SqliteSessionDAO() {
-        connection = SqliteConnection.getInstance();
+        connection = SqliteSessionConnection.getInstance();
         createTable();
 //        insertSampleData();
     }
@@ -49,13 +49,12 @@ public class SqliteSessionDAO implements ISessionDAO {
     @Override
     public void addSession(Session session) {
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status) VALUES (?, ?, ?, ?)");
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
             statement.setInt(4, session.getStatus());
             statement.executeUpdate();
-
             // set id for new session
             ResultSet generatedKeys = statement.getGeneratedKeys();
             if (generatedKeys.next()) {

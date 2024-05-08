@@ -3,11 +3,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class SqliteConnection {
+public class SqliteSessionConnection {
     private static Connection instance = null;
 
-    private SqliteConnection() {
-        String url = "jdbc:sqlite:MoodTrackr/src/main/resources/Database/users.db";
+    private SqliteSessionConnection() {
+        String url = "jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db";
         try {
             instance = DriverManager.getConnection(url);
         } catch (SQLException sqlEx) {
@@ -17,7 +17,7 @@ public class SqliteConnection {
 
     public static Connection getInstance() {
         if (instance == null) {
-            new SqliteConnection();
+            new SqliteSessionConnection();
         }
         return instance;
     }
