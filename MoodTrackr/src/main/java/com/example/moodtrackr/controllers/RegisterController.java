@@ -1,5 +1,6 @@
 package com.example.moodtrackr.controllers;
 
+import com.example.moodtrackr.HelloApplication;
 import com.example.moodtrackr.RegisterApplication;
 import com.example.moodtrackr.model.IUserDAO;
 import com.example.moodtrackr.model.SqliteUserDAO;
@@ -126,7 +127,7 @@ public class RegisterController {
     protected void onLoginButtonClick() throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), RegisterApplication.WIDTH, RegisterApplication.HEIGHT);
+        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setTitle("Login Page");
         stage.setScene(scene);
     }
