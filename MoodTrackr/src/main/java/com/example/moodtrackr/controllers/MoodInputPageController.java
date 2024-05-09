@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.util.List;
 
 import javafx.scene.control.Label;
 import javafx.util.Duration;
@@ -57,7 +58,7 @@ public class MoodInputPageController {
 
     @FXML
     private ListView<Session> sessionsListView;
-    private ISessionDAO sessionDAO;
+    //    private ISessionDAO sessionDAO;
     @FXML
     private SessionManager sessionManager;
     @FXML
@@ -71,8 +72,11 @@ public class MoodInputPageController {
     @FXML
     private VBox sessionContainer;
 
-    public MoodInputPageController() { sessionDAO = (new MockSessionDAO());
-        sessionManager = new SessionManager(new MockSessionDAO());
+    public MoodInputPageController() {
+
+//        sessionDAO = (new MockSessionDAO());
+//        sessionManager = new SessionManager(new MockSessionDAO());
+        sessionManager = new SessionManager(new SqliteSessionDAO());
     }
 
     private TimeTracker tracker;
@@ -144,7 +148,9 @@ public class MoodInputPageController {
 
     private void syncSessions() {
         sessionsListView.getItems().clear();
-        sessionsListView.getItems().addAll(sessionDAO.getAllSessions());
+//        sessionsListView.getItems().addAll(sessionDAO.getAllSessions());
+        List<Session> sessions = sessionManager.getAllSessions();
+        sessionsListView.getItems().addAll(sessions);
     }
 
     @FXML
@@ -181,12 +187,13 @@ public class MoodInputPageController {
 
     @FXML
     private void onEndSessionButtonClick() {
-        startSessionButton.setDisable(false); // disable start session
-        endSessionButton.setDisable(true); // enable end session
-        moodToolBar.setDisable(true); // enable mood select
-
-        // uncheck boxes
+        startSessionButton.setDisable(false);
+        endSessionButton.setDisable(true);
+        moodToolBar.setDisable(true);
+        // disable and uncheck boxes
+        disableMoodCheckBoxes(true);
         setMoodCheckBoxes(false);
+
 
         currentTime.setText("Current Time: " + tracker.getCurrentTime());
         timeline.stop();
@@ -200,7 +207,7 @@ public class MoodInputPageController {
 
         Session newSession = new Session(sessionTime, mood, localTime, status);
         sessionManager.addSession(newSession);
-        sessionDAO.addSession(newSession);
+//        sessionDAO.addSession(newSession);
         syncSessions();
 
     }
@@ -214,6 +221,7 @@ public class MoodInputPageController {
         }
         else{
             setMoodCheckBoxes(false);
+            disableMoodCheckBoxes(false);
         }
 
         tracker.startTracking();
