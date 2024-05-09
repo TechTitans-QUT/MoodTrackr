@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -14,6 +16,8 @@ import java.io.IOException;
 import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 public class BaseUITemplate {
+    public HBox searchbar;
+    public VBox sidebar;
     @FXML
     private Button Dashboard;
     @FXML
