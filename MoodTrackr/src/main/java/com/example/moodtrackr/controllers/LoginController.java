@@ -6,9 +6,9 @@ import com.example.moodtrackr.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class LoginController {
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
             if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText())) {
                 loginMessage.setText("Welcome!");
-                Stage stage = (Stage) loginButton.getScene().getWindow();
+                Stage stage = (Stage) loginMessage.getScene().getWindow();
                 FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("hello-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 1075, 680);
                 stage.setTitle("Dashboard");

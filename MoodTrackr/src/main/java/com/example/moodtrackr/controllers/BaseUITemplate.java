@@ -1,15 +1,10 @@
 package com.example.moodtrackr.controllers;
 
-import com.example.moodtrackr.HelloApplication;
-import com.example.moodtrackr.RegisterApplication;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -30,6 +25,21 @@ public class BaseUITemplate {
     private Button Settings;
     @FXML
     private Button logout;
+
+    public BaseUITemplate() {
+        init();
+    }
+
+    @FXML
+    protected void init() {
+        try {
+            System.out.println("NO Error");
+        } catch (Exception e) {
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+    }
+
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event

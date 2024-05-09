@@ -35,4 +35,10 @@ public interface IUserDAO {
     List<User> getAllUsers();
 
     Boolean verifyUser(String firstName, String lastName, String password);
+
+    int getUserId(String firstName, String lastName, String password);
+
+    void setCurrentUser(String user);
+
+    String getCurrentUser();
 }
