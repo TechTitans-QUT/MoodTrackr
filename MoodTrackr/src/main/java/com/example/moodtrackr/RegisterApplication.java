@@ -10,8 +10,6 @@ import java.io.IOException;
 public class RegisterApplication extends Application {
     // Constants defining the window title and size
     public static final String TITLE = "Register Page";
-    public static final int WIDTH = 560;
-    public static final int HEIGHT = 400;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("register-view.fxml"));

@@ -32,12 +32,10 @@ public class BaseUITemplate {
     private Label titleLabel;
     @FXML
     private MenuButton menuButton;
-    private User current;
 
     @FXML
     protected void init(User current) {
-        String username = current.getFullName();
-        titleLabel.setText("Welcome " + username);
+        titleLabel.setText("Welcome " + current.getFirstName());
         menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
 
