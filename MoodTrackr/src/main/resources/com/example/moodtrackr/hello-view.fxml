@@ -34,7 +34,7 @@
     </VBox>
     <VBox alignment="TOP_CENTER" style="-fx-background-color: lightgrey;" VBox.vgrow="ALWAYS">
         <HBox alignment="CENTER" prefHeight="74.0" prefWidth="904.0" style="-fx-background-color: white;">
-            <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="Dashboard" textAlignment="CENTER">
+            <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="Dashboard" textAlignment="CENTER" wrapText="true">
                 <font>
                     <Font name="Wingdings" size="24.0" />
                 </font>
@@ -50,7 +50,7 @@
                     <Insets left="50.0" top="5.0" />
                 </HBox.margin>
             </TextField>
-            <MenuButton fx:id="menuButton" mnemonicParsing="false" text="MenuButton">
+            <MenuButton fx:id="menuButton" mnemonicParsing="false" text="MenuButton" wrapText="true">
                 <items>
                     <MenuItem mnemonicParsing="false" text="Account" />
                     <MenuItem mnemonicParsing="false" text="Notifications" />

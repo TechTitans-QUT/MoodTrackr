@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 
 import static com.example.moodtrackr.NavigationMethods.ButtonNav;
+import static com.example.moodtrackr.NavigationMethods.NewButtonNav;
 
 public class BaseUITemplate {
     public HBox searchbar;
@@ -32,9 +33,11 @@ public class BaseUITemplate {
     private Label titleLabel;
     @FXML
     private MenuButton menuButton;
+    private User currentAccount;
 
     @FXML
-    protected void init(User current) {
+    public void init(User current) {
+        currentAccount = current;
         titleLabel.setText("Welcome " + current.getFirstName());
         menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
@@ -42,7 +45,8 @@ public class BaseUITemplate {
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "hello-view.fxml");
+//        ButtonNav(button, "hello-view.fxml");
+        NewButtonNav(button, "hello-view.fxml", currentAccount);
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
