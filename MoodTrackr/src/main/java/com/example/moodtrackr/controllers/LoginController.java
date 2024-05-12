@@ -53,7 +53,7 @@ public class LoginController {
                 loginMessage.setText("Invalid");
             }
         } else {
-            loginMessage.setText("Mandatory filed are empty");
+            loginMessage.setText("Mandatory fields are empty");
         }
     }
 
