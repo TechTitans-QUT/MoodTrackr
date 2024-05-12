@@ -1,8 +1,11 @@
 package com.example.moodtrackr.controllers;
 
+import com.example.moodtrackr.model.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -25,19 +28,17 @@ public class BaseUITemplate {
     private Button Settings;
     @FXML
     private Button logout;
-
-    public BaseUITemplate() {
-        init();
-    }
+    @FXML
+    private Label titleLabel;
+    @FXML
+    private MenuButton menuButton;
+    private User current;
 
     @FXML
-    protected void init() {
-        try {
-            System.out.println("NO Error");
-        } catch (Exception e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
+    protected void init(User current) {
+        String username = current.getFullName();
+        titleLabel.setText("Welcome " + username);
+        menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
 
     @FXML

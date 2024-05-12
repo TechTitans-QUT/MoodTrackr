@@ -168,16 +168,4 @@ public class SqliteUserDAO implements IUserDAO {
         }
         return 0;
     }
-
-    @Override
-    public void setCurrentUser(String username) {
-        currentUserName = username;
-    }
-
-    @Override
-    public String getCurrentUser() {
-        return currentUserName;
-    }
-
-
 }
