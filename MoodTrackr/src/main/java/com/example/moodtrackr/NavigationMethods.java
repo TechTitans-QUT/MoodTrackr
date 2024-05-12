@@ -11,14 +11,14 @@ import java.io.IOException;
 public class NavigationMethods {
     public static void ButtonNav(Button buttonName, String fxmlFile) throws IOException {
         Stage stage = (Stage) buttonName.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxmlFile));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(fxmlFile));
+        Scene scene = new Scene(fxmlLoader.load(), MainApplication.WIDTH, MainApplication.HEIGHT);
         stage.setScene(scene);
     }
 
     public static void NewButtonNav(Button buttonName, String fxmlFile, User user) throws IOException {
         Stage stage = (Stage) buttonName.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(fxmlFile));
+        FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource(fxmlFile));
         Parent root = loader.load();
         BaseUITemplate baseUITemplate = loader.getController();
         baseUITemplate.init(user);

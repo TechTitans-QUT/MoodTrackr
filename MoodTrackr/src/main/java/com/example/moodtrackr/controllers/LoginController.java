@@ -1,7 +1,6 @@
 package com.example.moodtrackr.controllers;
 
-import com.example.moodtrackr.HelloApplication;
-import com.example.moodtrackr.RegisterApplication;
+import com.example.moodtrackr.MainApplication;
 import com.example.moodtrackr.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +40,7 @@ public class LoginController {
                 // Find User
                 User current = userDAO.getUser(id);
                 Stage stage = (Stage) loginMessage.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(RegisterApplication.class.getResource("hello-view.fxml"));
+                FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
                 Parent root = loader.load();
                 BaseUITemplate baseUITemplate = loader.getController();
                 baseUITemplate.init(current);
@@ -60,8 +59,8 @@ public class LoginController {
     @FXML
     public void onRegisterButtonClick() throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(RegisterApplication.class.getResource("register-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("register-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), MainApplication.WIDTH, MainApplication.HEIGHT);
         stage.setTitle("Register Page");
         stage.setScene(scene);
     }
