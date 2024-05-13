@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="UserTest" time="0.153" tests="10" errors="10" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="UserTest" time="0.075" tests="10" errors="10" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/test-classes:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/xerial/sqlite-jdbc/3.45.3.0/sqlite-jdbc-3.45.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr\target\test-classes;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\xerial\sqlite-jdbc\3.45.3.0\sqlite-jdbc-3.45.3.0.jar;C:\Users\JoshK\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
-    <property name="os.name" value="Mac OS X"/>
+    <property name="user.timezone" value="Australia/Brisbane"/>
+    <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/surefire 2024-05-13T13-26-59_151-jvmRun1 surefire-20240513132659721_1tmp surefire_0-20240513132659721_2tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.boot.library.path" value="C:\Users\JoshK\.jdks\corretto-21.0.3\bin"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter C:\Users\JoshK\AppData\Local\Temp\surefire16181891261955803105 2024-05-13T14-04-32_544-jvmRun1 surefire-20240513140434107_1tmp surefire_0-20240513140434107_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/test-classes:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/xerial/sqlite-jdbc/3.45.3.0/sqlite-jdbc-3.45.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:"/>
+    <property name="surefire.test.class.path" value="C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr\target\test-classes;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\xerial\sqlite-jdbc\3.45.3.0\sqlite-jdbc-3.45.3.0.jar;C:\Users\JoshK\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/ibukisuzuki"/>
-    <property name="user.language" value="ja"/>
+    <property name="user.home" value="C:\Users\JoshK"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="jdk.module.path" value="/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/classes:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/controlsfx/controlsfx/11.1.2/controlsfx-11.1.2.jar:/Users/ibukisuzuki/.m2/repository/com/dlsc/formsfx/formsfx-core/11.6.0/formsfx-core-11.6.0.jar"/>
-    <property name="java.version.date" value="2024-01-16"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home"/>
-    <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr"/>
+    <property name="jdk.module.path" value="C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr\target\classes;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6-win.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6-win.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6-win.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6-win.jar;C:\Users\JoshK\.m2\repository\org\controlsfx\controlsfx\11.1.2\controlsfx-11.1.2.jar;C:\Users\JoshK\.m2\repository\com\dlsc\formsfx\formsfx-core\11.6.0\formsfx-core-11.6.0.jar"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="C:\Users\JoshK\.jdks\corretto-21.0.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-api/3.1.2/surefire-api-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-booter/3.1.2/surefire-booter-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-extensions-spi/3.1.2/surefire-extensions-spi-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-logger-api/3.1.2/surefire-logger-api-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-shared-utils/3.1.2/surefire-shared-utils-3.1.2.jar:/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/test-classes:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/Users/ibukisuzuki/.m2/repository/org/xerial/sqlite-jdbc/3.45.3.0/sqlite-jdbc-3.45.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/surefire-junit-platform/3.1.2/surefire-junit-platform-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/apache/maven/surefire/common-java5/3.1.2/common-java5-3.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-api\3.1.2\surefire-api-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-booter\3.1.2\surefire-booter-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-extensions-spi\3.1.2\surefire-extensions-spi-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-logger-api\3.1.2\surefire-logger-api-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-shared-utils\3.1.2\surefire-shared-utils-3.1.2.jar;C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr\target\test-classes;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\JoshK\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\JoshK\.m2\repository\org\xerial\sqlite-jdbc\3.45.3.0\sqlite-jdbc-3.45.3.0.jar;C:\Users\JoshK\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\surefire-junit-platform\3.1.2\surefire-junit-platform-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\apache\maven\surefire\common-java5\3.1.2\common-java5-3.1.2.jar;C:\Users\JoshK\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.0\junit-platform-launcher-1.10.0.jar"/>
+    <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="21.0.2+13-LTS"/>
-    <property name="user.name" value="ibukisuzuki"/>
-    <property name="stdout.encoding" value="UTF-8"/>
-    <property name="path.separator" value=":"/>
-    <property name="os.version" value="12.7.4"/>
+    <property name="java.runtime.version" value="21.0.3+9-LTS"/>
+    <property name="user.name" value="JoshK"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Corretto-21.0.2.13.1"/>
-    <property name="localRepository" value="/Users/ibukisuzuki/.m2/repository"/>
+    <property name="java.vendor.version" value="Corretto-21.0.3.9.1"/>
+    <property name="localRepository" value="C:\Users\JoshK\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-21/issues/"/>
-    <property name="java.io.tmpdir" value="/var/folders/4j/dc1g88_d797cgy9bqm0ftbc00000gn/T/"/>
+    <property name="java.io.tmpdir" value="C:\Users\JoshK\AppData\Local\Temp\"/>
     <property name="idea.version" value="2023.3.4"/>
-    <property name="java.version" value="21.0.2"/>
-    <property name="user.dir" value="/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr"/>
-    <property name="os.arch" value="x86_64"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="C:\Users\JoshK\Documents\GitHub\MoodTrackr\MoodTrackr"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="native.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/ibukisuzuki/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\JoshK\.jdks\corretto-21.0.3\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\JoshK\AppData\Local\Programs\Python\Launcher\;C:\Users\JoshK\AppData\Local\Microsoft\WindowsApps;C:\Users\JoshK\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\JoshK\AppData\Local\GitHubDesktop\bin;."/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Amazon.com Inc."/>
-    <property name="java.vm.version" value="21.0.2+13-LTS"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.vm.version" value="21.0.3+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetEmail" classname="UserTest" time="0.05">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testGetEmail" classname="UserTest" time="0.006">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -69,15 +70,15 @@
 ]]></error>
   </testcase>
   <testcase name="testGetPhone" classname="UserTest" time="0.004">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testSetFirstName" classname="UserTest" time="0.005">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testSetFirstName" classname="UserTest" time="0.006">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
@@ -85,55 +86,55 @@
 ]]></error>
   </testcase>
   <testcase name="testGetFullName" classname="UserTest" time="0.002">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testGetId" classname="UserTest" time="0.005">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testGetId" classname="UserTest" time="0.002">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testSetLastName" classname="UserTest" time="0.003">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testSetLastName" classname="UserTest" time="0.007">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testGetLastName" classname="UserTest" time="0.002">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testGetLastName" classname="UserTest" time="0.005">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testGetFirstName" classname="UserTest" time="0.003">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testGetFirstName" classname="UserTest" time="0.002">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testSetEmail" classname="UserTest" time="0.003">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testSetEmail" classname="UserTest" time="0.001">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ]]></error>
   </testcase>
-  <testcase name="testSetPhone" classname="UserTest" time="0.002">
-    <error message="class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+  <testcase name="testSetPhone" classname="UserTest" time="0.004">
+    <error message="class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363" type="java.lang.IllegalAccessError"><![CDATA[java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

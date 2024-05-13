@@ -11,7 +11,7 @@
             <Font name="Wingdings" size="24.0" />
         </font>
     </Label>
-    <Label contentDisplay="BOTTOM" underline="true"  textFill="WHITE" prefHeight="62.0" prefWidth="110.0" text="Welcome, User" textAlignment="CENTER">
+    <Label fx:id="titleLabel" contentDisplay="BOTTOM" underline="true"  textFill="WHITE" prefHeight="62.0" prefWidth="110.0" text="Welcome, User" textAlignment="CENTER">
         <font>
             <Font name="Wingdings" size="14.0" />
         </font>
@@ -21,7 +21,7 @@
             <Insets left="50.0" top="5.0" />
         </HBox.margin>
     </TextField>
-    <MenuButton mnemonicParsing="false" text="MenuButton">
+    <MenuButton fx:id="menuButton" mnemonicParsing="false" text="MenuButton">
         <items>
             <MenuItem mnemonicParsing="false" text="Account" />
             <MenuItem mnemonicParsing="false" text="Notifications" />
