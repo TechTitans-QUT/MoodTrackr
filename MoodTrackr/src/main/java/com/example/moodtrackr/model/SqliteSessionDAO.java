@@ -4,6 +4,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A public class that contains methods that enable the ability to
+ * add, update and delete data from a sessions database file
+ */
 public class SqliteSessionDAO implements ISessionDAO {
     private final Connection connection;
     public SqliteSessionDAO() {
@@ -28,23 +32,6 @@ public class SqliteSessionDAO implements ISessionDAO {
             e.printStackTrace();
         }
     }
-
-//    private void insertSampleData() {
-//        try {
-//            // Clear before inserting
-//            Statement clearStatement = connection.createStatement();
-//            String clearQuery = "DELETE FROM users";
-//            clearStatement.execute(clearQuery);
-//            Statement insertStatement = connection.createStatement();
-//            String insertQuery = "INSERT INTO users (firstName, lastName, password, email) VALUES "
-//                    + "('John', 'Doe', 'pass1', 'johndoe@example.com'),"
-//                    + "('Jane', 'Doe', 'pass2', 'janedoe@example.com'),"
-//                    + "('Jay', 'Doe', 'pass3', 'jaydoe@example.com')";
-//            insertStatement.execute(insertQuery);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     @Override
     public void addSession(Session session) {

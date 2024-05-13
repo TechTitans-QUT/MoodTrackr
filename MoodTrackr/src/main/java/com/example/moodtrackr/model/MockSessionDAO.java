@@ -3,6 +3,9 @@ package com.example.moodtrackr.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A public class that contains mock data for the listview (NOT BEING USED)
+ */
 public class MockSessionDAO implements ISessionDAO {
     /**
      * A static list of contacts to be used as a mock database.

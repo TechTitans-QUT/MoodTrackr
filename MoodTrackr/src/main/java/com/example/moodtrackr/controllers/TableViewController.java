@@ -1,6 +1,6 @@
 package com.example.moodtrackr.controllers;
 
-import com.example.moodtrackr.MoodInputApplication;
+import com.example.moodtrackr.MainApplication;
 import com.example.moodtrackr.model.Session;
 import javafx.application.Application;
 import javafx.fxml.FXML;

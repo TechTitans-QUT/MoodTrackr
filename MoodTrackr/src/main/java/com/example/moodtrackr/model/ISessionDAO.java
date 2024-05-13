@@ -3,6 +3,7 @@ package com.example.moodtrackr.model;
 import java.util.List;
 
 /**
+ * Interface that contains methods to add/updates/deletes sessions on a database
  */
 public interface ISessionDAO {
     /**

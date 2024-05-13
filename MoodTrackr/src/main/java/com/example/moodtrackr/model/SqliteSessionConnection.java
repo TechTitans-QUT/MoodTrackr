@@ -3,6 +3,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Class to handle the connection between the session database file and the application
+ */
 public class SqliteSessionConnection {
     private static Connection instance = null;
 

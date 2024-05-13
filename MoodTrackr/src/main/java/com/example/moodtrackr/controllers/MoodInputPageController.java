@@ -72,8 +72,11 @@ public class MoodInputPageController {
     @FXML
     private VBox sessionContainer;
 
+    /**
+        Creates a new instance of SessionManager in MoodInputPage. The data from the Session Manager
+        is collected from a database
+     */
     public MoodInputPageController() {
-
 //        sessionDAO = (new MockSessionDAO());
 //        sessionManager = new SessionManager(new MockSessionDAO());
         sessionManager = new SessionManager(new SqliteSessionDAO());
@@ -88,9 +91,19 @@ public class MoodInputPageController {
     public int status;
     private boolean checked;
 
+    /**
+     * Renders a cell in the sessions list view by setting the text to the contact's full name.
+     * @param sessionsListView The list view to render the cell for.
+     * @return The rendered cell.
+     */
     private ListCell<Session> renderCell(ListView<Session> sessionsListView) {
         return new ListCell<>() {
 
+            /**
+             * Updates the item in the cell by setting the text to the session data
+             * @param session The session to update the cell with.
+             * @param empty Whether the cell is empty.
+             */
             @Override
             protected void updateItem(Session session, boolean empty) {
                 super.updateItem(session, empty);
@@ -104,8 +117,8 @@ public class MoodInputPageController {
             }
         };
     }
-    /*
-    Checks/unchecks the mood check boxes
+    /**
+     * Checks/unchecks every mood check-box
      */
     private void setMoodCheckBoxes(boolean setter){
         mood1.setSelected(setter);
@@ -117,8 +130,8 @@ public class MoodInputPageController {
         mood7.setSelected(setter);
     }
 
-    /*
-    Disables/Enables the mood checkboxes
+    /**
+     * Disables/Enables every mood check-box
      */
     private void disableMoodCheckBoxes(boolean setter){
         mood1.setDisable(setter);
@@ -145,7 +158,9 @@ public class MoodInputPageController {
 //        // Show / hide based on whether there are contacts
 //        contactContainer.setVisible(hasContact);
 //    }
-
+    /**
+     * Synchronizes the sessions list view with the sessions stored in the database.
+     */
     private void syncSessions() {
         sessionsListView.getItems().clear();
 //        sessionsListView.getItems().addAll(sessionDAO.getAllSessions());
@@ -154,82 +169,112 @@ public class MoodInputPageController {
     }
 
     @FXML
+    public void initialize() {
+        // Initialise a new time tracker and renders and
+        // synchronises the cells in the listview with data in the database
+        tracker = new TimeTracker();
+        timeline = new Timeline(
+                new KeyFrame(Duration.seconds(1), event -> onStartSession()));
+        sessionsListView.setCellFactory(this::renderCell);
+        syncSessions();
+    }
+    @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
+        // Opens the dashboard page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "hello-view.fxml");
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
+        // Opens the mood input page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
+        // Opens the data visualisation page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "data-visualisation-page.fxml");
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
+        // Opens the calendar page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onSettingsButtonClick(ActionEvent event) throws IOException {
+        // Opens the settings page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {
+        // Logs off the user and opens the login page on click
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "login-view.fxml");
     }
 
-
+    /**
+     * Code to set the events of when the End Session button is clicked.
+     *
+     */
     @FXML
     private void onEndSessionButtonClick() {
-        startSessionButton.setDisable(false);
-        endSessionButton.setDisable(true);
-        moodToolBar.setDisable(true);
+        startSessionButton.setDisable(false); // enables start session button
+        endSessionButton.setDisable(true); // disables end session button
+        moodToolBar.setDisable(true); // disables the mood input tool bar
+
         // disable and uncheck boxes
         disableMoodCheckBoxes(true);
         setMoodCheckBoxes(false);
 
-
+        // sets the currentTime to the last instance of tracker, then stops the tracker and stores it in sessionTime
         currentTime.setText("Current Time: " + tracker.getCurrentTime());
         timeline.stop();
         sessionTime = tracker.getCurrentTime();
 
         tracker.stopTracking(); // stop tracking time
 
+        // gets the current local time and date of the user's system, and stores it in localTime
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         localTime = dtf.format(now); // get local time and date
 
+        // creates a new session instance and syncs the data to the database
         Session newSession = new Session(sessionTime, mood, localTime, status);
         sessionManager.addSession(newSession);
 //        sessionDAO.addSession(newSession);
         syncSessions();
 
     }
+
+    /**
+     * Code to handle events when the start session button is clicked
+     */
     @FXML
     private void onStartSession() {
+        // if the tracker is started, display the current time on the tool bar above the listview
+
         if (tracker.isTracking){
             currentTime.setText("Current Time: " + tracker.getCurrentTime());
             startSessionButton.setDisable(true); // disable start session
             //endSessionButton.setDisable(false); // enable end session
             moodToolBar.setDisable(false); // enable mood select
         }
+        // enable the mood check boxes
         else{
             setMoodCheckBoxes(false);
             disableMoodCheckBoxes(false);
         }
 
-        tracker.startTracking();
+        tracker.startTracking(); // start tracking time
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
     }
     @FXML
+    // The methods below handle the evenets of each mood check boxes being pressed
     private void onMood1Check() {
         checked = mood1.isSelected();
         mood = "Very Sad";
@@ -299,14 +344,6 @@ public class MoodInputPageController {
         disableMoodCheckBoxes(checked);
         mood7.setDisable(false);
 
-    }
-    @FXML
-    public void initialize() {
-        tracker = new TimeTracker();
-        timeline = new Timeline(
-                new KeyFrame(Duration.seconds(1), event -> onStartSession()));
-        sessionsListView.setCellFactory(this::renderCell);
-        syncSessions();
     }
 
 }
