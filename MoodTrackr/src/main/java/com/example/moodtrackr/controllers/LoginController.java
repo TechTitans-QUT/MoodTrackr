@@ -1,5 +1,6 @@
 package com.example.moodtrackr.controllers;
 
+import com.example.moodtrackr.GlobalData;
 import com.example.moodtrackr.MainApplication;
 import com.example.moodtrackr.model.*;
 import javafx.event.ActionEvent;
@@ -11,7 +12,9 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The controller for the login page.
+ */
 public class LoginController {
     @FXML
     private Button loginButton;
@@ -44,6 +47,7 @@ public class LoginController {
                 Parent root = loader.load();
                 BaseUITemplate baseUITemplate = loader.getController();
                 baseUITemplate.init(current);
+                GlobalData.getInstance().setYourObject(current);
                 Scene scene = new Scene(root);
                 stage.setTitle("Dashboard");
                 stage.setScene(scene);

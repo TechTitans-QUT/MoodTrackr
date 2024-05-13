@@ -13,7 +13,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The controller for the registration page.
+ */
 public class RegisterController {
     @FXML
     private ListView<User> usersListView;

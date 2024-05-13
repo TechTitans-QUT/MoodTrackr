@@ -33,8 +33,14 @@ public interface IUserDAO {
      * @return A list of all users in the database.
      */
     List<User> getAllUsers();
-
+    /**
+     * Check if the user exists in the database.
+     * @return True if the user exists, False if not.
+     */
     Boolean verifyUser(String firstName, String lastName, String password);
-
+    /**
+     * Get the user ID by their name and password.
+     * @return ID of the passed user.
+     */
     int getUserId(String firstName, String lastName, String password);
 }
