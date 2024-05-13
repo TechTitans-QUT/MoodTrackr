@@ -32,6 +32,7 @@ public class LoginController {
     public LoginController() {
         userDAO = new SqliteUserDAO();
     }
+    private SearchbarController searchbarController = new SearchbarController();
 
     @FXML
     public void onLoginButtonClick(ActionEvent event) throws IOException {
@@ -42,12 +43,12 @@ public class LoginController {
                 int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText());
                 // Find User
                 User current = userDAO.getUser(id);
+                GlobalData.getInstance().setYourObject(current);
                 Stage stage = (Stage) loginMessage.getScene().getWindow();
                 FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
                 Parent root = loader.load();
-                BaseUITemplate baseUITemplate = loader.getController();
-                baseUITemplate.init(current);
-                GlobalData.getInstance().setYourObject(current);
+//                BaseUITemplate baseUITemplate = loader.getController();
+//                baseUITemplate.init(current);
                 Scene scene = new Scene(root);
                 stage.setTitle("Dashboard");
                 stage.setScene(scene);
