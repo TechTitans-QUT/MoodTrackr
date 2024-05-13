@@ -15,23 +15,22 @@ public class SeachBarController implements Initializable {
     private Label titleLabel;
     private User current;
 
-//    SeachBarController(User user) {
-//        current = user;
-//    }
-
     @FXML
     public void set(User current) {
-        titleLabel.setText(current.getFullName());
+        titleLabel.setText("test");
     }
 
     @FXML
     public void test() {
-        System.out.println(current.getFullName());
+        System.out.println("initialize");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        titleLabel.setText("working!!!!!");
-        current = GlobalData.getInstance().getYourObject();
+//        titleLabel.setText("working!!!!!");
+//        User currentAccount = ;
+//        System.out.println(currentAccount);
+        titleLabel.setText(GlobalData.getInstance().getYourObject().getFullName());
+//        test();
     }
 }
