@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<HBox style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <BorderPane prefHeight="700.0" prefWidth="1174.0">
+        <top>
+            <fx:include fx:id="searchbar" source="searchbar.fxml" />
+        </top>
+        <left>
+          <fx:include fx:id="sidebar" source="sidebar.fxml" />
+        </left>
+      <center>
+          <!--Your page content should go here, add a controller to the root HBox as necessary-->
+      </center>
+    </BorderPane>
+</HBox>
