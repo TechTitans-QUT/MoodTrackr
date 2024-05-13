@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SqliteUserDAO implements IUserDAO {
+    private static String currentUserName;
     private final Connection connection;
     public SqliteUserDAO() {
         connection = SqliteConnection.getInstance();
@@ -149,5 +150,22 @@ public class SqliteUserDAO implements IUserDAO {
             e.printStackTrace();
         }
         return true;
+    }
+
+    @Override
+    public int getUserId(String firstName, String lastName, String password) {
+        try {
+            Statement statement = connection.createStatement();
+            String query = "SELECT * FROM users WHERE firstName = '" + firstName +
+                    "' AND lastName = '" + lastName + "' AND password = '" + password + "'";
+            ResultSet resultSet = statement.executeQuery(query);
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                return id;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
     }
 }

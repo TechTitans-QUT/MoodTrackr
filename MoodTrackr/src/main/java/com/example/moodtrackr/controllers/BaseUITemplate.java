@@ -1,19 +1,18 @@
 package com.example.moodtrackr.controllers;
 
-import com.example.moodtrackr.HelloApplication;
-import com.example.moodtrackr.RegisterApplication;
+import com.example.moodtrackr.model.User;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
 import static com.example.moodtrackr.NavigationMethods.ButtonNav;
+import static com.example.moodtrackr.NavigationMethods.NewButtonNav;
 
 public class BaseUITemplate {
     public HBox searchbar;
@@ -31,9 +30,23 @@ public class BaseUITemplate {
     @FXML
     private Button logout;
     @FXML
+    private Label titleLabel;
+    @FXML
+    private MenuButton menuButton;
+    private User currentAccount;
+
+    @FXML
+    public void init(User current) {
+        currentAccount = current;
+        titleLabel.setText("Welcome " + current.getFirstName());
+        menuButton.setText(current.getFirstName() + " " + current.getLastName());
+    }
+
+    @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "hello-view.fxml");
+//        ButtonNav(button, "hello-view.fxml");
+        NewButtonNav(button, "hello-view.fxml", currentAccount);
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
