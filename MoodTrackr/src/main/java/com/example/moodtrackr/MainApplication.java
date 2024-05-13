@@ -21,7 +21,7 @@ public class MainApplication extends Application {
     public static final String moodInput = "mood-input-page.fxml";
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(moodInput)); // Select launching page
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(login)); // Select launching page
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
         stage.setTitle(TITLE);
         stage.setScene(scene);

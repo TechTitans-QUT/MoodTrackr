@@ -72,8 +72,8 @@ public class MoodInputPageController {
     private VBox sessionContainer;
 
     /**
-        Creates a new instance of SessionManager in MoodInputPage. The data from the Session Manager
-        is collected from a database
+     Creates a new instance of SessionManager in MoodInputPage. The data from the Session Manager
+     is collected from a database
      */
     public MoodInputPageController() {
 //        sessionDAO = (new MockSessionDAO());
