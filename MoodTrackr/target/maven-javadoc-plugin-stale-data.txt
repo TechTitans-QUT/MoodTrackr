@@ -1,0 +1,52 @@
+@options
+@packages
+@argfile
+--class-path
+'/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar:/Users/ibukisuzuki/.m2/repository/org/xerial/sqlite-jdbc/3.45.3.0/sqlite-jdbc-3.45.3.0.jar:/Users/ibukisuzuki/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar'
+--module-path
+'/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6-mac.jar:/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/classes:/Users/ibukisuzuki/.m2/repository/org/controlsfx/controlsfx/11.1.2/controlsfx-11.1.2.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6-mac.jar:/Users/ibukisuzuki/.m2/repository/com/dlsc/formsfx/formsfx-core/11.6.0/formsfx-core-11.6.0.jar'
+--patch-module
+com.example.moodtrackr.moodtrackr='/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/src/main/java'
+-encoding
+'UTF-8'
+-protected
+--module-source-path
+'/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc'
+-docencoding
+'UTF-8'
+-doctitle
+'MoodTrackr 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'MoodTrackr 1.0-SNAPSHOT API'
+com.example.moodtrackr
+com.example.moodtrackr.controllers
+'/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/src/main/java/module-info.java'
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/constant-values.html = 1715577880536
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/tag-search-index.js = 1715577880646
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/overview-tree.html = 1715577880607
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/module-search-index.js = 1715577880643
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/index.html = 1715577880693
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/package-search-index.js = 1715577880643
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/link.svg = 1715577880711
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/index-all.html = 1715577880685
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/allpackages-index.html = 1715577880641
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/member-search-index.js = 1715577880645
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/copy.svg = 1715577880708
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/script.js = 1715577880706
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/stylesheet.css = 1715577880705
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/search-page.js = 1715577880717
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/help-doc.html = 1715577880701
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/element-list = 1715577880465
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/search.html = 1715577880690
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/allclasses-index.html = 1715577880637
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/type-search-index.js = 1715577880644
+/Users/ibukisuzuki/Desktop/MoodTrack/MoodTrackr/target/docs/javadoc/search.js = 1715577880715

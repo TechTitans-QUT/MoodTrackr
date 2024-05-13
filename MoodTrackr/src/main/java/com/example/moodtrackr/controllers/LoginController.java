@@ -29,6 +29,7 @@ public class LoginController {
     @FXML
     private final IUserDAO userDAO;
 
+
     public LoginController() {
         userDAO = new SqliteUserDAO();
     }

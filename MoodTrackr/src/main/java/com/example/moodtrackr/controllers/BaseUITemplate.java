@@ -1,8 +1,10 @@
 package com.example.moodtrackr.controllers;
 
 import com.example.moodtrackr.GlobalData;
+import com.example.moodtrackr.MainApplication;
 import com.example.moodtrackr.model.User;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -37,10 +39,11 @@ public class BaseUITemplate {
     private User currentAccount;
 
     @FXML
-    public void init(User current) {
+    public void init(User current) throws IOException {
+        SeachBarController seachBarController = new SeachBarController();
+//        seachBarController.set(current);
         currentAccount = current;
-        titleLabel.setText("Welcome " + current.getFirstName());
-        menuButton.setText(current.getFirstName() + " " + current.getLastName());
+//        menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
 
     @FXML
@@ -54,13 +57,13 @@ public class BaseUITemplate {
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "mood-input-page.fxml", currentAccount);
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "data-visualisation-page.fxml", currentAccount);
+        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
