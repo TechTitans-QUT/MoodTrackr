@@ -11,7 +11,9 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The controller for the login page.
+ */
 public class LoginController {
     @FXML
     private Button loginButton;

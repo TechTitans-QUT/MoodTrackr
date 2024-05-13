@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * The main application that launches the scene.
+ */
 public class MainApplication extends Application {
     public static final String TITLE = "MoodTrackr";
     public static final int WIDTH = 1075;
