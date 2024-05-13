@@ -9,7 +9,7 @@ import javafx.stage.*;
 import java.io.IOException;
 
 public class NavigationMethods {
-    public static void ButtonNav(Button buttonName, String fxmlFile) throws IOException {
+    public static void ButtonNav(Button buttonName, String fxmlFile, User currentAccount) throws IOException {
         Stage stage = (Stage) buttonName.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(fxmlFile));
         Scene scene = new Scene(fxmlLoader.load(), MainApplication.WIDTH, MainApplication.HEIGHT);
