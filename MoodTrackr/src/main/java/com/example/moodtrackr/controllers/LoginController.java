@@ -28,6 +28,8 @@ public class LoginController {
     private PasswordField passwordPasswordField;
     @FXML
     private final IUserDAO userDAO;
+    private SeachBarController seachBarController = new SeachBarController();
+
 
 
     public LoginController() {
@@ -38,27 +40,12 @@ public class LoginController {
     public void onLoginButtonClick(ActionEvent event) throws IOException {
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
             if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText())) {
-//                loginMessage.setText("Welcome!");
-                // Find user id
-                int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText());
-                // Find User
-                User current = userDAO.getUser(id);
-                GlobalData.getInstance().setYourObject(current);
-
-                User currentAccount = GlobalData.getInstance().getYourObject();
-                System.out.println(currentAccount.getFirstName());
-
-
+                int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText());// Find user id
+                User current = userDAO.getUser(id);// Find User
+                GlobalData.getInstance().setYourObject(current);// Set global to current user
                 Stage stage = (Stage) loginMessage.getScene().getWindow();
                 FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
                 Parent root = loader.load();
-
-
-                SeachBarController seachBarController = new SeachBarController();
-
-
-//                BaseUITemplate baseUITemplate = loader.getController();
-//                baseUITemplate.init(current);
                 Scene scene = new Scene(root);
                 stage.setTitle("Dashboard");
                 stage.setScene(scene);

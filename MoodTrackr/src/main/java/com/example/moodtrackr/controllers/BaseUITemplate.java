@@ -39,11 +39,8 @@ public class BaseUITemplate {
     private User currentAccount;
 
     @FXML
-    public void init(User current) throws IOException {
-        SeachBarController seachBarController = new SeachBarController();
-//        seachBarController.set(current);
+    public void init(User current) {
         currentAccount = current;
-//        menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
 
     @FXML
