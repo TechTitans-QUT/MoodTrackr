@@ -60,7 +60,7 @@ public class BaseUITemplate {
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "data-visualisation-page.fxml", currentAccount);
+        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
