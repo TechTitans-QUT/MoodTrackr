@@ -54,7 +54,7 @@ public class BaseUITemplate {
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
+        NewButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
