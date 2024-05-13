@@ -2,7 +2,7 @@
 Test set: DatabaseTest
 -------------------------------------------------------------------------------
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in DatabaseTest
-DatabaseTest.testConnection -- Time elapsed: 0.007 s <<< ERROR!
+DatabaseTest.testConnection -- Time elapsed: 0.010 s <<< ERROR!
 java.lang.IllegalAccessError: class DatabaseTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.SqliteConnection (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
 	at DatabaseTest.testConnection(DatabaseTest.java:9)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

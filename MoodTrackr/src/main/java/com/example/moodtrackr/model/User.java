@@ -1,12 +1,20 @@
 package com.example.moodtrackr.model;
-
+/**
+ * A model class representing a user with a first name, last name, email, and password.
+ */
 public class User {
     private int id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
-
+    /**
+     * Constructs a new User with the specified first name, last name, email, and password.
+     * @param firstName The first name of the user
+     * @param lastName The last name of the user
+     * @param email The email of the user
+     * @param password The password of the user
+     */
     public User(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;

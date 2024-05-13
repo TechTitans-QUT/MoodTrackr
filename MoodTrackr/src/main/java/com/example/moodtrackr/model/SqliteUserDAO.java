@@ -3,7 +3,9 @@ package com.example.moodtrackr.model;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * A public class generate and modify the SQL database containing the registered users.
+ */
 public class SqliteUserDAO implements IUserDAO {
     private static String currentUserName;
     private final Connection connection;

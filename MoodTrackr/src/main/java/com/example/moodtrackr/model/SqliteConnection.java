@@ -2,7 +2,9 @@ package com.example.moodtrackr.model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/**
+ * A public class establish the connection to the SQL database.
+ */
 public class SqliteConnection {
     private static Connection instance = null;
 
