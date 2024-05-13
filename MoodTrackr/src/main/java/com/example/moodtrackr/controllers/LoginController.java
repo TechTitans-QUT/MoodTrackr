@@ -46,8 +46,9 @@ public class LoginController {
                 FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
                 Parent root = loader.load();
                 BaseUITemplate baseUITemplate = loader.getController();
-                baseUITemplate.init(current);
                 GlobalData.getInstance().setYourObject(current);
+                baseUITemplate.init(current);
+                System.out.println(current.getFullName());
                 Scene scene = new Scene(root);
                 stage.setTitle("Dashboard");
                 stage.setScene(scene);

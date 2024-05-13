@@ -38,7 +38,6 @@ public class BaseUITemplate {
 
     @FXML
     public void init(User current) {
-        currentAccount = current;
         titleLabel.setText("Welcome " + current.getFirstName());
         menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
@@ -54,7 +53,7 @@ public class BaseUITemplate {
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "mood-input-page.fxml", currentAccount);
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
