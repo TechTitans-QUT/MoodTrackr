@@ -1,6 +1,5 @@
 package com.example.moodtrackr;
 
-import com.example.moodtrackr.controllers.BaseUITemplate;
 import com.example.moodtrackr.controllers.SearchbarController;
 import com.example.moodtrackr.model.User;
 import javafx.fxml.FXMLLoader;
