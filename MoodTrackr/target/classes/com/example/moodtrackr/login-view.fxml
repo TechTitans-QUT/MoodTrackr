@@ -6,10 +6,10 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="680.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.LoginController">
+<BorderPane prefHeight="680.0" prefWidth="1075.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.LoginController">
     <left>
         <AnchorPane prefHeight="680.0" prefWidth="485.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
-            <VBox alignment="CENTER" prefHeight="680.0" prefWidth="485.0">
+            <VBox id="logo-container" alignment="CENTER" prefHeight="680.0" prefWidth="485.0">
                 <Label alignment="CENTER" prefHeight="40.0" prefWidth="485.0" text="MoodTrackr" textFill="WHITE">
                     <font>
                         <Font name="Verdana Bold" size="36.0" />
@@ -43,7 +43,7 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-           <Button fx:id="loginButton" layoutX="233.0" layoutY="450.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Login" textFill="WHITE">
+           <Button id="login-button" fx:id="loginButton" layoutX="233.0" layoutY="450.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="125.0" text="Login" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font></Button>

@@ -6,13 +6,13 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="680.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.RegisterController">
+<BorderPane prefHeight="680.0" prefWidth="1075.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.RegisterController">
     <left>
         <AnchorPane prefHeight="680.0" prefWidth="485.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
             <VBox prefHeight="680.0" prefWidth="485.0">
                 <ListView fx:id="usersListView" visible="false" />
             </VBox>
-            <VBox fx:id="logoContainer" alignment="CENTER" prefHeight="680.0" prefWidth="485.0" visible="true">
+            <VBox id="logo-container" fx:id="logoContainer" alignment="CENTER" prefHeight="680.0" prefWidth="485.0" visible="true">
                 <Label alignment="CENTER" prefHeight="40.0" prefWidth="485.0" text="MoodTrackr" textFill="WHITE">
                     <font>
                         <Font name="Verdana Bold" size="36.0" />
@@ -41,17 +41,17 @@
                     <Font name="Apple Braille" size="36.0" />
                 </font>
             </Label>
-            <VBox alignment="CENTER" layoutX="5.0" layoutY="425.0" prefHeight="150.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="5.0" layoutY="425.0" prefHeight="150.0" spacing="10.0" style="-fx-background-color: #FAFAFA;">
                 <Label fx:id="errorLabel" textFill="RED">
                <font>
                   <Font size="20.0" />
                </font></Label>
                 <HBox alignment="CENTER" layoutY="250.0" prefHeight="100.0" prefWidth="590.0" spacing="20.0">
-                    <Button onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Register" textFill="WHITE">
+                    <Button id="register-button" onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" text="Register" textFill="WHITE">
                   <font>
                      <Font size="18.0" />
                   </font></Button>
-                    <Button onAction="#onCancelButtonClick" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: Black;" text="Cancel" textFill="WHITE">
+                    <Button id="cancel-button" onAction="#onCancelButtonClick" prefHeight="40.0" prefWidth="125.0" text="Cancel" textFill="WHITE">
                   <font>
                      <Font size="18.0" />
                   </font></Button>
