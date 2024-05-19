@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="167.0" style="-fx-background-color: #252322;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
+<VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="167.0" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="20.0">
         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
             <Image url="@../../../images/icons8-home-48.png" />
@@ -43,27 +43,27 @@
             <Insets left="25.0" />
          </GridPane.margin>
         </ImageView>
-        <Button fx:id="Dashboard" onAction="#onDashboardButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Dashboard" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <Button fx:id="Dashboard" onAction="#onDashboardButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Dashboard" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button fx:id="Mood" onAction="#onMoodButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Button fx:id="Mood" onAction="#onMoodButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Mood" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Data" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button fx:id="Calendar" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button fx:id="Calendar" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Calendar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button fx:id="Settings" onAction="#onSettingsButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button fx:id="Settings" onAction="#onSettingsButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button onAction="#onLogoutButtonClick" prefHeight="30.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button onAction="#onLogoutButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
