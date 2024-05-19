@@ -1,72 +1,72 @@
 -------------------------------------------------------------------------------
 Test set: UserTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.144 s <<< FAILURE! -- in UserTest
-UserTest.testGetEmail -- Time elapsed: 0.052 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+Tests run: 10, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.016 s <<< FAILURE! -- in UserTest
+UserTest.testGetEmail -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testGetPhone -- Time elapsed: 0.005 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testGetPhone -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testSetFirstName -- Time elapsed: 0.003 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testSetFirstName -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testGetFullName -- Time elapsed: 0.003 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testGetFullName -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testGetId -- Time elapsed: 0.003 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testGetId -- Time elapsed: 0 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testSetLastName -- Time elapsed: 0.003 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testSetLastName -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testGetLastName -- Time elapsed: 0.002 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testGetLastName -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
 UserTest.testGetFirstName -- Time elapsed: 0.001 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testSetEmail -- Time elapsed: 0.002 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testSetEmail -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-UserTest.testSetPhone -- Time elapsed: 0.002 s <<< ERROR!
-java.lang.IllegalAccessError: class UserTest (in unnamed module @0x245b4bdc) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x245b4bdc
+UserTest.testSetPhone -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.IllegalAccessError: class UserTest (in unnamed module @0x78691363) cannot access class com.example.moodtrackr.model.User (in module com.example.moodtrackr.moodtrackr) because module com.example.moodtrackr.moodtrackr does not export com.example.moodtrackr.model to unnamed module @0x78691363
 	at UserTest.setUp(UserTest.java:11)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

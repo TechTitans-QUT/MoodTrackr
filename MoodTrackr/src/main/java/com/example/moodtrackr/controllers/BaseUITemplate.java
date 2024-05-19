@@ -48,13 +48,13 @@ public class BaseUITemplate {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
 //        ButtonNav(button, "hello-view.fxml");
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "hello-view.fxml", currentAccount);
+        ButtonNav(button, "hello-view.fxml", currentAccount);
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "mood-input-page.fxml", currentAccount);
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
