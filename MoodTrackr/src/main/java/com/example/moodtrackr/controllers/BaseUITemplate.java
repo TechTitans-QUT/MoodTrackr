@@ -89,7 +89,7 @@ public class BaseUITemplate {
     protected void onSide() {
 //        boolean closed = side.isSelected();
         TranslateTransition slide = new TranslateTransition();
-        slide.setDuration(Duration.seconds(0.5));
+        slide.setDuration(Duration.seconds(1));
         slide.setNode(logout);
 
         slide.setToX(0);

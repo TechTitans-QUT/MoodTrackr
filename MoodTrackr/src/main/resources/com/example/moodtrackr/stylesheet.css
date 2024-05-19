@@ -16,13 +16,14 @@ and the text color to white */
 }
 */
 
+/* Set variables */
 * {
     -fx-base-dark: #252321;
     -fx-base-light: #FAFAFA;
 }
 
 
-/* login */
+/* Authentication pages */
 .root {
     -fx-background-color: -fx-base-light;
 }

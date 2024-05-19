@@ -21,8 +21,6 @@ public class NavigationMethods {
         Stage stage = (Stage) buttonName.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource(fxmlFile));
         Parent root = loader.load();
-//        BaseUITemplate baseUITemplate = loader.getController();
-//        baseUITemplate.init(user);
         Scene scene = new Scene(root);
         stage.setScene(scene);
     }
