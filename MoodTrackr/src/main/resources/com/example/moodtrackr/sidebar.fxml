@@ -2,13 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="167.0" style="-fx-background-color: #252322;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
+<VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="167.0" style="-fx-background-color: #252322;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <Button fx:id="Dashboard" onAction="#onDashboardButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Dashboard" textFill="WHITE" />
     <Button fx:id="Mood" onAction="#onMoodButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Mood" textFill="WHITE" />
     <Button fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Data" textFill="WHITE" />
     <Button fx:id="Calendar" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Calendar" textFill="WHITE" />
     <Button fx:id="Settings" onAction="#onSettingsButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Settings" textFill="WHITE" />
-    <Button onAction="#onSettingsButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
+    <Button onAction="#onLogoutButtonClick" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #252321;" text="Logout" textFill="WHITE" />
 </VBox>
