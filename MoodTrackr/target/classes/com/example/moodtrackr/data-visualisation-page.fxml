@@ -4,8 +4,7 @@
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.layout.*?>
 
-
-<HBox style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<HBox id="main-container" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
 <BorderPane prefHeight="700.0" prefWidth="1174.0">
     <top>
         <fx:include fx:id="searchbar" source="searchbar.fxml" />
@@ -19,45 +18,45 @@
             <HBox prefHeight="314.0" prefWidth="762.0">
                 <VBox prefHeight="298.0" prefWidth="708.0">
                     <padding>
-                        <Insets top="20.0"/>
+                        <Insets top="20.0" />
                     </padding>
                     <LineChart title="Mood Tracking">
                         <xAxis>
-                            <CategoryAxis side="BOTTOM"/>
+                            <CategoryAxis side="BOTTOM" />
                         </xAxis>
                         <yAxis>
-                            <NumberAxis side="LEFT"/>
+                            <NumberAxis side="LEFT" />
                         </yAxis>
                         <VBox.margin>
-                            <Insets right="30.0"/>
+                            <Insets right="30.0" />
                         </VBox.margin>
                     </LineChart>
                 </VBox>
                 <VBox prefHeight="296.0" prefWidth="282.0">
-                    <PieChart prefHeight="278.0" prefWidth="251.0" title="Mood Chart"/>
+                    <PieChart prefHeight="278.0" prefWidth="251.0" title="Mood Chart" />
                 </VBox>
             </HBox>
             <HBox prefHeight="289.0" prefWidth="776.0">
                 <VBox prefHeight="294.0" prefWidth="699.0">
                     <AreaChart prefHeight="254.0" prefWidth="576.0" title="Mood - Time">
                         <xAxis>
-                            <CategoryAxis side="BOTTOM"/>
+                            <CategoryAxis side="BOTTOM" />
                         </xAxis>
                         <yAxis>
-                            <NumberAxis side="LEFT"/>
+                            <NumberAxis side="LEFT" />
                         </yAxis>
                         <VBox.margin>
-                            <Insets right="30.0"/>
+                            <Insets right="30.0" />
                         </VBox.margin>
                     </AreaChart>
                 </VBox>
                 <VBox prefHeight="294.0" prefWidth="372.0">
                     <StackedBarChart prefHeight="258.0" prefWidth="289.0">
                         <xAxis>
-                            <CategoryAxis side="BOTTOM"/>
+                            <CategoryAxis side="BOTTOM" />
                         </xAxis>
                         <yAxis>
-                            <NumberAxis prefHeight="254.0" prefWidth="22.0" side="LEFT"/>
+                            <NumberAxis prefHeight="254.0" prefWidth="22.0" side="LEFT" />
                         </yAxis>
                     </StackedBarChart>
                 </VBox>

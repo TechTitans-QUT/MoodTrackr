@@ -19,7 +19,7 @@ and the text color to white */
 /* Set variables */
 * {
     -fx-base-dark: #252321;
-    -fx-base-light: #FAFAFA;
+    -fx-base-light: #ECECEC;
 }
 
 
@@ -34,6 +34,7 @@ and the text color to white */
 
 #login-button, #register-button, #cancel-button {
     -fx-background-color: -fx-base-dark;
+    -fx-cursor: hand;
 }
 
 #login-button:hover {
