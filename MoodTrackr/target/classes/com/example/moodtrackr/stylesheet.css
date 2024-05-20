@@ -16,13 +16,14 @@ and the text color to white */
 }
 */
 
+/* Set variables */
 * {
     -fx-base-dark: #252321;
     -fx-base-light: #FAFAFA;
 }
 
 
-/* login */
+/* Authentication pages */
 .root {
     -fx-background-color: -fx-base-light;
 }
@@ -73,6 +74,29 @@ GridPane .button:hover {
     -fx-scale-x: 1.2;
     -fx-scale-y: 1.2;
     -fx-scale-z: 1.2;
+}
+
+/* Mood input page */
+#main-container {
+    -fx-background-color: -fx-base-light;
+}
+
+#start-session {
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+#start-session:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#end-session {
+    -fx-text-fill: white;
+}
+#end-session:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
 }
 
 /* Set color of node with fx:id="confirmBtn" */
