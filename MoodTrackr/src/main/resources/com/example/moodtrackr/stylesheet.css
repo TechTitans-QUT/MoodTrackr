@@ -1,18 +1,83 @@
 /* Select all buttons and set the background color to red
 and the text color to white */
+/*
 .button {
     -fx-background-color: #121212;
     -fx-text-fill: white;
     -fx-border-color: white;
     -fx-border-radius: 5;
 }
+*/
 
 /* Set color of button when mouse hovers over it */
+/*
 .button:hover {
     -fx-background-color: #2e2e2e;
 }
+*/
+
+/* Set variables */
+* {
+    -fx-base-dark: #252321;
+    -fx-base-light: #FAFAFA;
+}
+
+
+/* Authentication pages */
+.root {
+    -fx-background-color: -fx-base-light;
+}
+
+#logo-container {
+    -fx-background-color: -fx-base-dark;
+}
+
+#login-button, #register-button, #cancel-button {
+    -fx-background-color: -fx-base-dark;
+}
+
+#login-button:hover {
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#register-button:hover {
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+#cancel-button:hover {
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+
+/* Sidebar */
+Button {
+    -fx-background-color: -fx-base-dark
+}
+GridPane .button:hover {
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: -fx-base-dark;
+}
+#side {
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white
+}
+#side:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-scale-z: 1.2;
+}
 
 /* Set color of node with fx:id="confirmBtn" */
+/*
 #registerButton {
     -fx-background-color: #23ad56;
 }
@@ -31,7 +96,4 @@ and the text color to white */
     -fx-text-fill: white;
 }
 
-/* Set the root's color to lightblue */
-.root {
-    -fx-background-color: #121212;
-}
+*/

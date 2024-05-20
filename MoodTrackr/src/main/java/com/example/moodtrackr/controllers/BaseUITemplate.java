@@ -2,13 +2,16 @@ package com.example.moodtrackr.controllers;
 
 import com.example.moodtrackr.GlobalData;
 import com.example.moodtrackr.model.User;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -17,6 +20,7 @@ import static com.example.moodtrackr.NavigationMethods.NewButtonNav;
 
 public class BaseUITemplate {
     public HBox searchbar;
+    @FXML
     public VBox sidebar;
     @FXML
     private Button Dashboard;
@@ -34,7 +38,10 @@ public class BaseUITemplate {
     private Label titleLabel;
     @FXML
     private MenuButton menuButton;
+    @FXML
+    private Button side;
     private User currentAccount;
+    private Boolean closed = true;
 
     @FXML
     public void init(User current) {
@@ -60,7 +67,7 @@ public class BaseUITemplate {
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "data-visualisation-page.fxml", currentAccount);
+        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
@@ -76,5 +83,29 @@ public class BaseUITemplate {
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         ButtonNav(button, "login-view.fxml", currentAccount);
+    }
+
+    @FXML
+    protected void onSide() {
+//        boolean closed = side.isSelected();
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(1));
+        slide.setNode(logout);
+
+        slide.setToX(0);
+        slide.play();
+
+        if (closed) {
+            sidebar.setTranslateX(-127);
+            closed = false;
+            side.setText(">");
+        } else {
+            sidebar.setTranslateX(0);
+            closed = true;
+            side.setText("<");
+        }
+        slide.setOnFinished((ActionEvent e) -> {
+            System.out.println("working");
+        });
     }
 }

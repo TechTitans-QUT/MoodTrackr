@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
+
 /**
  * The main application that launches the scene.
  */
@@ -23,6 +25,7 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(login)); // Select launching page
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm());
         stage.setTitle(TITLE);
         stage.setScene(scene);
         stage.show();
