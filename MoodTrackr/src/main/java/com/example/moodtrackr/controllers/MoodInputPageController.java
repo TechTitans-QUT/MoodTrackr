@@ -6,32 +6,17 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.util.List;
 
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
-import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 public class MoodInputPageController {
-    @FXML
-    private Button Dashboard;
-    @FXML
-    private Button Mood;
-    @FXML
-    private Button DataVisualisation;
-    @FXML
-    private Button Calendar;
-    @FXML
-    private Button Settings;
-    @FXML
-    private Button logout;
     @FXML
     private Button startSessionButton;
     @FXML
@@ -177,42 +162,6 @@ public class MoodInputPageController {
                 new KeyFrame(Duration.seconds(1), event -> onStartSession()));
         sessionsListView.setCellFactory(this::renderCell);
         syncSessions();
-    }
-    @FXML
-    protected void onDashboardButtonClick(ActionEvent event) throws IOException {
-        // Opens the dashboard page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "hello-view.fxml", currentAccount);
-    }
-    @FXML
-    protected void onMoodButtonClick(ActionEvent event) throws IOException {
-        // Opens the mood input page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
-        // Opens the data visualisation page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onCalendarButtonClick(ActionEvent event) throws IOException {
-        // Opens the calendar page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onSettingsButtonClick(ActionEvent event) throws IOException {
-        // Opens the settings page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
-        // Logs off the user and opens the login page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "login-view.fxml", currentAccount);
     }
 
     /**

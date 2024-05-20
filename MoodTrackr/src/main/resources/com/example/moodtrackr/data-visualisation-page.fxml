@@ -14,7 +14,7 @@
     </left>
     <center>
         <!--Your page content should go here, add a controller to the root HBox as necessary-->
-        <VBox prefHeight="591.0" prefWidth="901.0" style="-fx-background-color: #F6F6F6;">
+        <VBox style="-fx-background-color: #F6F6F6;">
             <HBox prefHeight="314.0" prefWidth="762.0">
                 <VBox prefHeight="298.0" prefWidth="708.0">
                     <padding>
