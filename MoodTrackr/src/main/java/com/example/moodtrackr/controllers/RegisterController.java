@@ -108,11 +108,14 @@ public class RegisterController {
         // Check for mandatory inputs
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() &&
                 !passwordPasswordField.getText().isBlank() && !emailTextField.getText().isBlank()) {
-
+            // Check if password matches
             if (passwordPasswordField.getText().equals(confirmPasswordField.getText())) {
                 errorLabel.setText("You are set");
+
+                String hashed = userDAO.passwordHash(passwordPasswordField.getText());
+
                 User newUser = new User(firstNameTextField.getText(), lastNameTextField.getText(),
-                        emailTextField.getText(), passwordPasswordField.getText());
+                        emailTextField.getText(), hashed);
                 userDAO.addUser(newUser);
                 errorLabel.setText("User Registered Successfully!");
                 syncUsers();

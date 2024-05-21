@@ -36,11 +36,15 @@ public class LoginController {
 
     @FXML
     public void onLoginButtonClick(ActionEvent event) throws IOException {
+        // Check for mandatory input
         if (!firstNameTextField.getText().isBlank() && !lastNameTextField.getText().isBlank() && !passwordPasswordField.getText().isBlank()) {
-            if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText())) {
-//                loginMessage.setText("Welcome!");
+            // Transform input password to hashed password
+            String hashed = userDAO.passwordHash(passwordPasswordField.getText());
+            // Validate user
+            if (userDAO.verifyUser(firstNameTextField.getText(), lastNameTextField.getText(), hashed)) {
+                // loginMessage.setText("Welcome!");
                 // Find user id
-                int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), passwordPasswordField.getText());
+                int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), hashed);
                 // Find User
                 User current = userDAO.getUser(id);
                 GlobalData.getInstance().setYourObject(current);

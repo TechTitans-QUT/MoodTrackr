@@ -1,5 +1,7 @@
 package com.example.moodtrackr.model;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,7 @@ import java.util.List;
  * A public class generate and modify the SQL database containing the registered users.
  */
 public class SqliteUserDAO implements IUserDAO {
-    private static String currentUserName;
+
     private final Connection connection;
     public SqliteUserDAO() {
         connection = SqliteConnection.getInstance();
@@ -39,10 +41,13 @@ public class SqliteUserDAO implements IUserDAO {
 //            String clearQuery = "DELETE FROM users";
 //            clearStatement.execute(clearQuery);
 //            Statement insertStatement = connection.createStatement();
+//            String hashed1 = passwordHash("pass1");
+//            String hashed2 = passwordHash("pass2");
+//            String hashed3 = passwordHash("pass3");
 //            String insertQuery = "INSERT INTO users (firstName, lastName, password, email) VALUES "
-//                    + "('John', 'Doe', 'pass1', 'johndoe@example.com'),"
-//                    + "('Jane', 'Doe', 'pass2', 'janedoe@example.com'),"
-//                    + "('Jay', 'Doe', 'pass3', 'jaydoe@example.com')";
+//                    + "('John', 'Doe', '" + hashed1 + "', 'johndoe@example.com'),"
+//                    + "('Jane', 'Doe', '" + hashed2 + "', 'janedoe@example.com'),"
+//                    + "('Jay', 'Doe', '" + hashed3 +  "', 'jaydoe@example.com')";
 //            insertStatement.execute(insertQuery);
 //        } catch (Exception e) {
 //            e.printStackTrace();
@@ -169,5 +174,23 @@ public class SqliteUserDAO implements IUserDAO {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    @Override
+    public String passwordHash(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA");
+            md.update(password.getBytes());
+            byte[] rbt = md.digest();
+            StringBuilder sb = new StringBuilder();
+
+            for (byte b:rbt) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
