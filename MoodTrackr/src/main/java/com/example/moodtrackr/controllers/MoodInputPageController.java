@@ -1,24 +1,48 @@
 package com.example.moodtrackr.controllers;
 
-import com.example.moodtrackr.model.*;
+import com.example.moodtrackr.Session;
+import com.example.moodtrackr.model.SessionManager;
+import com.example.moodtrackr.model.SqliteSessionDAO;
+import com.example.moodtrackr.model.User;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
-
-import java.util.List;
-
-import javafx.scene.control.Label;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 public class MoodInputPageController {
     @FXML
     private Button startSessionButton;
+    @FXML
+    TableView <Session> sessionTableView;
+    @FXML
+    TableColumn <Session, String> moodColumn;
+    @FXML
+    TableColumn <Session, String> sessionTimeColumn;
+    @FXML
+    TableColumn <Session, String> localTimeColumn;
+    @FXML
+    TableColumn <Session, String> statusColumn;
+    ObservableList<Session> observableSessions;
+
+    @FXML
+    private SessionManager sessionManager;
+
     @FXML
     private Button endSessionButton;
     @FXML
@@ -40,68 +64,23 @@ public class MoodInputPageController {
     @FXML
     private CheckBox mood7;
 
-    @FXML
-    private ListView<Session> sessionsListView;
-    //    private ISessionDAO sessionDAO;
-    @FXML
-    private SessionManager sessionManager;
-    @FXML
-    TextField sessionTimeTestField;
-    @FXML
-    TextField moodTextField;
-    @FXML
-    TextField localTimeTextField;
-    @FXML
-    TextField statusTextField;
-    @FXML
-    private VBox sessionContainer;
-
-    /**
-     Creates a new instance of SessionManager in MoodInputPage. The data from the Session Manager
-     is collected from a database
-     */
-    public MoodInputPageController() {
-//        sessionDAO = (new MockSessionDAO());
-//        sessionManager = new SessionManager(new MockSessionDAO());
-        sessionManager = new SessionManager(new SqliteSessionDAO());
-    }
-
     private TimeTracker tracker;
     private Timeline timeline;
 
     public String sessionTime;
     public String  mood;
     public String localTime;
-    public int status;
+    public String status;
     private boolean checked;
     private User currentAccount;
 
-    /**
-     * Renders a cell in the sessions list view by setting the text to the contact's full name.
-     * @param sessionsListView The list view to render the cell for.
-     * @return The rendered cell.
-     */
-    private ListCell<Session> renderCell(ListView<Session> sessionsListView) {
-        return new ListCell<>() {
+    public MoodInputPageController() {
 
-            /**
-             * Updates the item in the cell by setting the text to the session data
-             * @param session The session to update the cell with.
-             * @param empty Whether the cell is empty.
-             */
-            @Override
-            protected void updateItem(Session session, boolean empty) {
-                super.updateItem(session, empty);
-
-                if (empty || session == null || session.getAll() == null) {
-                    setText(null);
-
-                } else {
-                    setText(session.getAll());
-                }
-            }
-        };
+//        sessionDAO = (new MockSessionDAO());
+//        sessionManager = new SessionManager(new MockSessionDAO());
+        sessionManager = new SessionManager(new SqliteSessionDAO());
     }
+
     /**
      * Checks/unchecks every mood check-box
      */
@@ -146,11 +125,31 @@ public class MoodInputPageController {
     /**
      * Synchronizes the sessions list view with the sessions stored in the database.
      */
-    private void syncSessions() {
-        sessionsListView.getItems().clear();
-//        sessionsListView.getItems().addAll(sessionDAO.getAllSessions());
-        List<Session> sessions = sessionManager.getAllSessions();
-        sessionsListView.getItems().addAll(sessions);
+    private void tableLoad() {
+        observableSessions = FXCollections.observableArrayList();
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
+            Statement sta = con.createStatement();
+            ResultSet rs = sta.executeQuery("SELECT * FROM sessions");
+
+            while(rs.next()){
+                observableSessions.add(new Session(
+                        rs.getString("sessionTime"),
+                        rs.getString("mood"),
+                        rs.getString("localTime"),
+                        rs.getString("status")
+                        ));
+            }
+            sessionTableView.setItems(observableSessions);
+
+            rs.close();
+            sta.close();
+            con.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -160,8 +159,48 @@ public class MoodInputPageController {
         tracker = new TimeTracker();
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> onStartSession()));
-        sessionsListView.setCellFactory(this::renderCell);
-        syncSessions();
+
+        moodColumn.setCellValueFactory(new PropertyValueFactory<>("mood"));
+        sessionTimeColumn.setCellValueFactory(new PropertyValueFactory<>("sessionTime"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+        localTimeColumn.setCellValueFactory(new PropertyValueFactory<>("localTime"));
+        tableLoad();
+    }
+    @FXML
+    protected void onDashboardButtonClick(ActionEvent event) throws IOException {
+        // Opens the dashboard page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "hello-view.fxml", currentAccount);
+    }
+    @FXML
+    protected void onMoodButtonClick(ActionEvent event) throws IOException {
+        // Opens the mood input page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
+    }
+    @FXML
+    protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
+        // Opens the data visualisation page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
+    }
+    @FXML
+    protected void onCalendarButtonClick(ActionEvent event) throws IOException {
+        // Opens the calendar page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
+    }
+    @FXML
+    protected void onSettingsButtonClick(ActionEvent event) throws IOException {
+        // Opens the settings page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
+    }
+    @FXML
+    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
+        // Logs off the user and opens the login page on click
+        Button button = (Button) event.getSource(); // Get the button that triggered the event
+        ButtonNav(button, "login-view.fxml", currentAccount);
     }
 
     /**
@@ -190,11 +229,13 @@ public class MoodInputPageController {
         LocalDateTime now = LocalDateTime.now();
         localTime = dtf.format(now); // get local time and date
 
+        status = "0"; // set status
+
         // creates a new session instance and syncs the data to the database
         Session newSession = new Session(sessionTime, mood, localTime, status);
         sessionManager.addSession(newSession);
 //        sessionDAO.addSession(newSession);
-        syncSessions();
+        tableLoad();
 
     }
 

@@ -40,10 +40,12 @@ public class BaseUITemplate {
     private MenuButton menuButton;
     @FXML
     private Button side;
+    private User currentAccount;
     private Boolean closed = true;
 
     @FXML
     public void init(User current) {
+        currentAccount = current;
         titleLabel.setText("Welcome " + current.getFirstName());
         menuButton.setText(current.getFirstName() + " " + current.getLastName());
     }
@@ -53,34 +55,34 @@ public class BaseUITemplate {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
 //        ButtonNav(button, "hello-view.fxml");
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "hello-view.fxml");
+        NewButtonNav(button, "hello-view.fxml", currentAccount);
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        NewButtonNav(button, "data-visualisation-page.fxml");
+        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        NewButtonNav(button, "mood-input-page.fxml");
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onSettingsButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        NewButtonNav(button, "mood-input-page.fxml");
+        ButtonNav(button, "mood-input-page.fxml", currentAccount);
     }
     @FXML
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "login-view.fxml");
+        ButtonNav(button, "login-view.fxml", currentAccount);
     }
 
     @FXML
