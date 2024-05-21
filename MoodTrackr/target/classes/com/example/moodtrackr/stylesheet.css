@@ -22,7 +22,6 @@ and the text color to white */
     -fx-base-light: #ECECEC;
 }
 
-
 /* Authentication pages */
 .root {
     -fx-background-color: -fx-base-light;
@@ -32,36 +31,27 @@ and the text color to white */
     -fx-background-color: -fx-base-dark;
 }
 
-#login-button, #register-button, #cancel-button {
+#auth-btn {
     -fx-background-color: -fx-base-dark;
     -fx-cursor: hand;
 }
+#auth-btn:hover {
+    -fx-background-color: #3F4448;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
 
-#login-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
-}
-#register-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
-}
-#cancel-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
+#link {
+    -fx-text-fill: #0f07fc;
+    -fx-cursor: hand
 }
 
 /* Sidebar */
 Button {
-    -fx-background-color: -fx-base-dark
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
 }
 GridPane .button:hover {
     -fx-background-color: #D3D3D3;

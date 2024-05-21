@@ -47,11 +47,11 @@
                   <Font size="20.0" />
                </font></Label>
                 <HBox alignment="CENTER" layoutY="250.0" prefHeight="100.0" prefWidth="590.0" spacing="20.0">
-                    <Button id="register-button" onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" text="Register" textFill="WHITE">
+                    <Button id="auth-btn" onAction="#onRegisterButtonClick" prefHeight="40.0" prefWidth="125.0" text="Register" textFill="WHITE">
                   <font>
                      <Font size="18.0" />
                   </font></Button>
-                    <Button id="cancel-button" onAction="#onCancelButtonClick" prefHeight="40.0" prefWidth="125.0" text="Cancel" textFill="WHITE">
+                    <Button id="auth-btn" onAction="#onCancelButtonClick" prefHeight="40.0" prefWidth="125.0" text="Cancel" textFill="WHITE">
                   <font>
                      <Font size="18.0" />
                   </font></Button>
@@ -61,7 +61,7 @@
                   <font>
                      <Font size="14.0" />
                   </font></Label>
-                    <Button fx:id="loginButton" layoutX="197.0" layoutY="320.0" onAction="#onLoginButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="#0f07fc" underline="true">
+                    <Button id="link" fx:id="loginButton" layoutX="197.0" layoutY="320.0" onAction="#onLoginButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="#0f07fc" underline="true">
                         <font>
                             <Font name="Arial Rounded MT Bold" size="14.0" />
                         </font>

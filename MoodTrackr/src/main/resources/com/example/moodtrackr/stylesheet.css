@@ -1,27 +1,8 @@
-/* Select all buttons and set the background color to red
-and the text color to white */
-/*
-.button {
-    -fx-background-color: #121212;
-    -fx-text-fill: white;
-    -fx-border-color: white;
-    -fx-border-radius: 5;
-}
-*/
-
-/* Set color of button when mouse hovers over it */
-/*
-.button:hover {
-    -fx-background-color: #2e2e2e;
-}
-*/
-
 /* Set variables */
 * {
     -fx-base-dark: #252321;
     -fx-base-light: #ECECEC;
 }
-
 
 /* Authentication pages */
 .root {
@@ -32,36 +13,27 @@ and the text color to white */
     -fx-background-color: -fx-base-dark;
 }
 
-#login-button, #register-button, #cancel-button {
+#auth-btn {
     -fx-background-color: -fx-base-dark;
     -fx-cursor: hand;
 }
+#auth-btn:hover {
+    -fx-background-color: #3F4448;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
 
-#login-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
-}
-#register-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
-}
-#cancel-button:hover {
-    -fx-background-color: #3F4448;
-    -fx-text-fill: white;
-    -fx-scale-x: 1.1;
-    -fx-scale-y: 1.1;
-    -fx-scale-z: 1.1;
+#link {
+    -fx-text-fill: #0f07fc;
+    -fx-cursor: hand
 }
 
 /* Sidebar */
 Button {
-    -fx-background-color: -fx-base-dark
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
 }
 GridPane .button:hover {
     -fx-background-color: #D3D3D3;
@@ -135,24 +107,3 @@ GridPane .button:hover {
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
-/* Set color of node with fx:id="confirmBtn" */
-/*
-#registerButton {
-    -fx-background-color: #23ad56;
-}
-#loginButton {
-    -fx-background-color: #23ad56;
-}
-
-.text-field {
-    -fx-background-color: #121212;
-    -fx-text-fill: white;
-    -fx-border-color: white;
-    -fx-border-radius: 5;
-}
-
-.label {
-    -fx-text-fill: white;
-}
-
-*/

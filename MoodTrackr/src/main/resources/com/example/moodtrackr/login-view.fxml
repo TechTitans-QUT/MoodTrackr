@@ -43,7 +43,7 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-           <Button id="login-button" fx:id="loginButton" layoutX="233.0" layoutY="450.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="125.0" text="Login" textFill="WHITE">
+           <Button id="auth-btn" fx:id="loginButton" layoutX="233.0" layoutY="450.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="125.0" text="Login" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font></Button>
@@ -93,7 +93,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                 <Button onAction="#onRegisterButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#0f07fc" underline="true">
+                 <Button id="link" onAction="#onRegisterButtonClick" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Register" textFill="#0f07fc" underline="true">
                      <font>
                          <Font name="Arial Rounded MT Bold" size="14.0" />
                      </font>
