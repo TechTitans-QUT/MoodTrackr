@@ -42,7 +42,8 @@ public class Session {
      * @return all session data formatted as a string
      */
     public String getAll() {
-        return mood + " " + sessionTime + " " + status + " " + localTime ;
+        return "You were feeling: " + "\"" + mood + "\"" + ", at the date: " + "\"" +
+                localTime + "\"" + " during: " + "\"" + sessionTime + "\"" + " of doing your activities!" ;
     }
 
     /*
