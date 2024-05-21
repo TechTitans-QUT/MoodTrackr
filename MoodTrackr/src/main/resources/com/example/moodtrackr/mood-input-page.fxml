@@ -28,12 +28,12 @@
                     </ToolBar>
                 </HBox>
 
-                <TableView prefHeight="400.0" prefWidth="786.0">
+                <TableView fx:id="sessionTableView" prefHeight="400.0" prefWidth="786.0">
                     <columns>
-                        <TableColumn prefWidth="145.6000091433525" text="Mood" />
-                        <TableColumn prefWidth="140.8000030517578" text="Session Time" />
-                        <TableColumn minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
-                        <TableColumn prefWidth="151.19998168945312" text="Date Ended" />
+                        <TableColumn fx:id="moodColumn" prefWidth="145.6000091433525" text="Mood" />
+                        <TableColumn fx:id="sessionTimeColumn" prefWidth="140.8000030517578" text="Session Time" />
+                        <TableColumn fx:id="statusColumn" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
+                        <TableColumn fx:id="localTimeColumn" prefWidth="151.19998168945312" text="Date Ended" />
                         <TableColumn prefWidth="264.8000366210938" text="Activities" />
                     </columns>
                <VBox.margin>
