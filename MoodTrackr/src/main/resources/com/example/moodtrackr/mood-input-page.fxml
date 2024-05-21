@@ -19,7 +19,7 @@
             <VBox id="main-container" alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
 
                 <HBox alignment="TOP_CENTER">
-                    <ToolBar prefHeight="20.0" prefWidth="800.0">
+                    <ToolBar id="tool-bar" prefHeight="20.0" prefWidth="800.0">
                         <Button id="start-session" fx:id="startSessionButton" alignment="BOTTOM_LEFT" onAction="#onStartSession" text="Start Session" />
                         <Label fx:id="currentTime" />
                         <HBox.margin>
@@ -28,7 +28,7 @@
                     </ToolBar>
                 </HBox>
 
-                <TableView fx:id="sessionTableView" prefHeight="400.0" prefWidth="786.0">
+                <TableView id="table-view" fx:id="sessionTableView" prefHeight="400.0" prefWidth="786.0">
                     <columns>
                         <TableColumn fx:id="moodColumn" prefWidth="145.6000091433525" text="Mood" />
                         <TableColumn fx:id="sessionTimeColumn" prefWidth="140.8000030517578" text="Session Time" />
@@ -40,7 +40,7 @@
                   <Insets left="106.0" right="106.0" />
                </VBox.margin>
                 </TableView>
-                <HBox alignment="TOP_CENTER">
+                <HBox id="input-bar" alignment="TOP_CENTER">
                     <Button id="end-session" fx:id="endSessionButton" alignment="CENTER" disable="true" onAction="#onEndSessionButtonClick" prefHeight="64.0" prefWidth="108.0" text="End Session" textAlignment="CENTER">
                         <font>
                             <Font size="16.0" />

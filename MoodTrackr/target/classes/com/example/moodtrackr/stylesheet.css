@@ -38,21 +38,21 @@ and the text color to white */
 }
 
 #login-button:hover {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: #3F4448;
     -fx-text-fill: white;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-scale-z: 1.1;
 }
 #register-button:hover {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: #3F4448;
     -fx-text-fill: white;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-scale-z: 1.1;
 }
 #cancel-button:hover {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: #3F4448;
     -fx-text-fill: white;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
@@ -87,6 +87,7 @@ GridPane .button:hover {
     -fx-cursor: hand;
 }
 #start-session:hover {
+    -fx-background-color: #3F4448;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-scale-z: 1.1;
@@ -95,6 +96,7 @@ GridPane .button:hover {
     -fx-text-fill: white;
 }
 #end-session:hover {
+    -fx-background-color: #3F4448;
     -fx-scale-x: 1.1;
     -fx-scale-y: 1.1;
     -fx-scale-z: 1.1;
@@ -105,6 +107,34 @@ GridPane .button:hover {
     -fx-font: 12pt "Arial";
 }
 
+#input-bar {
+    -fx-padding: 10px 0px 0px 0px;
+}
+
+.tool-bar {
+    -fx-background-color: transparent;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-base-dark;
+    -fx-border-width: 4px;
+    -fx-border-radius: 8px;
+    -fx-padding: 0px 0px 5px 0px;
+}
+.table-view .table-column {
+    -fx-alignment: CENTER;
+}
+.table-view .column-header-background {
+    -fx-background-radius: 8px;
+}
+.table-view .column-header {
+    -fx-background-color: -fx-base-dark;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
 /* Set color of node with fx:id="confirmBtn" */
 /*
 #registerButton {
