@@ -44,8 +44,8 @@ public interface IUserDAO {
      */
     int getUserId(String firstName, String lastName, String password);
     /**
-     * Get the user ID by their name and password.
-     * @return ID of the passed user.
+     * Hash the password
+     * @return Hashed password.
      */
     String passwordHash(String password);
 }
