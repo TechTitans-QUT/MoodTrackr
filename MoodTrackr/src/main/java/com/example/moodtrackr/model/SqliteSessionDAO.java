@@ -1,5 +1,7 @@
 package com.example.moodtrackr.model;
 
+import com.example.moodtrackr.Session;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +42,7 @@ public class SqliteSessionDAO implements ISessionDAO {
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
-            statement.setInt(4, session.getStatus());
+            statement.setString(4, session.getStatus());
             statement.executeUpdate();
             // set id for new session
             ResultSet generatedKeys = statement.getGeneratedKeys();
@@ -59,7 +61,7 @@ public class SqliteSessionDAO implements ISessionDAO {
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
-            statement.setInt(4, session.getStatus());
+            statement.setString(4, session.getStatus());
             statement.setInt(5, session.getID());
             statement.executeUpdate();
         } catch (Exception e) {
@@ -88,7 +90,7 @@ public class SqliteSessionDAO implements ISessionDAO {
                 String sessionTime = resultSet.getString("sessionTime");
                 String mood = resultSet.getString("mood");
                 String localTime = resultSet.getString("localTime");
-                int status = resultSet.getInt("status");
+                String status = resultSet.getString("status");
                 Session session = new Session(sessionTime, mood, localTime, status);
                 session.setID(id);
                 return session;
@@ -111,7 +113,7 @@ public class SqliteSessionDAO implements ISessionDAO {
                 String sessionTime = resultSet.getString("sessionTime");
                 String mood = resultSet.getString("mood");
                 String localTime = resultSet.getString("localTime");
-                int status = resultSet.getInt("status");
+                String status = resultSet.getString("status");
 
                 Session session = new Session(sessionTime, mood, localTime, status);
                 session.setID(id);
