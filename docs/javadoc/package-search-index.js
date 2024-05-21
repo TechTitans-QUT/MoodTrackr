@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.example.moodtrackr.moodtrackr","l":"com.example.moodtrackr"},{"m":"com.example.moodtrackr.moodtrackr","l":"com.example.moodtrackr.controllers"},{"m":"com.example.moodtrackr.moodtrackr","l":"com.example.moodtrackr.model"}];updateSearchResults();

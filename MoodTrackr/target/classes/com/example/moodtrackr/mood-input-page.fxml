@@ -28,7 +28,18 @@
                     </ToolBar>
                 </HBox>
 
-                <ListView fx:id="sessionsListView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" HBox.hgrow="ALWAYS" />
+                <TableView prefHeight="400.0" prefWidth="786.0">
+                    <columns>
+                        <TableColumn prefWidth="145.6000091433525" text="Mood" />
+                        <TableColumn prefWidth="140.8000030517578" text="Session Time" />
+                        <TableColumn minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
+                        <TableColumn prefWidth="151.19998168945312" text="Date Ended" />
+                        <TableColumn prefWidth="264.8000366210938" text="Activities" />
+                    </columns>
+               <VBox.margin>
+                  <Insets left="106.0" right="106.0" />
+               </VBox.margin>
+                </TableView>
                 <HBox alignment="TOP_CENTER">
                     <Button id="end-session" fx:id="endSessionButton" alignment="CENTER" disable="true" onAction="#onEndSessionButtonClick" prefHeight="64.0" prefWidth="108.0" text="End Session" textAlignment="CENTER">
                         <font>

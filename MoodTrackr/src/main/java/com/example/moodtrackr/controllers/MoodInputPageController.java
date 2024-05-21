@@ -55,19 +55,9 @@ public class MoodInputPageController {
     @FXML
     private CheckBox mood7;
 
-    @FXML
-    private ListView<Session> sessionsListView;
     //    private ISessionDAO sessionDAO;
     @FXML
     private SessionManager sessionManager;
-    @FXML
-    TextField sessionTimeTestField;
-    @FXML
-    TextField moodTextField;
-    @FXML
-    TextField localTimeTextField;
-    @FXML
-    TextField statusTextField;
     @FXML
     private VBox sessionContainer;
 
@@ -91,32 +81,7 @@ public class MoodInputPageController {
     private boolean checked;
     private User currentAccount;
 
-    /**
-     * Renders a cell in the sessions list view by setting the text to the contact's full name.
-     * @param sessionsListView The list view to render the cell for.
-     * @return The rendered cell.
-     */
-    private ListCell<Session> renderCell(ListView<Session> sessionsListView) {
-        return new ListCell<>() {
 
-            /**
-             * Updates the item in the cell by setting the text to the session data
-             * @param session The session to update the cell with.
-             * @param empty Whether the cell is empty.
-             */
-            @Override
-            protected void updateItem(Session session, boolean empty) {
-                super.updateItem(session, empty);
-
-                if (empty || session == null || session.getAll() == null) {
-                    setText(null);
-
-                } else {
-                    setText(session.getAll());
-                }
-            }
-        };
-    }
     /**
      * Checks/unchecks every mood check-box
      */
@@ -162,10 +127,7 @@ public class MoodInputPageController {
      * Synchronizes the sessions list view with the sessions stored in the database.
      */
     private void syncSessions() {
-        sessionsListView.getItems().clear();
-//        sessionsListView.getItems().addAll(sessionDAO.getAllSessions());
-        List<Session> sessions = sessionManager.getAllSessions();
-        sessionsListView.getItems().addAll(sessions);
+
     }
 
     @FXML
@@ -175,7 +137,6 @@ public class MoodInputPageController {
         tracker = new TimeTracker();
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> onStartSession()));
-        sessionsListView.setCellFactory(this::renderCell);
         syncSessions();
     }
     @FXML

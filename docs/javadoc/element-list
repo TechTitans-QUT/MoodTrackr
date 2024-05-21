@@ -1,0 +1,4 @@
+module:com.example.moodtrackr.moodtrackr
+com.example.moodtrackr
+com.example.moodtrackr.controllers
+com.example.moodtrackr.model
