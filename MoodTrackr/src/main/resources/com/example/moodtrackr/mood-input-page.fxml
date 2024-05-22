@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -30,15 +31,21 @@
 
                 <TableView id="table-view" fx:id="sessionTableView" prefHeight="400.0" prefWidth="786.0">
                     <columns>
-                        <TableColumn fx:id="moodColumn" prefWidth="145.6000091433525" text="Mood" />
-                        <TableColumn fx:id="sessionTimeColumn" prefWidth="140.8000030517578" text="Session Time" />
-                        <TableColumn fx:id="statusColumn" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
-                        <TableColumn fx:id="localTimeColumn" prefWidth="151.19998168945312" text="Date Ended" />
-                        <TableColumn prefWidth="264.8000366210938" text="Activities" />
+                        <TableColumn fx:id="moodColumn" editable="false" prefWidth="145.6000091433525" text="Mood" />
+                        <TableColumn fx:id="sessionTimeColumn" editable="false" prefWidth="140.8000030517578" text="Session Time" />
+                        <TableColumn fx:id="statusColumn" editable="false" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
+                        <TableColumn fx:id="localTimeColumn" editable="false" prefWidth="185.0" text="Date Ended" />
+                        <TableColumn editable="false" minWidth="0.0" prefWidth="231.0" text="Activities" />
                     </columns>
                <VBox.margin>
                   <Insets left="106.0" right="106.0" />
                </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <effect>
+                  <Blend />
+               </effect>
                 </TableView>
                 <HBox id="input-bar" alignment="TOP_CENTER">
                     <Button id="end-session" fx:id="endSessionButton" alignment="CENTER" disable="true" onAction="#onEndSessionButtonClick" prefHeight="64.0" prefWidth="108.0" text="End Session" textAlignment="CENTER">

@@ -38,17 +38,15 @@ public class SqliteSessionDAO implements ISessionDAO {
     @Override
     public void addSession(Session session) {
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status) VALUES (?, ?, ?, ?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status, id) VALUES (?, ?, ?, ?, ?)");
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
             statement.setString(4, session.getStatus());
+            statement.setInt(5, session.getID());
+
             statement.executeUpdate();
-            // set id for new session
-            ResultSet generatedKeys = statement.getGeneratedKeys();
-            if (generatedKeys.next()) {
-                session.setID(generatedKeys.getInt(1));
-            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,15 +82,14 @@ public class SqliteSessionDAO implements ISessionDAO {
     public Session getSession(int id) {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM sessions WHERE id = ?");
-            statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 String sessionTime = resultSet.getString("sessionTime");
                 String mood = resultSet.getString("mood");
                 String localTime = resultSet.getString("localTime");
                 String status = resultSet.getString("status");
-                Session session = new Session(sessionTime, mood, localTime, status);
-                session.setID(id);
+
+                Session session = new Session(sessionTime, mood, localTime, status, id);
                 return session;
             }
         } catch (Exception e) {
@@ -115,7 +112,7 @@ public class SqliteSessionDAO implements ISessionDAO {
                 String localTime = resultSet.getString("localTime");
                 String status = resultSet.getString("status");
 
-                Session session = new Session(sessionTime, mood, localTime, status);
+                Session session = new Session(sessionTime, mood, localTime, status, id);
                 session.setID(id);
                 sessions.add(session);
             }
