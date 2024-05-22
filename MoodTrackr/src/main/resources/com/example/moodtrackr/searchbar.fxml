@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<HBox fx:id="searchbar" alignment="CENTER" prefHeight="100" prefWidth="1000" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.SearchbarController">
-    <Label contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="MoodTrackr" textAlignment="CENTER" textFill="WHITE" underline="true">
-        <font>
-            <Font name="Wingdings" size="24.0" />
-        </font>
-    </Label>
-    <Label fx:id="titleLabel" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="110.0" text="Welcome, User" textAlignment="CENTER" textFill="WHITE" underline="true">
-        <font>
-            <Font name="Wingdings" size="14.0" />
-        </font>
-    </Label>
-    <TextField prefHeight="20.0" prefWidth="300.0" promptText="Search...">
-        <HBox.margin>
-            <Insets left="50.0" top="5.0" />
-        </HBox.margin>
-    </TextField>
-    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@../../../images/icons8-account-48.png" />
-      </image>
-      <HBox.margin>
-         <Insets left="100.0" top="7.0" />
-      </HBox.margin></ImageView>
-    <MenuButton id="account-menu" fx:id="menuButton" mnemonicParsing="false" text="MenuButton">
-        <items>
-            <MenuItem mnemonicParsing="false" text="Account" />
-            <MenuItem mnemonicParsing="false" text="Notifications" />
-            <MenuItem mnemonicParsing="false" onAction="#logoutItemClicked" text="Logoff" />
-        </items>
-        <HBox.margin>
-            <Insets top="5.0" />
-        </HBox.margin>
-    </MenuButton>
+<HBox fx:id="searchbar" alignment="CENTER" prefHeight="100" prefWidth="1174.0" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.SearchbarController">
+    <AnchorPane prefHeight="100.0" prefWidth="1174.0">
+        <VBox id="logo-container" alignment="CENTER" prefHeight="100.0" prefWidth="175.0">
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="MoodTrackr" textFill="WHITE">
+                <font>
+                    <Font name="Verdana Bold" size="18.0" />
+                </font>
+            </Label>
+            <Line endX="70.0" startX="-70.0" stroke="WHITE" strokeWidth="2.0">
+                <effect>
+                    <DropShadow />
+                </effect>
+            </Line>
+            <Label alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="Web Application" textFill="WHITE">
+                <font>
+                    <Font name="Apple Braille Outline 6 Dot" size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+        <Label fx:id="titleLabel" contentDisplay="BOTTOM" layoutX="316.0" layoutY="41.0" text="Welcome, User" textAlignment="CENTER" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Wingdings" size="14.0" />
+            </font>
+        </Label>
+        <TextField layoutX="600.0" layoutY="37.0" prefHeight="20.0" prefWidth="300.0" promptText="Search...">
+        </TextField>
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1005.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+             <Image url="@../../../images/icons8-account-48.png" />
+          </image>
+        </ImageView>
+         <MenuButton id="account-menu" fx:id="menuButton" layoutX="1035.0" layoutY="37.0" mnemonicParsing="false" text="MenuButton">
+             <items>
+                 <MenuItem mnemonicParsing="false" text="Account" />
+                 <MenuItem mnemonicParsing="false" text="Notifications" />
+                 <MenuItem mnemonicParsing="false" onAction="#logoutItemClicked" text="Logoff" />
+             </items>
+         </MenuButton>
+    </AnchorPane>
 </HBox>
