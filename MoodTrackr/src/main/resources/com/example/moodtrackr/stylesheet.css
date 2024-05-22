@@ -49,6 +49,12 @@ GridPane .button:hover {
     -fx-scale-z: 1.2;
 }
 
+/* Search Bar */
+#account-menu {
+    -fx-background-color: -fx-base-dark;
+    -fx-text-fill: white;
+}
+
 /* Mood input page */
 #main-container {
     -fx-background-color: -fx-base-light;

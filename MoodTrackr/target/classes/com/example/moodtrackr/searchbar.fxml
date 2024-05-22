@@ -2,16 +2,17 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<HBox fx:id="searchbar" alignment="CENTER" prefHeight="100" prefWidth="1000" style="-fx-background-color: #252322;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.SearchbarController">
-    <Label contentDisplay="BOTTOM" underline="true"  textFill="WHITE" prefHeight="62.0" prefWidth="268.0" text="MoodTrackr" textAlignment="CENTER">
+<HBox fx:id="searchbar" alignment="CENTER" prefHeight="100" prefWidth="1000" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.SearchbarController">
+    <Label contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="268.0" text="MoodTrackr" textAlignment="CENTER" textFill="WHITE" underline="true">
         <font>
             <Font name="Wingdings" size="24.0" />
         </font>
     </Label>
-    <Label fx:id="titleLabel" contentDisplay="BOTTOM" underline="true"  textFill="WHITE" prefHeight="62.0" prefWidth="110.0" text="Welcome, User" textAlignment="CENTER">
+    <Label fx:id="titleLabel" contentDisplay="BOTTOM" prefHeight="62.0" prefWidth="110.0" text="Welcome, User" textAlignment="CENTER" textFill="WHITE" underline="true">
         <font>
             <Font name="Wingdings" size="14.0" />
         </font>
@@ -21,17 +22,21 @@
             <Insets left="50.0" top="5.0" />
         </HBox.margin>
     </TextField>
-    <MenuButton fx:id="menuButton" mnemonicParsing="false" text="MenuButton">
+    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../images/icons8-account-48.png" />
+      </image>
+      <HBox.margin>
+         <Insets left="100.0" top="7.0" />
+      </HBox.margin></ImageView>
+    <MenuButton id="account-menu" fx:id="menuButton" mnemonicParsing="false" text="MenuButton">
         <items>
             <MenuItem mnemonicParsing="false" text="Account" />
             <MenuItem mnemonicParsing="false" text="Notifications" />
-            <MenuItem mnemonicParsing="false" text="Logoff" onAction="#logoutItemClicked"/>
+            <MenuItem mnemonicParsing="false" onAction="#logoutItemClicked" text="Logoff" />
         </items>
         <HBox.margin>
-            <Insets left="100.0" top="5.0" />
+            <Insets top="5.0" />
         </HBox.margin>
     </MenuButton>
-    <VBox.margin>
-        <Insets />
-    </VBox.margin>
 </HBox>
