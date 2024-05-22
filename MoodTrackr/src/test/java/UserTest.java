@@ -11,7 +11,9 @@ public class UserTest {
         user = new User("John", "Doe", "john.doe@example.com", "password1");
     }
     @Test
-    public void testGetId() {
+    public void testGetId() { assertEquals(0, user.getId()); }
+    @Test
+    public void testSetId() {
         user.setId(1);
         assertEquals(1, user.getId());
     }
