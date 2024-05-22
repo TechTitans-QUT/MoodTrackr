@@ -58,6 +58,7 @@ GridPane .button:hover {
     -fx-background-color: -fx-base-dark;
 }
 #account-menu .label {
+    -fx-background-color: -fx-base-dark;
     -fx-text-fill: white;
 }
 
