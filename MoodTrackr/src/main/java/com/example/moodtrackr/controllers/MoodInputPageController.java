@@ -17,10 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -127,13 +124,14 @@ public class MoodInputPageController {
     /**
      * Synchronizes the sessions list view with the sessions stored in the database.
      */
-    private void tableLoad() {
+    private void tableLoad(int id) {
         observableSessions = FXCollections.observableArrayList();
 
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
-            Statement sta = con.createStatement();
-            ResultSet rs = sta.executeQuery("SELECT * FROM sessions");
+            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE id = ?");
+            sta.setInt(1, id); // Set the ID parameter
+            ResultSet rs = sta.executeQuery();
 
             while(rs.next()){
                 observableSessions.add(new Session(
@@ -159,6 +157,9 @@ public class MoodInputPageController {
     public void initialize() {
         // Initialise a new time tracker and renders and
         // synchronises the cells in the listview with data in the database
+        currentAccount = GlobalData.getInstance().getYourObject();
+        currentID = currentAccount.getId();
+
         tracker = new TimeTracker();
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> onStartSession()));
@@ -167,7 +168,7 @@ public class MoodInputPageController {
         sessionTimeColumn.setCellValueFactory(new PropertyValueFactory<>("sessionTime"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
         localTimeColumn.setCellValueFactory(new PropertyValueFactory<>("localTime"));
-        tableLoad();
+        tableLoad(currentID);
     }
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
@@ -235,12 +236,13 @@ public class MoodInputPageController {
         status = "0"; // set status
         currentAccount = GlobalData.getInstance().getYourObject();
         currentID = currentAccount.getId();
+
         System.out.println("CURRRENT ID:" + currentID);
         // creates a new session instance and syncs the data to the database
         Session newSession = new Session(sessionTime, mood, localTime, status, currentID);
         sessionManager.addSession(newSession);
 //        sessionDAO.addSession(newSession);
-        tableLoad();
+        tableLoad(currentID);
 
     }
 
