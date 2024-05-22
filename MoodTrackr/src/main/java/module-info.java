@@ -10,4 +10,6 @@ module com.example.moodtrackr.moodtrackr {
     exports com.example.moodtrackr;
     exports com.example.moodtrackr.controllers;
     opens com.example.moodtrackr.controllers to javafx.fxml;
+    exports com.example.moodtrackr.model;
+    opens com.example.moodtrackr.model to javafx.fxml;
 }

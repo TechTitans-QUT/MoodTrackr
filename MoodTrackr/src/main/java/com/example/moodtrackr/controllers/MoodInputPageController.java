@@ -1,7 +1,7 @@
 package com.example.moodtrackr.controllers;
 import com.example.moodtrackr.GlobalData;
 
-import com.example.moodtrackr.Session;
+import com.example.moodtrackr.model.Session;
 import com.example.moodtrackr.model.SessionManager;
 import com.example.moodtrackr.model.SqliteSessionDAO;
 import com.example.moodtrackr.model.User;
@@ -10,18 +10,14 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
 
-import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
-import static com.example.moodtrackr.NavigationMethods.ButtonNav;
 
 public class MoodInputPageController {
     @FXML
@@ -200,7 +196,6 @@ public class MoodInputPageController {
         currentAccount = GlobalData.getInstance().getYourObject();
         currentID = currentAccount.getId();
 
-        System.out.println("CURRRENT ID:" + currentID);
         // creates a new session instance and syncs the data to the database
         Session newSession = new Session(sessionTime, mood, localTime, status, currentID);
         sessionManager.addSession(newSession);

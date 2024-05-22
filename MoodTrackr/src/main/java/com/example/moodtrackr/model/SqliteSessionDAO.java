@@ -1,7 +1,5 @@
 package com.example.moodtrackr.model;
 
-import com.example.moodtrackr.Session;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

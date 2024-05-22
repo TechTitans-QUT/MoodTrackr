@@ -124,7 +124,7 @@
                 </GridPane>
             </HBox>
             <HBox>
-                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" visible="true" />
+                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" visible="false" />
                 <Button fx:id="deleteButton" maxWidth="Infinity" onAction="#onDelete" text="Delete" visible="false" />
                 <Button fx:id="editConfirmButton" onAction="#onEditConfirm" text="Confirm" visible="false" />
             </HBox>

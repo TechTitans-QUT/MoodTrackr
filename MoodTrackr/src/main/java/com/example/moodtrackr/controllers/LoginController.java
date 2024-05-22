@@ -2,6 +2,7 @@ package com.example.moodtrackr.controllers;
 
 import com.example.moodtrackr.GlobalData;
 import com.example.moodtrackr.MainApplication;
+import com.example.moodtrackr.model.User;
 import com.example.moodtrackr.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

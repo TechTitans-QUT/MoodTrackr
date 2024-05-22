@@ -53,6 +53,6 @@ public class UserTest {
     }
     @Test
     public void testGetFullName() {
-        assertEquals("John Doe", user.getFullName());
+        assertEquals("John Doe (john.doe@example.com)", user.getFullName());
     }
 }
