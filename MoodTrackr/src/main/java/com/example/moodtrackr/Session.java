@@ -17,11 +17,12 @@ public class Session {
      * Initialises a new Session object
      *
      */
-    public Session(String sessionTime, String mood, String localTime, String status){
+    public Session(String sessionTime, String mood, String localTime, String status, int id){
         this.sessionTime = sessionTime;
         this.mood = mood;
         this.localTime = localTime;
         this.status = status;
+        this.id = id;
     }
 
     /*
