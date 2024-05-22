@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox prefHeight="700.0" prefWidth="1174.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
+<HBox style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <BorderPane prefHeight="700.0" prefWidth="1174.0">
         <top>
             <fx:include fx:id="searchbar" source="searchbar.fxml" />
@@ -10,5 +15,11 @@
         <left>
             <fx:include fx:id="sidebar" source="sidebar.fxml" />
         </left>
+        <center>
+            <!--Your page content should go here, add a controller to the root HBox as necessary-->
+            <VBox id="main-container" alignment="TOP_CENTER" stylesheets="@stylesheet.css" VBox.vgrow="ALWAYS">
+
+            </VBox>
+        </center>
     </BorderPane>
 </HBox>
