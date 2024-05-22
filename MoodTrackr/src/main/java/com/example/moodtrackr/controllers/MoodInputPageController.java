@@ -1,4 +1,5 @@
 package com.example.moodtrackr.controllers;
+import com.example.moodtrackr.GlobalData;
 
 import com.example.moodtrackr.Session;
 import com.example.moodtrackr.model.SessionManager;
@@ -71,6 +72,7 @@ public class MoodInputPageController {
     public String  mood;
     public String localTime;
     public String status;
+    public int currentID;
     private boolean checked;
     private User currentAccount;
 
@@ -138,7 +140,8 @@ public class MoodInputPageController {
                         rs.getString("sessionTime"),
                         rs.getString("mood"),
                         rs.getString("localTime"),
-                        rs.getString("status")
+                        rs.getString("status"),
+                        rs.getInt("id")
                         ));
             }
             sessionTableView.setItems(observableSessions);
@@ -230,9 +233,11 @@ public class MoodInputPageController {
         localTime = dtf.format(now); // get local time and date
 
         status = "0"; // set status
-
+        currentAccount = GlobalData.getInstance().getYourObject();
+        currentID = currentAccount.getId();
+        System.out.println("CURRRENT ID:" + currentID);
         // creates a new session instance and syncs the data to the database
-        Session newSession = new Session(sessionTime, mood, localTime, status);
+        Session newSession = new Session(sessionTime, mood, localTime, status, currentID);
         sessionManager.addSession(newSession);
 //        sessionDAO.addSession(newSession);
         tableLoad();

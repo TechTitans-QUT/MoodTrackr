@@ -17,9 +17,10 @@ public class MockSessionDAO implements ISessionDAO {
 
     public MockSessionDAO() {
         // Add some initial contacts to the mock database
-        addSession(new Session("03:00:23", "Happy", "localTime1", "0"));
-        addSession(new Session("01:04:52", "Very Happy", "localTime2", "0"));
-        addSession(new Session("06:10:26", "Sad", "localTime3", "0"));
+//        addSession(new Session("03:00:23", "Happy", "localTime1", "0"));
+//        addSession(new Session("01:04:52", "Very Happy", "localTime2", "0"));
+//        addSession(new Session("06:10:26", "Sad", "localTime3", "0"));
+
     }
     @Override
     public void addSession(Session session) {
