@@ -1,4 +1,0 @@
---patch-module
-com.example.moodtrackr.moodtrackr=_
---add-reads
-com.example.moodtrackr.moodtrackr=ALL-UNNAMED

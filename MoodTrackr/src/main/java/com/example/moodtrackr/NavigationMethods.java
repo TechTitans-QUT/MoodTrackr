@@ -1,7 +1,6 @@
 package com.example.moodtrackr;
 
 import com.example.moodtrackr.controllers.SearchbarController;
-import com.example.moodtrackr.model.User;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Button;
