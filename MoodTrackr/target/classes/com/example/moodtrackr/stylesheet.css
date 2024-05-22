@@ -53,6 +53,9 @@ GridPane .button:hover {
 #account-menu {
     -fx-background-color: -fx-base-dark;
 }
+#account-menu .label {
+    -fx-text-fill: white;
+}
 
 /* Mood input page */
 #main-container {

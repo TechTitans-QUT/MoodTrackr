@@ -52,6 +52,8 @@ GridPane .button:hover {
 /* Search Bar */
 #account-menu {
     -fx-background-color: -fx-base-dark;
+}
+#account-menu .label {
     -fx-text-fill: white;
 }
 
