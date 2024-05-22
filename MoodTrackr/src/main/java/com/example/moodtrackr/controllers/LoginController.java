@@ -52,7 +52,6 @@ public class LoginController {
                 FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
-                stage.setTitle("Dashboard");
                 stage.setScene(scene);
                 stage.show();
             } else {
@@ -68,7 +67,6 @@ public class LoginController {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("register-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), MainApplication.WIDTH, MainApplication.HEIGHT);
-        stage.setTitle("Register Page");
         stage.setScene(scene);
     }
 }

@@ -10,7 +10,7 @@
     <left>
         <AnchorPane prefHeight="680.0" prefWidth="485.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
             <VBox prefHeight="680.0" prefWidth="485.0">
-                <ListView fx:id="usersListView" visible="false" />
+                <ListView fx:id="usersListView" prefHeight="680.0" visible="false" />
             </VBox>
             <VBox id="logo-container" fx:id="logoContainer" alignment="CENTER" prefHeight="680.0" prefWidth="485.0" visible="true">
                 <Label alignment="CENTER" prefHeight="40.0" prefWidth="485.0" text="MoodTrackr" textFill="WHITE">
@@ -124,7 +124,7 @@
                 </GridPane>
             </HBox>
             <HBox>
-                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" visible="true" />
+                <CheckBox fx:id="debugCheckBox" onAction="#onDebug" style="-fx-border-color: white; -fx-background-color: transparent;" visible="false" />
                 <Button fx:id="deleteButton" maxWidth="Infinity" onAction="#onDelete" text="Delete" visible="false" />
                 <Button fx:id="editConfirmButton" onAction="#onEditConfirm" text="Confirm" visible="false" />
             </HBox>
