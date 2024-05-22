@@ -170,43 +170,6 @@ public class MoodInputPageController {
         localTimeColumn.setCellValueFactory(new PropertyValueFactory<>("localTime"));
         tableLoad(currentID);
     }
-    @FXML
-    protected void onDashboardButtonClick(ActionEvent event) throws IOException {
-        // Opens the dashboard page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "hello-view.fxml", currentAccount);
-    }
-    @FXML
-    protected void onMoodButtonClick(ActionEvent event) throws IOException {
-        // Opens the mood input page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
-        // Opens the data visualisation page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "data-visualisation-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onCalendarButtonClick(ActionEvent event) throws IOException {
-        // Opens the calendar page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onSettingsButtonClick(ActionEvent event) throws IOException {
-        // Opens the settings page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml", currentAccount);
-    }
-    @FXML
-    protected void onLogoutButtonClick(ActionEvent event) throws IOException {
-        // Logs off the user and opens the login page on click
-        Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "login-view.fxml", currentAccount);
-    }
-
     /**
      * Code to set the events of when the End Session button is clicked.
      *
