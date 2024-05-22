@@ -4,6 +4,10 @@
     -fx-base-light: #ECECEC;
 }
 
+#main-container {
+    -fx-background-color: -fx-base-light;
+}
+
 /* Authentication pages */
 .root {
     -fx-background-color: -fx-base-light;
@@ -58,10 +62,6 @@ GridPane .button:hover {
 }
 
 /* Mood input page */
-#main-container {
-    -fx-background-color: -fx-base-light;
-}
-
 #start-session {
     -fx-text-fill: white;
     -fx-cursor: hand;
