@@ -86,7 +86,6 @@ public class BaseUITemplate {
 
     @FXML
     protected void onSide() {
-//        boolean closed = side.isSelected();
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(1));
         slide.setNode(logout);
@@ -95,7 +94,7 @@ public class BaseUITemplate {
         slide.play();
 
         if (closed) {
-            sidebar.setTranslateX(-127);
+            sidebar.setTranslateX(-130);
             closed = false;
             side.setText(">");
         } else {
@@ -103,8 +102,8 @@ public class BaseUITemplate {
             closed = true;
             side.setText("<");
         }
-        slide.setOnFinished((ActionEvent e) -> {
-            System.out.println("working");
-        });
+//        slide.setOnFinished((ActionEvent e) -> {
+//            System.out.println("working");
+//        });
     }
 }

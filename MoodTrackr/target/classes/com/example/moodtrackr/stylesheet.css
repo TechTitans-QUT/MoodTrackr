@@ -33,8 +33,14 @@
     -fx-text-fill: #0f07fc;
     -fx-cursor: hand
 }
+#logo-container {
+    -fx-background-color: -fx-base-dark;
+}
 
 /* Sidebar */
+#sidebar {
+    -fx-background-color: -fx-base-dark;
+}
 Button {
     -fx-background-color: -fx-base-dark;
     -fx-text-fill: white;
@@ -48,7 +54,8 @@ GridPane .button:hover {
 }
 #side {
     -fx-background-color: -fx-base-dark;
-    -fx-text-fill: white
+    -fx-text-fill: white;
+    -fx-cursor: hand;
 }
 #side:hover {
     -fx-scale-x: 1.2;
@@ -58,11 +65,13 @@ GridPane .button:hover {
 
 /* Search Bar */
 #account-menu {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: transparent;
 }
 #account-menu .label {
-    -fx-background-color: -fx-base-dark;
-    -fx-text-fill: white;
+    -fx-text-fill: #fff;
+}
+#account-item .label {
+    -fx-text-fill: -fx-base-dark;
 }
 
 /* Mood input page */
@@ -89,7 +98,6 @@ GridPane .button:hover {
 .list-cell
 {
     -fx-font: 12pt "Arial";
-    -fx-size: 50px;
 }
 
 #input-bar {

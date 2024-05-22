@@ -47,7 +47,7 @@
                <font>
                   <Font size="18.0" />
                </font></Button>
-            <HBox alignment="CENTER" layoutY="200.0" prefHeight="100.0" prefWidth="590.0" spacing="10.0">
+            <HBox alignment="CENTER" layoutY="184.0" prefHeight="100.0" prefWidth="590.0" spacing="10.0">
                <children>
                  <GridPane hgap="5.0" vgap="40.0">
                      <columnConstraints>

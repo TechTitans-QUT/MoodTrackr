@@ -9,7 +9,7 @@
 
 <HBox fx:id="searchbar" alignment="CENTER" prefHeight="100" prefWidth="1174.0" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.SearchbarController">
     <AnchorPane prefHeight="100.0" prefWidth="1174.0">
-        <VBox id="logo-container" alignment="CENTER" prefHeight="100.0" prefWidth="175.0">
+        <VBox id="logo-container" alignment="CENTER" prefHeight="100.0" prefWidth="170.0">
             <Label alignment="CENTER" prefHeight="20.0" prefWidth="150.0" text="MoodTrackr" textFill="WHITE">
                 <font>
                     <Font name="Verdana Bold" size="18.0" />
@@ -40,9 +40,9 @@
         </ImageView>
          <MenuButton id="account-menu" fx:id="menuButton" layoutX="1035.0" layoutY="37.0" mnemonicParsing="false" text="MenuButton">
              <items>
-                 <MenuItem mnemonicParsing="false" text="Account" />
-                 <MenuItem mnemonicParsing="false" text="Notifications" />
-                 <MenuItem mnemonicParsing="false" onAction="#logoutItemClicked" text="Logoff" />
+                 <MenuItem id="account-item" mnemonicParsing="false" text="Account" />
+                 <MenuItem id="account-item" mnemonicParsing="false" text="Notifications" />
+                 <MenuItem id="account-item" mnemonicParsing="false" onAction="#logoutItemClicked" text="Logoff" />
              </items>
          </MenuButton>
     </AnchorPane>

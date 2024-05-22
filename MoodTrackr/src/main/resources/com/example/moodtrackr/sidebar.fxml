@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="163.0" style="-fx-background-color: #252322;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
+<VBox id="sidebar" fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="170.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <GridPane alignment="TOP_CENTER" vgap="20.0">
         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
             <Image url="@../../../images/icons8-home-48.png" />
@@ -84,11 +84,13 @@
          <Insets top="20.0" />
       </VBox.margin>
     </GridPane>
-   <Button fx:id="side" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
-      <font>
-         <Font name="System Bold" size="18.0" />
-      </font>
-      <VBox.margin>
-         <Insets left="122.0" top="260.0" />
-      </VBox.margin></Button>
+   <AnchorPane prefHeight="300.0" prefWidth="170.0">
+      <children>
+         <Button fx:id="side" layoutX="130.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Button>
+      </children>
+   </AnchorPane>
 </VBox>
