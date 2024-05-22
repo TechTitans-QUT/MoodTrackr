@@ -31,10 +31,7 @@
 
 #link {
     -fx-text-fill: #0f07fc;
-    -fx-cursor: hand
-}
-#logo-container {
-    -fx-background-color: -fx-base-dark;
+    -fx-cursor: hand;
 }
 
 /* Sidebar */
