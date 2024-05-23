@@ -1,5 +1,7 @@
 package com.example.moodtrackr.model;
 
+import javafx.scene.chart.PieChart;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -118,5 +120,27 @@ public class SqliteSessionDAO implements ISessionDAO {
             e.printStackTrace();
         }
         return sessions;
+    }
+
+    @Override
+    public int getNumberOfMood(int id, String mood) {
+        int total = 0;
+        try {
+            Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
+            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE id = ? AND mood = ?");
+            sta.setInt(1, id); // Set the ID parameter
+            sta.setString(2, mood);
+            ResultSet rs = sta.executeQuery();
+            while(rs.next()){
+                total++;
+            }
+            rs.close();
+            sta.close();
+            con.close();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return total;
     }
 }

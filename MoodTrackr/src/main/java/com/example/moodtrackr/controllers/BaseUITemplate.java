@@ -66,17 +66,17 @@ public class BaseUITemplate {
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
         User currentAccount = GlobalData.getInstance().getYourObject();
-        ButtonNav(button, "data-visualisation-page.fxml");
+        NewButtonNav(button, "data-visualisation-page.fxml");
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onSettingsButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "pie-chart.fxml");
     }
     @FXML
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {
