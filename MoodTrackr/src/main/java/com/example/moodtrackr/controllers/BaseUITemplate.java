@@ -53,30 +53,27 @@ public class BaseUITemplate {
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
 //        ButtonNav(button, "hello-view.fxml");
-        User currentAccount = GlobalData.getInstance().getYourObject();
         NewButtonNav(button, "hello-view.fxml");
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        User currentAccount = GlobalData.getInstance().getYourObject();
         NewButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        User currentAccount = GlobalData.getInstance().getYourObject();
         NewButtonNav(button, "data-visualisation-page.fxml");
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        NewButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "template-page.fxml");
     }
     @FXML
     protected void onSettingsButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        NewButtonNav(button, "pie-chart.fxml");
+        NewButtonNav(button, "template-page.fxml");
     }
     @FXML
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {

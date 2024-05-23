@@ -17,15 +17,12 @@ import java.util.ResourceBundle;
 public class PieChartController implements Initializable {
     @FXML
     private PieChart pieChart;
-
-    private SessionManager sessionManager;
-    private SqliteSessionDAO sessionDAO;
-    private String[] moods = { "Very Happy", "Happy", "Slightly Happy", "Neutral", "Slightly Sad", "Sad", "Very Sad" };
+    private final String[] moods = { "Very Happy", "Happy", "Slightly Happy", "Neutral", "Slightly Sad", "Sad", "Very Sad" };
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Access session manager
-        sessionDAO = new SqliteSessionDAO();
+        SqliteSessionDAO sessionDAO = new SqliteSessionDAO();
         // Set current user's id
         int id = GlobalData.getInstance().getYourObject().getId();
         // Create pie chart
@@ -44,6 +41,9 @@ public class PieChartController implements Initializable {
         });
         // Insert data into pie chart
         pieChart.getData().addAll(pieData);
-        pieChart.setTitle("Mood Chart");
+        // Get username
+        String name = GlobalData.getInstance().getYourObject().getFirstName();
+        // Set title
+        pieChart.setTitle(name + "'s Mood Chart");
     }
 }

@@ -56,7 +56,7 @@
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
-        <Button fx:id="Calendar" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Calendar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Button fx:id="Calendar" onAction="#onCalendarButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Calendar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets />
          </GridPane.margin></Button>
