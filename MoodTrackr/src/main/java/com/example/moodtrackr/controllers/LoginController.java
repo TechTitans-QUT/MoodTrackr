@@ -33,8 +33,6 @@ public class LoginController {
     public LoginController() {
         userDAO = new SqliteUserDAO();
     }
-    private SearchbarController searchbarController = new SearchbarController();
-
     @FXML
     public void onLoginButtonClick(ActionEvent event) throws IOException {
         // Check for mandatory input
@@ -50,7 +48,7 @@ public class LoginController {
                 User current = userDAO.getUser(id);
                 GlobalData.getInstance().setYourObject(current);
                 Stage stage = (Stage) loginMessage.getScene().getWindow();
-                FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("hello-view.fxml"));
+                FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("dashboard-view.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);

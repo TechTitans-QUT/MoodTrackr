@@ -1,6 +1,5 @@
 package com.example.moodtrackr;
 
-import com.example.moodtrackr.controllers.SearchbarController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Button;
@@ -8,7 +7,6 @@ import javafx.stage.*;
 import java.io.IOException;
 
 public class NavigationMethods {
-    private SearchbarController searchbarController = new SearchbarController();
     public static void ButtonNav(Button buttonName, String fxmlFile) throws IOException {
         Stage stage = (Stage) buttonName.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource(fxmlFile));

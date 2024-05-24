@@ -52,8 +52,7 @@ public class BaseUITemplate {
     @FXML
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-//        ButtonNav(button, "hello-view.fxml");
-        NewButtonNav(button, "hello-view.fxml");
+        NewButtonNav(button, "dashboard-view.fxml");
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
