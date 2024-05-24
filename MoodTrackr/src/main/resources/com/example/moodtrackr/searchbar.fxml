@@ -26,9 +26,9 @@
                 </font>
             </Label>
         </VBox>
-        <Label fx:id="titleLabel" contentDisplay="BOTTOM" layoutX="316.0" layoutY="41.0" text="Welcome, User" textAlignment="CENTER" textFill="WHITE" underline="true">
+        <Label fx:id="titleLabel" contentDisplay="BOTTOM" layoutX="274.0" layoutY="39.0" text="Welcome, User" textAlignment="CENTER" textFill="WHITE" underline="true">
             <font>
-                <Font name="Wingdings" size="14.0" />
+                <Font name="Wingdings" size="18.0" />
             </font>
         </Label>
         <TextField layoutX="600.0" layoutY="37.0" prefHeight="20.0" prefWidth="300.0" promptText="Search...">
