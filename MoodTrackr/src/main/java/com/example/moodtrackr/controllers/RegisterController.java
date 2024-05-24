@@ -132,7 +132,6 @@ public class RegisterController {
         Stage stage = (Stage) loginButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), MainApplication.WIDTH, MainApplication.HEIGHT);
-        stage.setTitle("Login Page");
         stage.setScene(scene);
     }
 

@@ -32,4 +32,9 @@ public interface ISessionDAO {
      * @return A list of all session in the database.
      */
     public List<Session> getAllSessions();
+    /**
+     * Get the number of mood
+     * @return number of session with mood.
+     */
+    public int getNumberOfMood(int id, String mood);
 }

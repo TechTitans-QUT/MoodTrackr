@@ -56,4 +56,9 @@ public class MockSessionDAO implements ISessionDAO {
     public List<Session> getAllSessions() {
         return new ArrayList<>(sessions);
     }
+
+    @Override
+    public int getNumberOfMood(int id, String mood) {
+        return 0;
+    }
 }

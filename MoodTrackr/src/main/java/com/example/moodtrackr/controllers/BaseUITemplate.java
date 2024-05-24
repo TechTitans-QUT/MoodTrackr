@@ -53,30 +53,27 @@ public class BaseUITemplate {
     protected void onDashboardButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
 //        ButtonNav(button, "hello-view.fxml");
-        User currentAccount = GlobalData.getInstance().getYourObject();
         NewButtonNav(button, "hello-view.fxml");
     }
     @FXML
     protected void onMoodButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        User currentAccount = GlobalData.getInstance().getYourObject();
         NewButtonNav(button, "mood-input-page.fxml");
     }
     @FXML
     protected void onDataVisualisationButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        User currentAccount = GlobalData.getInstance().getYourObject();
-        ButtonNav(button, "data-visualisation-page.fxml");
+        NewButtonNav(button, "data-visualisation-page.fxml");
     }
     @FXML
     protected void onCalendarButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "template-page.fxml");
     }
     @FXML
     protected void onSettingsButtonClick(ActionEvent event) throws IOException {
         Button button = (Button) event.getSource(); // Get the button that triggered the event
-        ButtonNav(button, "mood-input-page.fxml");
+        NewButtonNav(button, "template-page.fxml");
     }
     @FXML
     protected void onLogoutButtonClick(ActionEvent event) throws IOException {
@@ -86,7 +83,6 @@ public class BaseUITemplate {
 
     @FXML
     protected void onSide() {
-//        boolean closed = side.isSelected();
         TranslateTransition slide = new TranslateTransition();
         slide.setDuration(Duration.seconds(1));
         slide.setNode(logout);
@@ -95,7 +91,7 @@ public class BaseUITemplate {
         slide.play();
 
         if (closed) {
-            sidebar.setTranslateX(-127);
+            sidebar.setTranslateX(-130);
             closed = false;
             side.setText(">");
         } else {
@@ -103,8 +99,8 @@ public class BaseUITemplate {
             closed = true;
             side.setText("<");
         }
-        slide.setOnFinished((ActionEvent e) -> {
-            System.out.println("working");
-        });
+//        slide.setOnFinished((ActionEvent e) -> {
+//            System.out.println("working");
+//        });
     }
 }
