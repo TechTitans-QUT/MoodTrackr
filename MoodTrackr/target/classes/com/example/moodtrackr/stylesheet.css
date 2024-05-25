@@ -71,6 +71,53 @@ GridPane .button:hover {
     -fx-text-fill: -fx-base-dark;
 }
 
+/* Dashboard */
+/*
+#box {
+    -fx-background-radius: 10;
+    -fx-background-color: rgba(0,0,0,0.1);
+    -fx-border-radius: 10;
+    -fx-border-width: 4px;
+    -fx-border-color: -fx-base-dark;
+}
+*/
+#pie-container {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10;
+}
+/*
+#pie-container .default-color0.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color1.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color2.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color3.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color4.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color5.chart-pie{-fx-pie-color: transparent;}
+#pie-container .default-color6.chart-pie{-fx-pie-color: transparent;}
+*/
+#pie-container .chart-pie-label {
+    -fx-fill: -fx-base-dark;
+    -fx-stroke: -fx-base-dark;
+    -fx-font: 10pt "Arial";
+}
+#pie-container .chart-pie-label-line {
+    -fx-fill: -fx-base-dark;
+    -fx-stroke: -fx-base-dark;
+}
+#pie-container .chart-legend {
+    -fx-background-color: transparent;
+    -fx-font-size: 10;
+}
+#pie-container .chart {
+    -fx-pref-width: 450;
+    -fx-pref-height: 300;
+    -fx-legend-visible: false;
+}
+.chart-title {
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.2), 10.0, 0.0, 0.0, 10.0);
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+
 /* Mood input page */
 #start-session {
     -fx-text-fill: white;

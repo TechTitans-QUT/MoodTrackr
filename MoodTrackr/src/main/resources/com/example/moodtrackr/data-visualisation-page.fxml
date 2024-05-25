@@ -2,7 +2,7 @@
 
 <?import javafx.scene.layout.*?>
 
-<HBox style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
+<HBox id="main-container" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
     <BorderPane prefHeight="700.0" prefWidth="1174.0">
         <top>
             <fx:include fx:id="searchbar" source="searchbar.fxml" />

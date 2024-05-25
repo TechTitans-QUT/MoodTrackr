@@ -6,5 +6,5 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.moodtrackr.controllers.PieChartController">
-    <PieChart fx:id="pieChart"></PieChart>
+    <PieChart fx:id="pieChart" />
 </AnchorPane>

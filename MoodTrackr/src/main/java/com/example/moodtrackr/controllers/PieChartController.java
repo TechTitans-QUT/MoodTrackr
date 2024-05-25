@@ -39,6 +39,8 @@ public class PieChartController implements Initializable {
                     )
             );
         });
+        // Set start angle
+        pieChart.setStartAngle(90);
         // Insert data into pie chart
         pieChart.getData().addAll(pieData);
         // Get username

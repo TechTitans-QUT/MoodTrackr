@@ -24,7 +24,7 @@ public class MainApplication extends Application {
 //    public static final int height = 600; // template-page
     public static final String login = "login-view.fxml";
     public static final String template = "template-page.fxml";
-    public static final String dashboard = "hello-view.fxml";
+    public static final String dashboard = "dashboard-view.fxml";
     public static final String moodInput = "mood-input-page.fxml";
     @Override
     public void start(Stage stage) throws IOException {

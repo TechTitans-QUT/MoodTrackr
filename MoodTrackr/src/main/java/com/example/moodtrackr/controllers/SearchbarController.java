@@ -20,12 +20,11 @@ public class SearchbarController implements Initializable {
     private Label titleLabel;
     @FXML
     private MenuButton menuButton;
-    private User current;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        current = GlobalData.getInstance().getYourObject();
-        titleLabel.setText(current.getFirstName());
+        User current = GlobalData.getInstance().getYourObject();
+        titleLabel.setText("Hi " + current.getFirstName() + " " + current.getLastName() + "!");
         menuButton.setText(current.getFirstName());
     }
 
