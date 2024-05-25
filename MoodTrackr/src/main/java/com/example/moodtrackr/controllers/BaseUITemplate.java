@@ -32,6 +32,8 @@ public class BaseUITemplate {
     @FXML
     private Button Settings;
     @FXML
+    private Button Logout;
+    @FXML
     private Button logout;
     @FXML
     private Label titleLabel;
@@ -98,8 +100,12 @@ public class BaseUITemplate {
             closed = true;
             side.setText("<");
         }
-//        slide.setOnFinished((ActionEvent e) -> {
-//            System.out.println("working");
-//        });
+
+        Dashboard.setVisible(closed);
+        Mood.setVisible(closed);
+        DataVisualisation.setVisible(closed);
+        Calendar.setVisible(closed);
+        Settings.setVisible(closed);
+        Logout.setVisible(closed);
     }
 }

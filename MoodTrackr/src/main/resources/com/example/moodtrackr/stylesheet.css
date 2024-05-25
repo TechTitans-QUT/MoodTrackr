@@ -42,15 +42,21 @@ Button {
     -fx-background-color: -fx-base-dark;
     -fx-text-fill: white;
 }
-GridPane .button:hover {
-    -fx-background-color: #D3D3D3;
-    -fx-text-fill: -fx-base-dark;
+#side-btn {
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 0px 10px 0px;
+}
+#side-btn:hover {
+    -fx-background-color: black;
+}
+#side-btn:pressed {
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
     -fx-scale-z: 0.9;
 }
 #side {
-    -fx-background-color: -fx-base-dark;
+    -fx-background-color: black;
+    -fx-background-radius: 20px;
     -fx-text-fill: white;
     -fx-cursor: hand;
 }
