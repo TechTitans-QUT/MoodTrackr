@@ -12,10 +12,14 @@
         </left>
         <center>
             <!--Your page content should go here, add a controller to the root HBox as necessary-->
-            <VBox id="main-container" alignment="TOP_CENTER" stylesheets="@stylesheet.css" VBox.vgrow="ALWAYS">
-                <fx:include source="pie-chart.fxml" />
-                <fx:include source="line-chart.fxml" />
-            </VBox>
+            <AnchorPane id="main-container">
+                <AnchorPane id="pie-vis">
+                    <fx:include source="pie-chart.fxml" />
+                </AnchorPane>
+                <AnchorPane layoutX="6.0" layoutY="340.0">
+                    <fx:include source="line-chart.fxml" />
+                </AnchorPane>
+            </AnchorPane>
         </center>
     </BorderPane>
 </HBox>

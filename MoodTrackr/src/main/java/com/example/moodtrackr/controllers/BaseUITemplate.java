@@ -92,7 +92,7 @@ public class BaseUITemplate {
         slide.play();
 
         if (closed) {
-            sidebar.setTranslateX(-130);
+            sidebar.setTranslateX(-120);
             closed = false;
             side.setText(">");
         } else {

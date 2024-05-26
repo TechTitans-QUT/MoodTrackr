@@ -54,7 +54,7 @@
     </graphic></Button>
     <AnchorPane>
         <children>
-            <Button fx:id="side" layoutX="151.0" layoutY="241.0" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
+            <Button id="side" fx:id="side" layoutX="126.0" layoutY="241.0" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
                 <font>
                     <Font name="System Bold" size="18.0" />
                 </font>
