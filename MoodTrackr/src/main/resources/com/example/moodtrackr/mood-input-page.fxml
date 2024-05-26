@@ -57,16 +57,13 @@
                     <columns>
                         <TableColumn fx:id="moodColumn" editable="false" prefWidth="145.6000091433525" text="Mood" />
                         <TableColumn fx:id="sessionTimeColumn" editable="false" prefWidth="140.8000030517578" text="Session Time" />
-                        <TableColumn fx:id="localTimeColumn" editable="false" prefWidth="185.0" text="Date Ended" />
-                        <TableColumn fx:id="statusColumn" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Activities" />
+                        <TableColumn fx:id="localTimeColumn" editable="false" prefWidth="133.0" text="Date Ended" />
+                        <TableColumn fx:id="statusColumn" minWidth="9.199981689453125" prefWidth="358.0" text="Activities" />
 
                     </columns>
                <VBox.margin>
                   <Insets left="106.0" right="106.0" />
                </VBox.margin>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
                <effect>
                   <Blend />
                </effect>

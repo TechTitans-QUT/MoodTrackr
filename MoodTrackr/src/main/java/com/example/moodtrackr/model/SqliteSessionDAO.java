@@ -66,7 +66,6 @@ public class SqliteSessionDAO implements ISessionDAO {
             statement.setInt(5, session.getUserID());
             statement.setInt(6, session.getID());
 
-
             System.out.println(session.getStatus() + session.getUserID() + session.getID());
 
             int rowsUpdated = statement.executeUpdate();

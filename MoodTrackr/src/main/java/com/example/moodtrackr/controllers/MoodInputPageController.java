@@ -146,6 +146,10 @@ public class MoodInputPageController {
                 ));
             }
             sessionTableView.setItems(observableSessions);
+            moodColumn.setResizable(false);
+            sessionTimeColumn.setResizable(false);
+            localTimeColumn.setResizable(false);
+            statusColumn.setResizable(false);
 
             rs.close();
             sta.close();
