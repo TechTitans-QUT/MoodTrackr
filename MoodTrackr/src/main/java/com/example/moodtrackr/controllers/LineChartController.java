@@ -13,13 +13,12 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class LineChartController implements Initializable {
     @FXML
-    private LineChart<Number,Number> lineChart;
-    private final String[] moods = { "Very Happy", "Happy", "Slightly Happy", "Neutral", "Slightly Sad", "Sad", "Very Sad" };
-
+    private LineChart<String,Number> lineChart;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -31,27 +30,30 @@ public class LineChartController implements Initializable {
         // Get HashMap of dates with average mood for UserID
         HashMap<String, Number> userData = SqliteSessionDAO.getUserIdSessions(id);
 
-
-        //Defining x Axis
+        // Defining an x Axis
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Date");
 
-        //Defining y Axis
+        // Defining a y Axis
         NumberAxis yAxis = new NumberAxis();
         yAxis.setLabel("Recorded Mood");
 
-        new LineChart<String,Number>(xAxis,yAxis);
+        lineChart = new LineChart<String,Number>(xAxis,yAxis);
 
-        //defining a series
+        // Defining a series
         XYChart.Series<String, Number> series = new XYChart.Series<String, Number>();
-        series.setName("Mood Over Time");
+
+        // Get username
+        String name = GlobalData.getInstance().getYourObject().getFirstName();
+        series.setName(name + "'s Mood Over Time");
 
         for (Map.Entry<String, Number> entry : userData.entrySet()) {
             String date = entry.getKey();
             Number averageMood = entry.getValue();
             series.getData().add(new XYChart.Data<String, Number>(date, averageMood));
         }
-
+        // Set the data to Line chart
+        lineChart.getData().add(series);
 
     }
 }

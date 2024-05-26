@@ -5,6 +5,6 @@
 <?import javafx.scene.chart.LineChart?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.moodtrackr.controllers.PieChartController">
+            fx:controller="com.example.moodtrackr.controllers.LineChartController">
     <LineChart fx:id="lineChart" />
 </AnchorPane>
