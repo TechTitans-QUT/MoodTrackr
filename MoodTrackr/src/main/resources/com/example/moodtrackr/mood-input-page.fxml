@@ -18,24 +18,48 @@
         <center>
             <!--Your page content should go here, add a controller to the root HBox as necessary-->
             <VBox id="main-container" alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
-
-                <HBox alignment="TOP_CENTER">
-                    <ToolBar id="tool-bar" prefHeight="20.0" prefWidth="800.0">
-                        <Button id="start-session" fx:id="startSessionButton" alignment="BOTTOM_LEFT" onAction="#onStartSession" text="Start Session" />
-                        <Label fx:id="currentTime" />
-                        <HBox.margin>
-                            <Insets top="40.0" />
-                        </HBox.margin>
-                    </ToolBar>
-                </HBox>
+            <HBox prefHeight="25.0" prefWidth="781.0">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="653.0" spacing="10.0">
+                     <children>
+                              <Button id="start-session" fx:id="startSessionButton" alignment="BOTTOM_LEFT" onAction="#onStartSession" prefHeight="25.0" prefWidth="96.0" text="Start Session">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="10.0" />
+                           </HBox.margin>
+                        </Button>
+                              <Label fx:id="currentTime" prefHeight="17.0" prefWidth="201.0" />
+                        <TextField fx:id="statusTextField" prefHeight="25.0" prefWidth="262.0" promptText="Click on a row and insert your activities here!">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="120.0" top="50.0" />
+                     </HBox.margin>
+                  </HBox>
+      
+                           <Button fx:id="updateStatusButton" contentDisplay="BOTTOM" onAction="#updateSelectedRowStatus" prefHeight="25.0" prefWidth="109.0" text="Update Activity">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
 
                 <TableView id="table-view" fx:id="sessionTableView" prefHeight="400.0" prefWidth="786.0">
                     <columns>
                         <TableColumn fx:id="moodColumn" editable="false" prefWidth="145.6000091433525" text="Mood" />
                         <TableColumn fx:id="sessionTimeColumn" editable="false" prefWidth="140.8000030517578" text="Session Time" />
-                        <TableColumn fx:id="statusColumn" editable="false" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Status" />
                         <TableColumn fx:id="localTimeColumn" editable="false" prefWidth="185.0" text="Date Ended" />
-                        <TableColumn editable="false" minWidth="0.0" prefWidth="231.0" text="Activities" />
+                        <TableColumn fx:id="statusColumn" minWidth="9.199981689453125" prefWidth="94.19998168945312" text="Activities" />
+
                     </columns>
                <VBox.margin>
                   <Insets left="106.0" right="106.0" />

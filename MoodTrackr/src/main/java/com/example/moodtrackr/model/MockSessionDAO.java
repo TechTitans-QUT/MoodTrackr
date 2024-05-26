@@ -22,7 +22,7 @@ public class MockSessionDAO implements ISessionDAO {
     }
     @Override
     public void addSession(Session session) {
-        session.setID(autoIncrementedId);
+        session.setUserID(autoIncrementedId);
         autoIncrementedId++;
         sessions.add(session);
     }
@@ -30,7 +30,7 @@ public class MockSessionDAO implements ISessionDAO {
     @Override
     public void updateSession(Session session) {
         for (int i = 0; i < sessions.size(); i++) {
-            if (sessions.get(i).getID() == session.getID()) {
+            if (sessions.get(i).getUserID() == session.getUserID()) {
                 sessions.set(i, session);
                 break;
             }
@@ -45,7 +45,7 @@ public class MockSessionDAO implements ISessionDAO {
     @Override
     public Session getSession(int id) {
         for (Session session : sessions) {
-            if (session.getID() == id) {
+            if (session.getUserID() == id) {
                 return session;
             }
         }

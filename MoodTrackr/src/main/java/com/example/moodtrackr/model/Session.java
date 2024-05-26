@@ -1,13 +1,11 @@
 package com.example.moodtrackr.model;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 /**
  * Class that contains getters and setters for each session data
  */
 public class Session {
     private int id;
+    private int userID;
     private String sessionTime;
     private String mood;
     private String localTime;
@@ -17,18 +15,38 @@ public class Session {
      * Initialises a new Session object
      *
      */
-    public Session(String sessionTime, String mood, String localTime, String status, int id){
+    public Session(String sessionTime, String mood, String localTime, String status, int userID){
         this.sessionTime = sessionTime;
         this.mood = mood;
         this.localTime = localTime;
         this.status = status;
+        this.userID = userID;
+    }
+
+    /**
+     * For updating an existing session
+     *
+     * @param id
+     * @param sessionTime
+     * @param mood
+     * @param localTime
+     * @param status
+     * @param userID
+     */
+    public Session(int id, String sessionTime, String mood, String localTime, String status, int userID) {
         this.id = id;
+        this.sessionTime = sessionTime;
+        this.mood = mood;
+        this.localTime = localTime;
+        this.status = status;
+        this.userID = userID;
     }
 
     /*
     The necessary getters for each session data
      */
     public int getID() {return id;}
+    public int getUserID() {return userID;}
     public String getSessionTime() {return sessionTime;}
     public String getMood() {return mood;}
     public String getLocalTime() {return localTime;}
@@ -38,7 +56,10 @@ public class Session {
     /*
         The necessary setters for each session data
     */
-    public void setID(int id) { this.id = id; }
+    public void setID(int id) {
+        this.id = id;
+    }
+    public void setUserID(int userID) { this.userID = userID; }
     public void setSessionTime(String sessionTime) { this.sessionTime = sessionTime; }
     public void setMood(String mood) {this.mood = mood;}
     public void setLocalTime(String localTime) {this.localTime = localTime;}

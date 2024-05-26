@@ -1,7 +1,5 @@
 package com.example.moodtrackr.model;
 
-import javafx.scene.chart.PieChart;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +22,7 @@ public class SqliteSessionDAO implements ISessionDAO {
             Statement statement = connection.createStatement();
             String query = "CREATE TABLE IF NOT EXISTS sessions ("
                     + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "userID INTEGER,"
                     + "sessionTime VARCHAR NOT NULL,"
                     + "mood VARCHAR NOT NULL,"
                     + "localTime VARCHAR NOT NULL,"
@@ -38,14 +37,18 @@ public class SqliteSessionDAO implements ISessionDAO {
     @Override
     public void addSession(Session session) {
         try {
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status, id) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO sessions (sessionTime, mood, localTime, status, userID) VALUES (?, ?, ?, ?, ?)");
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
             statement.setString(4, session.getStatus());
-            statement.setInt(5, session.getID());
-
+            statement.setInt(5, session.getUserID());
             statement.executeUpdate();
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                session.setID(generatedKeys.getInt(1));
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,15 +58,30 @@ public class SqliteSessionDAO implements ISessionDAO {
     @Override
     public void updateSession(Session session) {
         try {
-            PreparedStatement statement = connection.prepareStatement("UPDATE contacts SET sessionTime = ?, mood = ?, localTime = ?, status = ? WHERE id = ?");
+            PreparedStatement statement = connection.prepareStatement("UPDATE sessions SET sessionTime = ?, mood = ?, localTime = ?, status = ?, userID = ? WHERE id = ?");
             statement.setString(1, session.getSessionTime());
             statement.setString(2, session.getMood());
             statement.setString(3, session.getLocalTime());
             statement.setString(4, session.getStatus());
-            statement.setInt(5, session.getID());
-            statement.executeUpdate();
+            statement.setInt(5, session.getUserID());
+            statement.setInt(6, session.getID());
+
+
+            System.out.println(session.getStatus() + session.getUserID() + session.getID());
+
+            int rowsUpdated = statement.executeUpdate();
+
+            if (rowsUpdated > 0) {
+                System.out.println("Session updated successfully.");
+            } else {
+                System.out.println("No session updated.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle specific SQL exceptions (e.g., SQLException, DataAccessException) here
         } catch (Exception e) {
             e.printStackTrace();
+            // Handle other exceptions here
         }
     }
 
@@ -88,8 +106,9 @@ public class SqliteSessionDAO implements ISessionDAO {
                 String mood = resultSet.getString("mood");
                 String localTime = resultSet.getString("localTime");
                 String status = resultSet.getString("status");
+                int userID = resultSet.getInt("userID");
 
-                Session session = new Session(sessionTime, mood, localTime, status, id);
+                Session session = new Session(sessionTime, mood, localTime, status, userID);
                 return session;
             }
         } catch (Exception e) {
@@ -107,12 +126,13 @@ public class SqliteSessionDAO implements ISessionDAO {
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
+                int userID = resultSet.getInt("userID");
                 String sessionTime = resultSet.getString("sessionTime");
                 String mood = resultSet.getString("mood");
                 String localTime = resultSet.getString("localTime");
                 String status = resultSet.getString("status");
 
-                Session session = new Session(sessionTime, mood, localTime, status, id);
+                Session session = new Session(sessionTime, mood, localTime, status, userID);
                 session.setID(id);
                 sessions.add(session);
             }
@@ -123,12 +143,12 @@ public class SqliteSessionDAO implements ISessionDAO {
     }
 
     @Override
-    public int getNumberOfMood(int id, String mood) {
+    public int getNumberOfMood(int userID, String mood) {
         int total = 0;
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
-            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE id = ? AND mood = ?");
-            sta.setInt(1, id); // Set the ID parameter
+            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE userID = ? AND mood = ?");
+            sta.setInt(1, userID); // Set the ID parameter
             sta.setString(2, mood);
             ResultSet rs = sta.executeQuery();
             while(rs.next()){

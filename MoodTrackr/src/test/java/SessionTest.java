@@ -11,11 +11,11 @@ public class SessionTest {
         session = new Session("1", "Happy", "12:00", "status", 1);
     }
     @Test
-    public void testGetId() { assertEquals(1, session.getID()); }
+    public void testGetId() { assertEquals(1, session.getUserID()); }
     @Test
     public void testSetId() {
-        session.setID(2);
-        assertEquals(2, session.getID());
+        session.setUserID(2);
+        assertEquals(2, session.getUserID());
     }
     @Test
     public void testGetSessionTime() { assertEquals("1", session.getSessionTime()); }

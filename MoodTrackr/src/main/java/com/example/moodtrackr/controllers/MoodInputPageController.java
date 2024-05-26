@@ -23,6 +23,13 @@ public class MoodInputPageController {
     @FXML
     private Button startSessionButton;
     @FXML
+    private Button endSessionButton;
+    @FXML
+    private Button updateStatusButton;
+    @FXML
+    private TextField statusTextField;
+
+    @FXML
     TableView <Session> sessionTableView;
     @FXML
     TableColumn <Session, String> moodColumn;
@@ -37,8 +44,7 @@ public class MoodInputPageController {
     @FXML
     private SessionManager sessionManager;
 
-    @FXML
-    private Button endSessionButton;
+
     @FXML
     private ToolBar moodToolBar;
     @FXML
@@ -118,25 +124,26 @@ public class MoodInputPageController {
 //        contactContainer.setVisible(hasContact);
 //    }
     /**
-     * Synchronizes the sessions list view with the sessions stored in the database.
+     * Loads the moodinput data of the current user into the tableview
      */
-    private void tableLoad(int id) {
+    private void tableLoad(int userID) {
         observableSessions = FXCollections.observableArrayList();
 
         try {
             Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
-            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE id = ?");
-            sta.setInt(1, id); // Set the ID parameter
+            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE userID = ?");
+            sta.setInt(1, userID); // Set the ID parameter
             ResultSet rs = sta.executeQuery();
 
             while(rs.next()){
                 observableSessions.add(new Session(
+                        rs.getInt("id"),
                         rs.getString("sessionTime"),
                         rs.getString("mood"),
                         rs.getString("localTime"),
                         rs.getString("status"),
-                        rs.getInt("id")
-                        ));
+                        rs.getInt("userID")
+                ));
             }
             sessionTableView.setItems(observableSessions);
 
@@ -229,7 +236,7 @@ public class MoodInputPageController {
 
     }
     @FXML
-    // The methods below handle the evenets of each mood check boxes being pressed
+    // The methods below handle the events of each mood check boxes being pressed
     private void onMood1Check() {
         checked = mood1.isSelected();
         mood = "Very Sad";
@@ -300,5 +307,19 @@ public class MoodInputPageController {
         mood7.setDisable(false);
 
     }
+
+    // Method to update the status of the selected row
+    @FXML
+    private void updateSelectedRowStatus() {
+        Session selectedItem = sessionTableView.getSelectionModel().getSelectedItem();
+        if (selectedItem != null) {
+            String newStatus = statusTextField.getText();
+            selectedItem.setStatus(newStatus);
+            sessionManager.updateSession(selectedItem); // Update the session in the database
+            sessionTableView.refresh(); // Refresh the table view to reflect changes
+            //tableLoad(selectedItem.getID());
+        }
+    }
+
 
 }
