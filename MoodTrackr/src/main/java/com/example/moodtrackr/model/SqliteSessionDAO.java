@@ -1,8 +1,9 @@
 package com.example.moodtrackr.model;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * A public class that contains methods that enable the ability to
@@ -161,5 +162,58 @@ public class SqliteSessionDAO implements ISessionDAO {
             e.printStackTrace();
         }
         return total;
+    }
+    public static HashMap<String, Number> getUserIdSessions(int userID) {
+        HashMap<String, Number> moodMap = new HashMap<String, Number>();
+        HashMap<String, List<Double>> tempMoodMap = new HashMap<>();
+        try {
+            Connection con = DriverManager.getConnection("jdbc:sqlite:MoodTrackr/src/main/resources/Database/sessions.db");
+            PreparedStatement sta = con.prepareStatement("SELECT * FROM sessions WHERE userID = ?");
+            sta.setInt(1, userID); // Set the ID parameter
+            ResultSet rs = sta.executeQuery();
+
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+
+            while(rs.next()){
+                // Store mood and localTime
+                String complexTime = rs.getString("localTime"); // Assuming column name is localTime
+                String mood = rs.getString("mood"); // Assuming column name is mood
+
+                java.util.Date date = sdf.parse(complexTime.split(" ")[0]);
+                String dateKey = sdf.format(date);
+                double moodValue = assignMood(mood);
+
+                // Check to see if the date hasn't already been added
+                tempMoodMap.computeIfAbsent(dateKey, k -> new ArrayList<>()).add(moodValue);
+            }
+            // Take the list of moods for each date and average them
+            for (Map.Entry<String, List<Double>> entry : tempMoodMap.entrySet()) {
+                List<Double> moods = entry.getValue();
+                double sum = 0;
+                for (double moodValue : moods) {
+                    sum += moodValue;
+                }
+                double averageMood = sum / moods.size();
+                moodMap.put(entry.getKey(), averageMood);
+            }
+            sta.close();
+            rs.close();
+            con.close();
+        }
+        catch (Exception d) {
+            d.printStackTrace();
+        }
+        return moodMap;
+    }
+    public static int assignMood(String mood) {
+        return switch (mood) {
+            case "Very Happy" -> 7;
+            case "Happy" -> 6;
+            case "Slightly Happy" -> 5;
+            case "Slightly Sad" -> 3;
+            case "Sad" -> 2;
+            case "Very Sad" -> 1;
+            default -> 4;
+        };
     }
 }
