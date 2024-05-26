@@ -7,90 +7,58 @@
 <?import javafx.scene.text.*?>
 
 <VBox id="sidebar" fx:id="sidebar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="170.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.moodtrackr.controllers.BaseUITemplate">
-    <GridPane alignment="TOP_CENTER" vgap="20.0">
-        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
-            <Image url="@../../../images/icons8-home-48.png" />
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
+    <Button id="side-btn" fx:id="Dashboard" graphicTextGap="10.0" onAction="#onDashboardButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Dashboard" textFill="WHITE"><graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-home-48.png" />
+            </image>
         </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
-            <Image url="@../../../images/icons8-alzheimer-48.png" />
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-        </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="2">
-            <Image url="@../../../images/icons8-database-import-48.png" />
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-        </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="3">
-            <Image url="@../../../images/icons8-calender-48.png" />
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-        </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="4">
-            <Image url="@../../../images/icons8-setting-48.png" />
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-        </ImageView>
-        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="5">
-            <Image url="@../../../images/icons8-logout-48.png" />
-         <GridPane.margin>
-            <Insets left="5.0" />
-         </GridPane.margin>
-        </ImageView>
-        <Button fx:id="Dashboard" onAction="#onDashboardButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Dashboard" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-        <Button fx:id="Mood" onAction="#onMoodButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Mood" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-        <Button fx:id="DataVisualisation" onAction="#onDataVisualisationButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Data" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-        <Button fx:id="Calendar" onAction="#onCalendarButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Calendar" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-        <Button fx:id="Settings" onAction="#onSettingsButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Settings" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-        <Button onAction="#onLogoutButtonClick" prefHeight="30.0" stylesheets="@stylesheet.css" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></Button>
-      <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-      </rowConstraints>
+    </graphic>
       <VBox.margin>
-         <Insets top="20.0" />
-      </VBox.margin>
-    </GridPane>
-   <AnchorPane prefHeight="300.0" prefWidth="170.0">
-      <children>
-         <Button fx:id="side" layoutX="130.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Button>
-      </children>
-   </AnchorPane>
+         <Insets top="10.0" />
+      </VBox.margin></Button>
+    <Button id="side-btn" fx:id="Mood" graphicTextGap="10.0" onAction="#onMoodButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Mood          " textFill="WHITE"><graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-alzheimer-48.png" />
+            </image>
+        </ImageView>
+    </graphic></Button>
+    <Button id="side-btn" fx:id="DataVisualisation" graphicTextGap="10.0" onAction="#onDataVisualisationButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Data             " textFill="WHITE"><graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-database-import-48.png" />
+            </image>
+        </ImageView>
+    </graphic></Button>
+    <Button id="side-btn" fx:id="Calendar" graphicTextGap="10.0" onAction="#onCalendarButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Calendar   " textFill="WHITE"><graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-calender-48.png" />
+            </image>
+        </ImageView>
+    </graphic></Button>
+    <Button id="side-btn" fx:id="Settings" graphicTextGap="10.0" onAction="#onSettingsButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Settings     " textFill="WHITE"><graphic>
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-setting-48.png" />
+            </image>
+        </ImageView>
+    </graphic></Button>
+    <Button id="side-btn" fx:id="Logout" graphicTextGap="10.0" onAction="#onLogoutButtonClick" prefWidth="170.0" stylesheets="@stylesheet.css" text="Logout    " textFill="WHITE"><graphic>
+        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/icons8-logout-48.png" />
+            </image>
+        </ImageView>
+    </graphic></Button>
+    <AnchorPane>
+        <children>
+            <Button fx:id="side" layoutX="151.0" layoutY="241.0" mnemonicParsing="false" onAction="#onSide" styleClass="side" text="&lt;" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Button>
+        </children>
+    </AnchorPane>
 </VBox>
