@@ -10,40 +10,39 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
 import java.net.URL;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 public class LineChartController implements Initializable {
+
     @FXML
-    private LineChart<String,Number> lineChart;
-    @FXML CategoryAxis xAxis;
-    @FXML NumberAxis yAxis;
+    private LineChart<String, Number> lineChart;
+    @FXML
+    private CategoryAxis xAxis;
+    @FXML
+    private NumberAxis yAxis;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         // Access session manager
         SqliteSessionDAO sessionDAO = new SqliteSessionDAO();
         // Set current user's id
         int id = GlobalData.getInstance().getYourObject().getId();
 
         // Get HashMap of dates with average mood for UserID
-        HashMap<String, Number> userData = SqliteSessionDAO.getUserIdSessions(id);
+        HashMap<String, Number> userData = sessionDAO.getUserIdSessions(id);
 
-        // Defining an x Axis
-        xAxis = new CategoryAxis();
+        // Defining the axes is not necessary as they are injected from FXML
         xAxis.setLabel("Date");
-
-        // Defining a y Axis
-        yAxis = new NumberAxis(1,7,1);
         yAxis.setLabel("Recorded Mood");
-
-        lineChart = new LineChart<>(xAxis,yAxis);
+        yAxis.setAutoRanging(false);
+        yAxis.setLowerBound(1);
+        yAxis.setUpperBound(7);
+        yAxis.setTickUnit(1);
 
         // Defining a series
         XYChart.Series<String, Number> series = new XYChart.Series<>();
-
-        // Get username
-        String name = GlobalData.getInstance().getYourObject().getFirstName();
         series.setName("Mood Over Time");
 
         for (Map.Entry<String, Number> entry : userData.entrySet()) {
@@ -51,8 +50,8 @@ public class LineChartController implements Initializable {
             Number averageMood = entry.getValue();
             series.getData().add(new XYChart.Data<>(date, averageMood));
         }
+
         // Set the data to Line chart
         lineChart.getData().add(series);
-
     }
 }
