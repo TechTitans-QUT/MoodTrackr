@@ -3,8 +3,15 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.chart.LineChart?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.moodtrackr.controllers.LineChartController">
-    <LineChart fx:id="lineChart" />
-</AnchorPane>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+
+
+<LineChart fx:id="lineChart" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.moodtrackr.controllers.LineChartController">
+    <xAxis>
+        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+    </xAxis>
+    <yAxis>
+        <NumberAxis side="LEFT"  fx:id="yAxis" />
+    </yAxis>
+</LineChart>
