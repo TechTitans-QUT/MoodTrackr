@@ -163,7 +163,7 @@ public class SqliteSessionDAO implements ISessionDAO {
         }
         return total;
     }
-    public HashMap<String, Number> getUserIdSessions(int userID) throws SQLException {
+    public static HashMap<String, Number> getUserIdSessions(int userID) {
         HashMap<String, Number> moodMap = new HashMap<String, Number>();
         HashMap<String, List<Double>> tempMoodMap = new HashMap<>();
         try {
@@ -179,7 +179,7 @@ public class SqliteSessionDAO implements ISessionDAO {
                 String complexTime = rs.getString("localTime"); // Assuming column name is localTime
                 String mood = rs.getString("mood"); // Assuming column name is mood
 
-                Date date = (Date) sdf.parse(complexTime.split(" ")[0]);
+                java.util.Date date = sdf.parse(complexTime.split(" ")[0]);
                 String dateKey = sdf.format(date);
                 double moodValue = assignMood(mood);
 
@@ -205,7 +205,7 @@ public class SqliteSessionDAO implements ISessionDAO {
         }
         return moodMap;
     }
-    public int assignMood(String mood) {
+    public static int assignMood(String mood) {
         return switch (mood) {
             case "Very Happy" -> 7;
             case "Happy" -> 6;

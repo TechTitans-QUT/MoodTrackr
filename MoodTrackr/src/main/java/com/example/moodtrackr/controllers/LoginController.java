@@ -45,6 +45,7 @@ public class LoginController {
                 // Find user id
                 int id = userDAO.getUserId(firstNameTextField.getText(), lastNameTextField.getText(), hashed);
                 // Find User
+
                 User current = userDAO.getUser(id);
                 GlobalData.getInstance().setYourObject(current);
                 Stage stage = (Stage) loginMessage.getScene().getWindow();
