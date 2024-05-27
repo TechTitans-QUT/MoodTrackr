@@ -89,6 +89,7 @@ Button {
 #pie-container {
     -fx-background-color: #fff;
     -fx-background-radius: 10;
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 5.0, 0.0, 0.0, 5.0);
 }
 /*
 #pie-container .default-color0.chart-pie{-fx-pie-color: transparent;}
@@ -125,6 +126,16 @@ Button {
     -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.2), 10.0, 0.0, 0.0, 10.0);
     -fx-font-weight: bold;
     -fx-font-family: Arial;
+}
+
+#line-container {
+    -fx-background-color: #fff;
+    -fx-background-radius: 10;
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 5.0, 0.0, 0.0, 5.0);
+}
+#line-container .chart {
+    -fx-pref-width: 436;
+    -fx-pref-height: 286;
 }
 
 /* Mood input page */

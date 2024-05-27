@@ -113,11 +113,16 @@
 <!--                </LineChart>-->
                <AnchorPane id="box" maxWidth="950.0" minWidth="950.0" prefHeight="350.0" prefWidth="950.0">
                   <children>
-                     <HBox id="pie-container" layoutX="25.0" layoutY="25.0">
+                     <HBox id="pie-container" layoutY="32.0">
                         <children>
                                 <fx:include source="pie-chart.fxml" />
                         </children>
                      </HBox>
+                      <HBox id="line-container" layoutX="496.0" layoutY="30.0">
+                          <children>
+                              <fx:include source="line-chart.fxml" />
+                          </children>
+                      </HBox>
                   </children>
                   <HBox.margin>
                      <Insets top="30.0" />
