@@ -2,6 +2,7 @@
 * {
     -fx-base-dark: #252321;
     -fx-base-light: #ECECEC;
+    -fx-base-less-dark: #D3D3D3;
 }
 
 #main-container {
@@ -91,15 +92,15 @@ Button {
     -fx-background-radius: 10;
     -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 5.0, 0.0, 0.0, 5.0);
 }
-/*
-#pie-container .default-color0.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color1.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color2.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color3.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color4.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color5.chart-pie{-fx-pie-color: transparent;}
-#pie-container .default-color6.chart-pie{-fx-pie-color: transparent;}
-*/
+
+#pie-container .default-color0.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color1.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color2.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color3.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color4.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color5.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+#pie-container .default-color6.chart-pie{-fx-pie-color: -fx-base-less-dark;}
+
 #pie-container .chart-pie-label {
     -fx-fill: -fx-base-dark;
     -fx-stroke: -fx-base-dark;
@@ -136,6 +137,12 @@ Button {
 #line-container .chart {
     -fx-pref-width: 436;
     -fx-pref-height: 286;
+}
+#line-container .chart-line-symbol {
+    -fx-background-color: -fx-base-less-dark;
+}
+#line-container .chart-series-line {
+    -fx-stroke: -fx-base-less-dark;
 }
 
 /* Mood input page */
