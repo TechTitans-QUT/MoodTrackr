@@ -37,8 +37,8 @@ public class LineChartController implements Initializable {
         xAxis.setLabel("Date");
         yAxis.setLabel("Recorded Mood");
         yAxis.setAutoRanging(false);
-        yAxis.setLowerBound(1);
-        yAxis.setUpperBound(7);
+        yAxis.setLowerBound(0);
+        yAxis.setUpperBound(8);
         yAxis.setTickUnit(1);
 
         // Defining a series
