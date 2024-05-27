@@ -9,7 +9,7 @@
             <CategoryAxis label="Date" fx:id="xAxis" />
         </xAxis>
         <yAxis>
-            <NumberAxis fx:id="yAxis" label="Recorded Mood" lowerBound="1" tickUnit="1" upperBound="7" />
+            <NumberAxis fx:id="yAxis" label="Recorded Mood" />
         </yAxis>
     </LineChart>
 </AnchorPane>
